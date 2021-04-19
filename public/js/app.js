@@ -89853,6 +89853,8 @@ var Pressupost = /*#__PURE__*/function (_React$Component) {
   }, {
     key: "addFormData",
     value: function addFormData(evt) {
+      var _this2 = this;
+
       evt.preventDefault(); //Regex
 
       var regex = true;
@@ -90165,7 +90167,7 @@ var Pressupost = /*#__PURE__*/function (_React$Component) {
               fd.append('cuina_pintura', '');
             }
           }
-        } // Comprovacions bany
+        } // Comprovacions bany 1
 
 
         if (this.refs.bany1_electricitat_q1.checked) {
@@ -90181,74 +90183,722 @@ var Pressupost = /*#__PURE__*/function (_React$Component) {
             }
           }
         }
-        /*
-         fd.append('bany1_aigua', this.refs.contactDescripcio.value);
-        fd.append('bany1_moble_rentamans', this.refs.contactDescripcio.value);
-        fd.append('bany1_rentamans', this.refs.contactDescripcio.value);
-        fd.append('bany1_mirall', this.refs.contactDescripcio.value);
-        fd.append('bany1_mampara_banyera', this.refs.contactDescripcio.value);
-        fd.append('bany1_mampara_dutxa', this.refs.contactDescripcio.value);
-        fd.append('bany1_aixeta_dutxa', this.refs.contactDescripcio.value);
-        fd.append('bany1_aixeta_bany', this.refs.contactDescripcio.value);
-        fd.append('bany1_accesoris_bany', this.refs.contactDescripcio.value);
-        fd.append('bany1_tovalloler', this.refs.contactDescripcio.value);
-        fd.append('bany1_wc', this.refs.contactDescripcio.value);
-        fd.append('bany1_bidet', this.refs.contactDescripcio.value);
-        fd.append('bany1_banyera', this.refs.contactDescripcio.value);
-        fd.append('bany1_dutxa', this.refs.contactDescripcio.value);
-        fd.append('bany1_sostre_pladur', this.refs.contactDescripcio.value);
-        fd.append('bany1_sostres_alumini', this.refs.contactDescripcio.value);
-        fd.append('bany1_alicatat', this.refs.contactDescripcio.value);
-        fd.append('bany1_pintura', this.refs.contactDescripcio.value);
-         fd.append('salo_interruptors_endolls', this.refs.contactDescripcio.value);
-        fd.append('salo_tv', this.refs.contactDescripcio.value);
-        fd.append('salo_dades_internet', this.refs.contactDescripcio.value);
-        fd.append('salo_aire_condicionat', this.refs.contactDescripcio.value);
-        fd.append('salo_calefaccio', this.refs.contactDescripcio.value);
-        fd.append('salo_sostre_fals', this.refs.contactDescripcio.value);
-        fd.append('salo_pintura', this.refs.contactDescripcio.value);
-         fd.append('hb_mat1_interruptors_endolls', this.refs.contactDescripcio.value);
-        fd.append('hb_mat1_tv', this.refs.contactDescripcio.value);
-        fd.append('hb_mat1_dades_internet', this.refs.contactDescripcio.value);
-        fd.append('hb_mat1_aire_condicionat', this.refs.contactDescripcio.value);
-        fd.append('hb_mat1_calefaccio', this.refs.contactDescripcio.value);
-        fd.append('hb_mat1_sostre_fals', this.refs.contactDescripcio.value);
-        fd.append('hb_mat1_pintura', this.refs.contactDescripcio.value);
-         fd.append('hb_ind1_interruptors_endolls', this.refs.contactDescripcio.value);
-        fd.append('hb_ind1_tv', this.refs.contactDescripcio.value);
-        fd.append('hb_ind1_dades_internet', this.refs.contactDescripcio.value);
-        fd.append('hb_ind1_aire_condicionat', this.refs.contactDescripcio.value);
-        fd.append('hb_ind1_calefaccio', this.refs.contactDescripcio.value);
-        fd.append('hb_ind1_sostre_fals', this.refs.contactDescripcio.value);
-        fd.append('hb_ind1_pintura', this.refs.contactDescripcio.value);
-         fd.append('hb_ind2_interruptors_endolls', this.refs.contactDescripcio.value);
-        fd.append('hb_ind2_tv', this.refs.contactDescripcio.value);
-        fd.append('hb_ind2_dades_internet', this.refs.contactDescripcio.value);
-        fd.append('hb_ind2_aire_condicionat', this.refs.contactDescripcio.value);
-        fd.append('hb_ind2_calefaccio', this.refs.contactDescripcio.value);
-        fd.append('hb_ind2_sostre_fals', this.refs.contactDescripcio.value);
-        fd.append('hb_ind2_pintura', this.refs.contactDescripcio.value);
-         fd.append('rebedor_interruptors_endolls', this.refs.contactDescripcio.value);
-        fd.append('rebedor_calefaccio', this.refs.contactDescripcio.value);
-        fd.append('rebedor_dades_internet', this.refs.contactDescripcio.value);
-        fd.append('rebedor_aire_condicionat', this.refs.contactDescripcio.value);
-        
-        axios.post('http://127.0.0.1:8000/api/send/budget', fd
-        ).then(res=>
-            {
-                console.log(res.data);
-                this.myFormRef.reset();
-                
-                //alertify.set('notifier','position', 'top-right');
-                //alertify.success('Current position : ' + alertify.get('notifier','position'));
-                
-                //alertify.set('notifier','delay', 10);
-                //alertify.set('notifier','position', 'top-right');
-                //alertify.success('Email enviat, ens posarem en contacte amb tu el més aviat possible!');
-            }
-        );
-        */
 
+        if (this.refs.bany1_aigua_q1.checked) {
+          fd.append('bany1_aigua', 'q1');
+        } else {
+          if (this.refs.bany1_aigua_q2.checked) {
+            fd.append('bany1_aigua', 'q2');
+          } else {
+            if (this.refs.bany1_aigua_q3.checked) {
+              fd.append('bany1_aigua', 'q3');
+            } else {
+              fd.append('bany1_aigua', '');
+            }
+          }
+        }
+
+        if (this.refs.bany1_moble_rentamans_q1.checked) {
+          fd.append('bany1_moble_rentamans', 'q1');
+        } else {
+          if (this.refs.bany1_moble_rentamans_q2.checked) {
+            fd.append('bany1_moble_rentamans', 'q2');
+          } else {
+            if (this.refs.bany1_moble_rentamans_q3.checked) {
+              fd.append('bany1_moble_rentamans', 'q3');
+            } else {
+              fd.append('bany1_moble_rentamans', '');
+            }
+          }
+        }
+
+        if (this.refs.bany1_rentamans_q1.checked) {
+          fd.append('bany1_rentamans', 'q1');
+        } else {
+          if (this.refs.bany1_rentamans_q2.checked) {
+            fd.append('bany1_rentamans', 'q2');
+          } else {
+            if (this.refs.bany1_rentamans_q3.checked) {
+              fd.append('bany1_rentamans', 'q3');
+            } else {
+              fd.append('bany1_rentamans', '');
+            }
+          }
+        }
+
+        if (this.refs.bany1_mirall_q1.checked) {
+          fd.append('bany1_mirall', 'q1');
+        } else {
+          if (this.refs.bany1_mirall_q2.checked) {
+            fd.append('bany1_mirall', 'q2');
+          } else {
+            if (this.refs.bany1_mirall_q3.checked) {
+              fd.append('bany1_mirall', 'q3');
+            } else {
+              fd.append('bany1_mirall', '');
+            }
+          }
+        }
+
+        if (this.refs.bany1_mampara_banyera_q1.checked) {
+          fd.append('bany1_mampara_banyera', 'q1');
+        } else {
+          if (this.refs.bany1_mampara_banyera_q2.checked) {
+            fd.append('bany1_mampara_banyera', 'q2');
+          } else {
+            if (this.refs.bany1_mampara_banyera_q3.checked) {
+              fd.append('bany1_mampara_banyera', 'q3');
+            } else {
+              fd.append('bany1_mampara_banyera', '');
+            }
+          }
+        }
+
+        if (this.refs.bany1_mampara_dutxa_q1.checked) {
+          fd.append('bany1_mampara_dutxa', 'q1');
+        } else {
+          if (this.refs.bany1_mampara_dutxa_q2.checked) {
+            fd.append('bany1_mampara_dutxa', 'q2');
+          } else {
+            if (this.refs.bany1_mampara_dutxa_q3.checked) {
+              fd.append('bany1_mampara_dutxa', 'q3');
+            } else {
+              fd.append('bany1_mampara_dutxa', '');
+            }
+          }
+        }
+
+        if (this.refs.bany1_aixeta_dutxa_q1.checked) {
+          fd.append('bany1_aixeta_dutxa', 'q1');
+        } else {
+          if (this.refs.bany1_aixeta_dutxa_q2.checked) {
+            fd.append('bany1_aixeta_dutxa', 'q2');
+          } else {
+            if (this.refs.bany1_aixeta_dutxa_q3.checked) {
+              fd.append('bany1_aixeta_dutxa', 'q3');
+            } else {
+              fd.append('bany1_aixeta_dutxa', '');
+            }
+          }
+        }
+
+        if (this.refs.bany1_aixeta_bany_q1.checked) {
+          fd.append('bany1_aixeta_bany', 'q1');
+        } else {
+          if (this.refs.bany1_aixeta_bany_q2.checked) {
+            fd.append('bany1_aixeta_bany', 'q2');
+          } else {
+            if (this.refs.bany1_aixeta_bany_q3.checked) {
+              fd.append('bany1_aixeta_bany', 'q3');
+            } else {
+              fd.append('bany1_aixeta_bany', '');
+            }
+          }
+        }
+
+        if (this.refs.bany1_accesoris_bany_q1.checked) {
+          fd.append('bany1_accesoris_bany', 'q1');
+        } else {
+          if (this.refs.bany1_accesoris_bany_q2.checked) {
+            fd.append('bany1_accesoris_bany', 'q2');
+          } else {
+            if (this.refs.bany1_accesoris_bany_q3.checked) {
+              fd.append('bany1_accesoris_bany', 'q3');
+            } else {
+              fd.append('bany1_accesoris_bany', '');
+            }
+          }
+        }
+
+        if (this.refs.bany1_tovalloler_q1.checked) {
+          fd.append('bany1_tovalloler', 'q1');
+        } else {
+          if (this.refs.bany1_tovalloler_q2.checked) {
+            fd.append('bany1_tovalloler', 'q2');
+          } else {
+            if (this.refs.bany1_tovalloler_q3.checked) {
+              fd.append('bany1_tovalloler', 'q3');
+            } else {
+              fd.append('bany1_tovalloler', '');
+            }
+          }
+        }
+
+        if (this.refs.bany1_wc_q1.checked) {
+          fd.append('bany1_wc', 'q1');
+        } else {
+          if (this.refs.bany1_wc_q2.checked) {
+            fd.append('bany1_wc', 'q2');
+          } else {
+            if (this.refs.bany1_wc_q3.checked) {
+              fd.append('bany1_wc', 'q3');
+            } else {
+              fd.append('bany1_wc', '');
+            }
+          }
+        }
+
+        if (this.refs.bany1_bidet_q1.checked) {
+          fd.append('bany1_bidet', 'q1');
+        } else {
+          if (this.refs.bany1_bidet_q2.checked) {
+            fd.append('bany1_bidet', 'q2');
+          } else {
+            if (this.refs.bany1_bidet_q3.checked) {
+              fd.append('bany1_bidet', 'q3');
+            } else {
+              fd.append('bany1_bidet', '');
+            }
+          }
+        }
+
+        if (this.refs.bany1_banyera_q1.checked) {
+          fd.append('bany1_banyera', 'q1');
+        } else {
+          if (this.refs.bany1_banyera_q2.checked) {
+            fd.append('bany1_banyera', 'q2');
+          } else {
+            if (this.refs.bany1_banyera_q3.checked) {
+              fd.append('bany1_banyera', 'q3');
+            } else {
+              fd.append('bany1_banyera', '');
+            }
+          }
+        }
+
+        if (this.refs.bany1_dutxa_q1.checked) {
+          fd.append('bany1_dutxa', 'q1');
+        } else {
+          if (this.refs.bany1_dutxa_q2.checked) {
+            fd.append('bany1_dutxa', 'q2');
+          } else {
+            if (this.refs.bany1_dutxa_q3.checked) {
+              fd.append('bany1_dutxa', 'q3');
+            } else {
+              fd.append('bany1_dutxa', '');
+            }
+          }
+        }
+
+        if (this.refs.bany1_sostre_pladur_q1.checked) {
+          fd.append('bany1_sostre_pladur', 'q1');
+        } else {
+          if (this.refs.bany1_sostre_pladur_q2.checked) {
+            fd.append('bany1_sostre_pladur', 'q2');
+          } else {
+            if (this.refs.bany1_sostre_pladur_q3.checked) {
+              fd.append('bany1_sostre_pladur', 'q3');
+            } else {
+              fd.append('bany1_sostre_pladur', '');
+            }
+          }
+        }
+
+        if (this.refs.bany1_sostres_alumini_q1.checked) {
+          fd.append('bany1_sostres_alumini', 'q1');
+        } else {
+          if (this.refs.bany1_sostres_alumini_q2.checked) {
+            fd.append('bany1_sostres_alumini', 'q2');
+          } else {
+            if (this.refs.bany1_sostres_alumini_q3.checked) {
+              fd.append('bany1_sostres_alumini', 'q3');
+            } else {
+              fd.append('bany1_sostres_alumini', '');
+            }
+          }
+        }
+
+        if (this.refs.bany1_alicatat_q1.checked) {
+          fd.append('bany1_alicatat', 'q1');
+        } else {
+          if (this.refs.bany1_alicatat_q2.checked) {
+            fd.append('bany1_alicatat', 'q2');
+          } else {
+            if (this.refs.bany1_alicatat_q3.checked) {
+              fd.append('bany1_alicatat', 'q3');
+            } else {
+              fd.append('bany1_alicatat', '');
+            }
+          }
+        }
+
+        if (this.refs.bany1_pintura_q1.checked) {
+          fd.append('bany1_pintura', 'q1');
+        } else {
+          if (this.refs.bany1_pintura_q2.checked) {
+            fd.append('bany1_pintura', 'q2');
+          } else {
+            if (this.refs.bany1_pintura_q3.checked) {
+              fd.append('bany1_pintura', 'q3');
+            } else {
+              fd.append('bany1_pintura', '');
+            }
+          }
+        } // Comprovacions salo
+
+
+        if (this.refs.salo_interruptors_endolls_q1.checked) {
+          fd.append('salo_interruptors_endolls', 'q1');
+        } else {
+          if (this.refs.salo_interruptors_endolls_q2.checked) {
+            fd.append('salo_interruptors_endolls', 'q2');
+          } else {
+            if (this.refs.salo_interruptors_endolls_q3.checked) {
+              fd.append('salo_interruptors_endolls', 'q3');
+            } else {
+              fd.append('salo_interruptors_endolls', '');
+            }
+          }
+        }
+
+        if (this.refs.salo_tv_q1.checked) {
+          fd.append('salo_tv', 'q1');
+        } else {
+          if (this.refs.salo_tv_q2.checked) {
+            fd.append('salo_tv', 'q2');
+          } else {
+            if (this.refs.salo_tv_q3.checked) {
+              fd.append('salo_tv', 'q3');
+            } else {
+              fd.append('salo_tv', '');
+            }
+          }
+        }
+
+        if (this.refs.salo_dades_internet_q1.checked) {
+          fd.append('salo_dades_internet', 'q1');
+        } else {
+          if (this.refs.salo_dades_internet_q2.checked) {
+            fd.append('salo_dades_internet', 'q2');
+          } else {
+            if (this.refs.salo_dades_internet_q3.checked) {
+              fd.append('salo_dades_internet', 'q3');
+            } else {
+              fd.append('salo_dades_internet', '');
+            }
+          }
+        }
+
+        if (this.refs.salo_aire_condicionat_q1.checked) {
+          fd.append('salo_aire_condicionat', 'q1');
+        } else {
+          if (this.refs.salo_aire_condicionat_q2.checked) {
+            fd.append('salo_aire_condicionat', 'q2');
+          } else {
+            if (this.refs.salo_aire_condicionat_q3.checked) {
+              fd.append('salo_aire_condicionat', 'q3');
+            } else {
+              fd.append('salo_aire_condicionat', '');
+            }
+          }
+        }
+
+        if (this.refs.salo_calefaccio_q1.checked) {
+          fd.append('salo_calefaccio', 'q1');
+        } else {
+          if (this.refs.salo_calefaccio_q2.checked) {
+            fd.append('salo_calefaccio', 'q2');
+          } else {
+            if (this.refs.salo_calefaccio_q3.checked) {
+              fd.append('salo_calefaccio', 'q3');
+            } else {
+              fd.append('salo_calefaccio', '');
+            }
+          }
+        }
+
+        if (this.refs.salo_sostre_fals_q1.checked) {
+          fd.append('salo_sostre_fals', 'q1');
+        } else {
+          if (this.refs.salo_sostre_fals_q2.checked) {
+            fd.append('salo_sostre_fals', 'q2');
+          } else {
+            if (this.refs.salo_sostre_fals_q3.checked) {
+              fd.append('salo_sostre_fals', 'q3');
+            } else {
+              fd.append('salo_sostre_fals', '');
+            }
+          }
+        }
+
+        if (this.refs.salo_pintura_q1.checked) {
+          fd.append('salo_pintura', 'q1');
+        } else {
+          if (this.refs.salo_pintura_q2.checked) {
+            fd.append('salo_pintura', 'q2');
+          } else {
+            if (this.refs.salo_pintura_q3.checked) {
+              fd.append('salo_pintura', 'q3');
+            } else {
+              fd.append('salo_pintura', '');
+            }
+          }
+        } // Comprovacions habitació matrimoni 1
+
+
+        if (this.refs.hb_mat1_interruptors_endolls_q1.checked) {
+          fd.append('hb_mat1_interruptors_endolls', 'q1');
+        } else {
+          if (this.refs.hb_mat1_interruptors_endolls_q2.checked) {
+            fd.append('hb_mat1_interruptors_endolls', 'q2');
+          } else {
+            if (this.refs.hb_mat1_interruptors_endolls_q3.checked) {
+              fd.append('hb_mat1_interruptors_endolls', 'q3');
+            } else {
+              fd.append('hb_mat1_interruptors_endolls', '');
+            }
+          }
+        }
+
+        if (this.refs.hb_mat1_tv_q1.checked) {
+          fd.append('hb_mat1_tv', 'q1');
+        } else {
+          if (this.refs.hb_mat1_tv_q2.checked) {
+            fd.append('hb_mat1_tv', 'q2');
+          } else {
+            if (this.refs.hb_mat1_tv_q3.checked) {
+              fd.append('hb_mat1_tv', 'q3');
+            } else {
+              fd.append('hb_mat1_tv', '');
+            }
+          }
+        }
+
+        if (this.refs.hb_mat1_dades_internet_q1.checked) {
+          fd.append('hb_mat1_dades_internet', 'q1');
+        } else {
+          if (this.refs.hb_mat1_dades_internet_q2.checked) {
+            fd.append('hb_mat1_dades_internet', 'q2');
+          } else {
+            if (this.refs.hb_mat1_dades_internet_q3.checked) {
+              fd.append('hb_mat1_dades_internet', 'q3');
+            } else {
+              fd.append('hb_mat1_dades_internet', '');
+            }
+          }
+        }
+
+        if (this.refs.hb_mat1_aire_condicionat_q1.checked) {
+          fd.append('hb_mat1_aire_condicionat', 'q1');
+        } else {
+          if (this.refs.hb_mat1_aire_condicionat_q2.checked) {
+            fd.append('hb_mat1_aire_condicionat', 'q2');
+          } else {
+            if (this.refs.hb_mat1_aire_condicionat_q3.checked) {
+              fd.append('hb_mat1_aire_condicionat', 'q3');
+            } else {
+              fd.append('hb_mat1_aire_condicionat', '');
+            }
+          }
+        }
+
+        if (this.refs.hb_mat1_calefaccio_q1.checked) {
+          fd.append('hb_mat1_calefaccio', 'q1');
+        } else {
+          if (this.refs.hb_mat1_calefaccio_q2.checked) {
+            fd.append('hb_mat1_calefaccio', 'q2');
+          } else {
+            if (this.refs.hb_mat1_calefaccio_q3.checked) {
+              fd.append('hb_mat1_calefaccio', 'q3');
+            } else {
+              fd.append('hb_mat1_calefaccio', '');
+            }
+          }
+        }
+
+        if (this.refs.hb_mat1_sostre_fals_q1.checked) {
+          fd.append('hb_mat1_sostre_fals', 'q1');
+        } else {
+          if (this.refs.hb_mat1_sostre_fals_q2.checked) {
+            fd.append('hb_mat1_sostre_fals', 'q2');
+          } else {
+            if (this.refs.hb_mat1_sostre_fals_q3.checked) {
+              fd.append('hb_mat1_sostre_fals', 'q3');
+            } else {
+              fd.append('hb_mat1_sostre_fals', '');
+            }
+          }
+        }
+
+        if (this.refs.hb_mat1_pintura_q1.checked) {
+          fd.append('hb_mat1_pintura', 'q1');
+        } else {
+          if (this.refs.hb_mat1_pintura_q2.checked) {
+            fd.append('hb_mat1_pintura', 'q2');
+          } else {
+            if (this.refs.hb_mat1_pintura_q3.checked) {
+              fd.append('hb_mat1_pintura', 'q3');
+            } else {
+              fd.append('hb_mat1_pintura', '');
+            }
+          }
+        } // Comprovacions habitació individual 1
+
+
+        if (this.refs.hb_ind1_interruptors_endolls_q1.checked) {
+          fd.append('hb_ind1_interruptors_endolls', 'q1');
+        } else {
+          if (this.refs.hb_ind1_interruptors_endolls_q2.checked) {
+            fd.append('hb_ind1_interruptors_endolls', 'q2');
+          } else {
+            if (this.refs.hb_ind1_interruptors_endolls_q3.checked) {
+              fd.append('hb_ind1_interruptors_endolls', 'q3');
+            } else {
+              fd.append('hb_ind1_interruptors_endolls', '');
+            }
+          }
+        }
+
+        if (this.refs.hb_ind1_tv_q1.checked) {
+          fd.append('hb_ind1_tv', 'q1');
+        } else {
+          if (this.refs.hb_ind1_tv_q2.checked) {
+            fd.append('hb_ind1_tv', 'q2');
+          } else {
+            if (this.refs.hb_ind1_tv_q3.checked) {
+              fd.append('hb_ind1_tv', 'q3');
+            } else {
+              fd.append('hb_ind1_tv', '');
+            }
+          }
+        }
+
+        if (this.refs.hb_ind1_dades_internet_q1.checked) {
+          fd.append('hb_ind1_dades_internet', 'q1');
+        } else {
+          if (this.refs.hb_ind1_dades_internet_q2.checked) {
+            fd.append('hb_ind1_dades_internet', 'q2');
+          } else {
+            if (this.refs.hb_ind1_dades_internet_q3.checked) {
+              fd.append('hb_ind1_dades_internet', 'q3');
+            } else {
+              fd.append('hb_ind1_dades_internet', '');
+            }
+          }
+        }
+
+        if (this.refs.hb_ind1_aire_condicionat_q1.checked) {
+          fd.append('hb_ind1_aire_condicionat', 'q1');
+        } else {
+          if (this.refs.hb_ind1_aire_condicionat_q2.checked) {
+            fd.append('hb_ind1_aire_condicionat', 'q2');
+          } else {
+            if (this.refs.hb_ind1_aire_condicionat_q3.checked) {
+              fd.append('hb_ind1_aire_condicionat', 'q3');
+            } else {
+              fd.append('hb_ind1_aire_condicionat', '');
+            }
+          }
+        }
+
+        if (this.refs.hb_ind1_calefaccio_q1.checked) {
+          fd.append('hb_ind1_calefaccio', 'q1');
+        } else {
+          if (this.refs.hb_ind1_calefaccio_q2.checked) {
+            fd.append('hb_ind1_calefaccio', 'q2');
+          } else {
+            if (this.refs.hb_ind1_calefaccio_q3.checked) {
+              fd.append('hb_ind1_calefaccio', 'q3');
+            } else {
+              fd.append('hb_ind1_calefaccio', '');
+            }
+          }
+        }
+
+        if (this.refs.hb_ind1_sostre_fals_q1.checked) {
+          fd.append('hb_ind1_sostre_fals', 'q1');
+        } else {
+          if (this.refs.hb_ind1_sostre_fals_q2.checked) {
+            fd.append('hb_ind1_sostre_fals', 'q2');
+          } else {
+            if (this.refs.hb_ind1_sostre_fals_q3.checked) {
+              fd.append('hb_ind1_sostre_fals', 'q3');
+            } else {
+              fd.append('hb_ind1_sostre_fals', '');
+            }
+          }
+        }
+
+        if (this.refs.hb_ind1_pintura_q1.checked) {
+          fd.append('hb_ind1_pintura', 'q1');
+        } else {
+          if (this.refs.hb_ind1_pintura_q2.checked) {
+            fd.append('hb_ind1_pintura', 'q2');
+          } else {
+            if (this.refs.hb_ind1_pintura_q3.checked) {
+              fd.append('hb_ind1_pintura', 'q3');
+            } else {
+              fd.append('hb_ind1_pintura', '');
+            }
+          }
+        } // Comprovacions habitació individual 2
+
+
+        if (this.refs.hb_ind2_interruptors_endolls_q1.checked) {
+          fd.append('hb_ind2_interruptors_endolls', 'q1');
+        } else {
+          if (this.refs.hb_ind2_interruptors_endolls_q2.checked) {
+            fd.append('hb_ind2_interruptors_endolls', 'q2');
+          } else {
+            if (this.refs.hb_ind2_interruptors_endolls_q3.checked) {
+              fd.append('hb_ind2_interruptors_endolls', 'q3');
+            } else {
+              fd.append('hb_ind2_interruptors_endolls', '');
+            }
+          }
+        }
+
+        if (this.refs.hb_ind2_tv_q1.checked) {
+          fd.append('hb_ind2_tv', 'q1');
+        } else {
+          if (this.refs.hb_ind2_tv_q2.checked) {
+            fd.append('hb_ind2_tv', 'q2');
+          } else {
+            if (this.refs.hb_ind2_tv_q3.checked) {
+              fd.append('hb_ind2_tv', 'q3');
+            } else {
+              fd.append('hb_ind2_tv', '');
+            }
+          }
+        }
+
+        if (this.refs.hb_ind2_dades_internet_q1.checked) {
+          fd.append('hb_ind2_dades_internet', 'q1');
+        } else {
+          if (this.refs.hb_ind2_dades_internet_q2.checked) {
+            fd.append('hb_ind2_dades_internet', 'q2');
+          } else {
+            if (this.refs.hb_ind2_dades_internet_q3.checked) {
+              fd.append('hb_ind2_dades_internet', 'q3');
+            } else {
+              fd.append('hb_ind2_dades_internet', '');
+            }
+          }
+        }
+
+        if (this.refs.hb_ind2_aire_condicionat_q1.checked) {
+          fd.append('hb_ind2_aire_condicionat', 'q1');
+        } else {
+          if (this.refs.hb_ind2_aire_condicionat_q2.checked) {
+            fd.append('hb_ind2_aire_condicionat', 'q2');
+          } else {
+            if (this.refs.hb_ind2_aire_condicionat_q3.checked) {
+              fd.append('hb_ind2_aire_condicionat', 'q3');
+            } else {
+              fd.append('hb_ind2_aire_condicionat', '');
+            }
+          }
+        }
+
+        if (this.refs.hb_ind2_calefaccio_q1.checked) {
+          fd.append('hb_ind2_calefaccio', 'q1');
+        } else {
+          if (this.refs.hb_ind2_calefaccio_q2.checked) {
+            fd.append('hb_ind2_calefaccio', 'q2');
+          } else {
+            if (this.refs.hb_ind2_calefaccio_q3.checked) {
+              fd.append('hb_ind2_calefaccio', 'q3');
+            } else {
+              fd.append('hb_ind2_calefaccio', '');
+            }
+          }
+        }
+
+        if (this.refs.hb_ind2_sostre_fals_q1.checked) {
+          fd.append('hb_ind2_sostre_fals', 'q1');
+        } else {
+          if (this.refs.hb_ind2_sostre_fals_q2.checked) {
+            fd.append('hb_ind2_sostre_fals', 'q2');
+          } else {
+            if (this.refs.hb_ind2_sostre_fals_q3.checked) {
+              fd.append('hb_ind2_sostre_fals', 'q3');
+            } else {
+              fd.append('hb_ind2_sostre_fals', '');
+            }
+          }
+        }
+
+        if (this.refs.hb_ind2_pintura_q1.checked) {
+          fd.append('hb_ind2_pintura', 'q1');
+        } else {
+          if (this.refs.hb_ind2_pintura_q2.checked) {
+            fd.append('hb_ind2_pintura', 'q2');
+          } else {
+            if (this.refs.hb_ind2_pintura_q3.checked) {
+              fd.append('hb_ind2_pintura', 'q3');
+            } else {
+              fd.append('hb_ind2_pintura', '');
+            }
+          }
+        } // Comprovacions rebedor/passadis
+
+
+        if (this.refs.rebedor_interruptors_endolls_q1.checked) {
+          fd.append('rebedor_interruptors_endolls', 'q1');
+        } else {
+          if (this.refs.rebedor_interruptors_endolls_q2.checked) {
+            fd.append('rebedor_interruptors_endolls', 'q2');
+          } else {
+            if (this.refs.rebedor_interruptors_endolls_q3.checked) {
+              fd.append('rebedor_interruptors_endolls', 'q3');
+            } else {
+              fd.append('rebedor_interruptors_endolls', '');
+            }
+          }
+        }
+
+        if (this.refs.rebedor_calefaccio_q1.checked) {
+          fd.append('rebedor_calefaccio', 'q1');
+        } else {
+          if (this.refs.rebedor_calefaccio_q2.checked) {
+            fd.append('rebedor_calefaccio', 'q2');
+          } else {
+            if (this.refs.rebedor_calefaccio_q3.checked) {
+              fd.append('rebedor_calefaccio', 'q3');
+            } else {
+              fd.append('rebedor_calefaccio', '');
+            }
+          }
+        }
+
+        if (this.refs.rebedor_sostre_fals_q1.checked) {
+          fd.append('rebedor_sostre_fals', 'q1');
+        } else {
+          if (this.refs.rebedor_sostre_fals_q2.checked) {
+            fd.append('rebedor_sostre_fals', 'q2');
+          } else {
+            if (this.refs.rebedor_sostre_fals_q3.checked) {
+              fd.append('rebedor_sostre_fals', 'q3');
+            } else {
+              fd.append('rebedor_sostre_fals', '');
+            }
+          }
+        }
+
+        if (this.refs.rebedor_pintura_q1.checked) {
+          fd.append('rebedor_pintura', 'q1');
+        } else {
+          if (this.refs.rebedor_pintura_q2.checked) {
+            fd.append('rebedor_pintura', 'q2');
+          } else {
+            if (this.refs.rebedor_pintura_q3.checked) {
+              fd.append('rebedor_pintura', 'q3');
+            } else {
+              fd.append('rebedor_pintura', '');
+            }
+          }
+        }
+
+        axios__WEBPACK_IMPORTED_MODULE_3___default.a.post('http://127.0.0.1:8000/api/send/budget', fd).then(function (res) {
+          console.log(res.data);
+
+          _this2.myFormRef.reset(); //alertify.set('notifier','position', 'top-right');
+          //alertify.success('Current position : ' + alertify.get('notifier','position'));
+          //alertify.set('notifier','delay', 10);
+          //alertify.set('notifier','position', 'top-right');
+          //alertify.success('Email enviat, ens posarem en contacte amb tu el més aviat possible!');
+
+        });
         /*
         .then(res=>
         {
@@ -90264,7 +90914,6 @@ var Pressupost = /*#__PURE__*/function (_React$Component) {
         
         }
         );*/
-
       }
     }
   }, {
@@ -90286,7 +90935,7 @@ var Pressupost = /*#__PURE__*/function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
-      var _this2 = this;
+      var _this3 = this;
 
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_header_Header__WEBPACK_IMPORTED_MODULE_2__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "headerMargin"
@@ -90300,13 +90949,13 @@ var Pressupost = /*#__PURE__*/function (_React$Component) {
         className: "switchButtons vivenda",
         align: "center",
         onClick: function onClick() {
-          return _this2.formButton("vivenda");
+          return _this3.formButton("vivenda");
         }
       }, "Vivenda"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
         className: "switchButtons barRestaurant",
         align: "center",
         onClick: function onClick() {
-          return _this2.formButton("barRestaurant");
+          return _this3.formButton("barRestaurant");
         }
       }, "Local Comercial")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "notificationContainer"
@@ -90324,7 +90973,7 @@ var Pressupost = /*#__PURE__*/function (_React$Component) {
         id: "pressupostForm"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
         ref: function ref(el) {
-          return _this2.myFormRef = el;
+          return _this3.myFormRef = el;
         }
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         id: "accordion"
@@ -91076,107 +91725,107 @@ var Pressupost = /*#__PURE__*/function (_React$Component) {
         type: "radio",
         name: "hb_mat1_group1",
         value: "210",
-        ref: "hb_mat_interruptors_endolls_q1"
+        ref: "hb_mat1_interruptors_endolls_q1"
       })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         type: "radio",
         name: "hb_mat1_group1",
         value: "315",
-        ref: "hb_mat_interruptors_endolls_q2"
+        ref: "hb_mat1_interruptors_endolls_q2"
       })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         type: "radio",
         name: "hb_mat1_group1",
         value: "280",
-        ref: "hb_mat_interruptors_endolls_q3"
+        ref: "hb_mat1_interruptors_endolls_q3"
       }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "TV"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         type: "radio",
         name: "hb_mat1_group2",
         value: "30",
-        ref: "hb_mat_tv_q1"
+        ref: "hb_mat1_tv_q1"
       })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         type: "radio",
         name: "hb_mat1_group2",
         value: "45",
-        ref: "hb_mat_tv_q2"
+        ref: "hb_mat1_tv_q2"
       })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         type: "radio",
         name: "hb_mat1_group2",
         value: "50",
-        ref: "hb_mat_tv_q3"
+        ref: "hb_mat1_tv_q3"
       }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Dades ordinador"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         type: "radio",
         name: "hb_mat1_group3",
         value: "40",
-        ref: "hb_mat_dades_internet_q1"
+        ref: "hb_mat1_dades_internet_q1"
       })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         type: "radio",
         name: "hb_mat1_group3",
         value: "45",
-        ref: "hb_mat_dades_internet_q2"
+        ref: "hb_mat1_dades_internet_q2"
       })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         type: "radio",
         name: "hb_mat1_group3",
         value: "50",
-        ref: "hb_mat_dades_internet_q3"
+        ref: "hb_mat1_dades_internet_q3"
       }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Aire Condicionat"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         type: "radio",
         name: "hb_mat1_group4",
         value: "1100",
-        ref: "hb_mat_aire_condicionat_q1"
+        ref: "hb_mat1_aire_condicionat_q1"
       })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         type: "radio",
         name: "hb_mat1_group4",
         value: "1200",
-        ref: "hb_mat_aire_condicionat_q2"
+        ref: "hb_mat1_aire_condicionat_q2"
       })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         type: "radio",
         name: "hb_mat1_group4",
         value: "1300",
-        ref: "hb_mat_aire_condicionat_q3"
+        ref: "hb_mat1_aire_condicionat_q3"
       }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Calefacci\xF3"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         type: "radio",
         name: "hb_mat1_group5",
         value: "180",
-        ref: "hb_mat_calefaccio_q1"
+        ref: "hb_mat1_calefaccio_q1"
       })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         type: "radio",
         name: "hb_mat1_group5",
         value: "220",
-        ref: "hb_mat_calefaccio_q2"
+        ref: "hb_mat1_calefaccio_q2"
       })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         type: "radio",
         name: "hb_mat1_group5",
         value: "240",
-        ref: "hb_mat_calefaccio_q3"
+        ref: "hb_mat1_calefaccio_q3"
       }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Sostre fals"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         type: "radio",
         name: "hb_mat1_group6",
         value: "225",
-        ref: "hb_mat_sostre_fals_q1"
+        ref: "hb_mat1_sostre_fals_q1"
       })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         type: "radio",
         name: "hb_mat1_group6",
         value: "315",
-        ref: "hb_mat_sostre_fals_q2"
+        ref: "hb_mat1_sostre_fals_q2"
       })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         type: "radio",
         name: "hb_mat1_group6",
         value: "405",
-        ref: "hb_mat_sostre_fals_q3"
+        ref: "hb_mat1_sostre_fals_q3"
       }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Pintura"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         type: "radio",
         name: "hb_mat1_group7",
         value: "750",
-        ref: "hb_mat_pintura_q1"
+        ref: "hb_mat1_pintura_q1"
       })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         type: "radio",
         name: "hb_mat1_group7",
         value: "850",
-        ref: "hb_mat_pintura_q2"
+        ref: "hb_mat1_pintura_q2"
       })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         type: "radio",
         name: "hb_mat1_group7",
         value: "950",
-        ref: "hb_mat_pintura_q3"
+        ref: "hb_mat1_pintura_q3"
       }))))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "card"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -91482,32 +92131,32 @@ var Pressupost = /*#__PURE__*/function (_React$Component) {
         ref: "rebedor_calefaccio_q3"
       }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Sostre fals"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         type: "radio",
-        name: "Interruptors i endolls_group3",
+        name: "rebedor_group3",
         value: "150",
         ref: "rebedor_sostre_fals_q1"
       })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         type: "radio",
-        name: "Interruptors i endolls_group3",
+        name: "rebedor_group3",
         value: "210",
         ref: "rebedor_sostre_fals_q2"
       })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         type: "radio",
-        name: "Interruptors i endolls_group3",
+        name: "rebedor_group3",
         value: "270",
         ref: "rebedor_sostre_fals_q3"
       }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Pintura"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         type: "radio",
-        name: "Interruptors i endolls_group4",
+        name: "rebedor_group4",
         value: "600",
         ref: "rebedor_pintura_q1"
       })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         type: "radio",
-        name: "Interruptors i endolls_group4",
+        name: "rebedor_group4",
         value: "700",
         ref: "rebedor_pintura_q2"
       })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         type: "radio",
-        name: "Interruptors i endolls_group4",
+        name: "rebedor_group4",
         value: "850",
         ref: "rebedor_pintura_q3"
       })))))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -91640,6 +92289,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var react_google_maps__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-google-maps */ "./node_modules/react-google-maps/lib/index.js");
 /* harmony import */ var react_google_maps__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react_google_maps__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _Credentials__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./Credentials */ "./resources/js/views/contact/Credentials.js");
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -91665,7 +92315,7 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
 
 
 
- //import Mapa from './Map';
+
 
  //import './header.css';
 
@@ -91683,6 +92333,7 @@ var MapWithAMarker = Object(react_google_maps__WEBPACK_IMPORTED_MODULE_4__["with
     }
   }));
 }));
+var mapURL = "https://maps.googleapis.com/maps/api/js?key=".concat(_Credentials__WEBPACK_IMPORTED_MODULE_5__["default"].mapsKey, "&v=3.exp&libraries=geometry,drawing,places");
 
 var Contacte = /*#__PURE__*/function (_React$Component) {
   _inherits(Contacte, _React$Component);
@@ -91821,7 +92472,7 @@ var Contacte = /*#__PURE__*/function (_React$Component) {
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "col-7"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Telf: 659 51 41 70"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Contacte: info@rgil.es"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Segle XX 62, Local 2, 08041, Barcelona"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(MapWithAMarker, {
-        googleMapURL: "https://maps.googleapis.com/maps/api/js?key=AIzaSyAknT672-td-7TgMvJcY8zHSpYoZzs8JC0&v=3.exp&libraries=geometry,drawing,places",
+        googleMapURL: mapURL,
         containerElement: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
           style: {
             height: '400px'
@@ -91908,6 +92559,21 @@ var Contacte = /*#__PURE__*/function (_React$Component) {
 }(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
 
 /* harmony default export */ __webpack_exports__["default"] = (Contacte);
+
+/***/ }),
+
+/***/ "./resources/js/views/contact/Credentials.js":
+/*!***************************************************!*\
+  !*** ./resources/js/views/contact/Credentials.js ***!
+  \***************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ({
+  mapsKey: 'AIzaSyAknT672-td-7TgMvJcY8zHSpYoZzs8JC0'
+});
 
 /***/ }),
 
@@ -92450,8 +93116,8 @@ function Obres(_ref) {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\Users\Marc\Desktop\JMA Web 20-03\jmargiles\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! C:\Users\Marc\Desktop\JMA Web 20-03\jmargiles\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! C:\Users\Marc\Desktop\JMA\jmargiles\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! C:\Users\Marc\Desktop\JMA\jmargiles\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })

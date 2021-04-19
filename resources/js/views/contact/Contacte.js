@@ -2,8 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Header from '../../components/header/Header';
 import axios from 'axios';
-//import Mapa from './Map';
 import { GoogleMap, withScriptjs, withGoogleMap, Marker } from 'react-google-maps';
+import credentials from './Credentials';
 
 //import './header.css';
 
@@ -17,6 +17,8 @@ const MapWithAMarker = withScriptjs(withGoogleMap(props =>
         />
     </GoogleMap>
 ));
+
+const mapURL = `https://maps.googleapis.com/maps/api/js?key=${credentials.mapsKey}&v=3.exp&libraries=geometry,drawing,places`;
 
 class Contacte extends React.Component {
 
@@ -150,7 +152,7 @@ class Contacte extends React.Component {
                                     <p>Segle XX 62, Local 2, 08041, Barcelona</p>
 
                                     <MapWithAMarker 
-                                        googleMapURL = "https://maps.googleapis.com/maps/api/js?key=AIzaSyAknT672-td-7TgMvJcY8zHSpYoZzs8JC0&v=3.exp&libraries=geometry,drawing,places"
+                                        googleMapURL = {mapURL}
                                         containerElement = {<div style={{ height: '400px' }} />}
                                         mapElement = {<div style={{ height: '100%' }} />}
                                         loadingElement = {<p>Cargant</p>}

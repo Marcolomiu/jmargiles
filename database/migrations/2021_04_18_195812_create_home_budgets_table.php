@@ -13,8 +13,12 @@ class CreateHomeBudgetsTable extends Migration
      */
     public function up()
     {
-        Schema::create('home_budgets', function (Blueprint $table) {
+        Schema::create('vivenda', function (Blueprint $table) {
             $table->id();
+            $table->string('nom');
+            $table->string('telefon');
+            $table->string('email');
+            $table->string('descripcio');
             $table->timestamps();
         });
     }

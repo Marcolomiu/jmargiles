@@ -1184,11 +1184,11 @@ class Pressupost extends React.Component {
                 }
             }
 
-            if (this.refs.rebedor_calefaccio_endolls_q1.checked) {
-                fd.append('rebedor_calefaccio_endolls', 'q1');
+            if (this.refs.rebedor_calefaccio_q1.checked) {
+                fd.append('rebedor_calefaccio', 'q1');
             } else {
                 if (this.refs.rebedor_calefaccio_q2.checked) {
-                    fd.append('rebedor_calefaccio_endolls', 'q2');
+                    fd.append('rebedor_calefaccio', 'q2');
                 } else {
                     if (this.refs.rebedor_calefaccio_q3.checked) {
                         fd.append('rebedor_calefaccio', 'q3');
@@ -1226,12 +1226,6 @@ class Pressupost extends React.Component {
                 }
             }
 
-            /*
-            fd.append('rebedor_interruptors_endolls', this.refs.contactDescripcio.value);
-            fd.append('rebedor_calefaccio', this.refs.contactDescripcio.value);
-            fd.append('rebedor_sostre_fals', this.refs.contactDescripcio.value);
-            fd.append('rebedor_pintura', this.refs.contactDescripcio.value);
-            
             axios.post('http://127.0.0.1:8000/api/send/budget', fd
             ).then(res=>
                 {
@@ -1246,7 +1240,7 @@ class Pressupost extends React.Component {
                     //alertify.success('Email enviat, ens posarem en contacte amb tu el més aviat possible!');
                 }
             );
-            */
+
             /*
             .then(res=>
             {
@@ -1718,51 +1712,51 @@ class Pressupost extends React.Component {
 
                                                         <tr>
                                                             <th>Interruptors i endolls</th>
-                                                            <td><input type="radio" name="hb_mat1_group1" value="210" ref="hb_mat_interruptors_endolls_q1"/></td>
-                                                            <td><input type="radio" name="hb_mat1_group1" value="315" ref="hb_mat_interruptors_endolls_q2"/></td>
-                                                            <td><input type="radio" name="hb_mat1_group1" value="280" ref="hb_mat_interruptors_endolls_q3"/></td>
+                                                            <td><input type="radio" name="hb_mat1_group1" value="210" ref="hb_mat1_interruptors_endolls_q1"/></td>
+                                                            <td><input type="radio" name="hb_mat1_group1" value="315" ref="hb_mat1_interruptors_endolls_q2"/></td>
+                                                            <td><input type="radio" name="hb_mat1_group1" value="280" ref="hb_mat1_interruptors_endolls_q3"/></td>
                                                         </tr>
 
                                                         <tr>
                                                             <th>TV</th>
-                                                            <td><input type="radio" name="hb_mat1_group2" value="30" ref="hb_mat_tv_q1"/></td>
-                                                            <td><input type="radio" name="hb_mat1_group2" value="45" ref="hb_mat_tv_q2"/></td>
-                                                            <td><input type="radio" name="hb_mat1_group2" value="50" ref="hb_mat_tv_q3"/></td>
+                                                            <td><input type="radio" name="hb_mat1_group2" value="30" ref="hb_mat1_tv_q1"/></td>
+                                                            <td><input type="radio" name="hb_mat1_group2" value="45" ref="hb_mat1_tv_q2"/></td>
+                                                            <td><input type="radio" name="hb_mat1_group2" value="50" ref="hb_mat1_tv_q3"/></td>
                                                         </tr>
 
                                                         <tr>
                                                             <th>Dades ordinador</th>
-                                                            <td><input type="radio" name="hb_mat1_group3" value="40" ref="hb_mat_dades_internet_q1"/></td>
-                                                            <td><input type="radio" name="hb_mat1_group3" value="45" ref="hb_mat_dades_internet_q2"/></td>
-                                                            <td><input type="radio" name="hb_mat1_group3" value="50" ref="hb_mat_dades_internet_q3"/></td>
+                                                            <td><input type="radio" name="hb_mat1_group3" value="40" ref="hb_mat1_dades_internet_q1"/></td>
+                                                            <td><input type="radio" name="hb_mat1_group3" value="45" ref="hb_mat1_dades_internet_q2"/></td>
+                                                            <td><input type="radio" name="hb_mat1_group3" value="50" ref="hb_mat1_dades_internet_q3"/></td>
                                                         </tr>
 
                                                         <tr>
                                                             <th>Aire Condicionat</th>
-                                                            <td><input type="radio" name="hb_mat1_group4" value="1100" ref="hb_mat_aire_condicionat_q1"/></td>
-                                                            <td><input type="radio" name="hb_mat1_group4" value="1200" ref="hb_mat_aire_condicionat_q2"/></td>
-                                                            <td><input type="radio" name="hb_mat1_group4" value="1300" ref="hb_mat_aire_condicionat_q3"/></td>
+                                                            <td><input type="radio" name="hb_mat1_group4" value="1100" ref="hb_mat1_aire_condicionat_q1"/></td>
+                                                            <td><input type="radio" name="hb_mat1_group4" value="1200" ref="hb_mat1_aire_condicionat_q2"/></td>
+                                                            <td><input type="radio" name="hb_mat1_group4" value="1300" ref="hb_mat1_aire_condicionat_q3"/></td>
                                                         </tr>
 
                                                         <tr>
                                                             <th>Calefacció</th>
-                                                            <td><input type="radio" name="hb_mat1_group5" value="180" ref="hb_mat_calefaccio_q1"/></td>
-                                                            <td><input type="radio" name="hb_mat1_group5" value="220" ref="hb_mat_calefaccio_q2"/></td>
-                                                            <td><input type="radio" name="hb_mat1_group5" value="240" ref="hb_mat_calefaccio_q3"/></td>
+                                                            <td><input type="radio" name="hb_mat1_group5" value="180" ref="hb_mat1_calefaccio_q1"/></td>
+                                                            <td><input type="radio" name="hb_mat1_group5" value="220" ref="hb_mat1_calefaccio_q2"/></td>
+                                                            <td><input type="radio" name="hb_mat1_group5" value="240" ref="hb_mat1_calefaccio_q3"/></td>
                                                         </tr>
 
                                                         <tr>
                                                             <th>Sostre fals</th>
-                                                            <td><input type="radio" name="hb_mat1_group6" value="225" ref="hb_mat_sostre_fals_q1"/></td>
-                                                            <td><input type="radio" name="hb_mat1_group6" value="315" ref="hb_mat_sostre_fals_q2"/></td>
-                                                            <td><input type="radio" name="hb_mat1_group6" value="405" ref="hb_mat_sostre_fals_q3"/></td>
+                                                            <td><input type="radio" name="hb_mat1_group6" value="225" ref="hb_mat1_sostre_fals_q1"/></td>
+                                                            <td><input type="radio" name="hb_mat1_group6" value="315" ref="hb_mat1_sostre_fals_q2"/></td>
+                                                            <td><input type="radio" name="hb_mat1_group6" value="405" ref="hb_mat1_sostre_fals_q3"/></td>
                                                         </tr>
 
                                                         <tr>
                                                             <th>Pintura</th>
-                                                            <td><input type="radio" name="hb_mat1_group7" value="750" ref="hb_mat_pintura_q1"/></td>
-                                                            <td><input type="radio" name="hb_mat1_group7" value="850" ref="hb_mat_pintura_q2"/></td>
-                                                            <td><input type="radio" name="hb_mat1_group7" value="950" ref="hb_mat_pintura_q3"/></td>
+                                                            <td><input type="radio" name="hb_mat1_group7" value="750" ref="hb_mat1_pintura_q1"/></td>
+                                                            <td><input type="radio" name="hb_mat1_group7" value="850" ref="hb_mat1_pintura_q2"/></td>
+                                                            <td><input type="radio" name="hb_mat1_group7" value="950" ref="hb_mat1_pintura_q3"/></td>
                                                         </tr>
                                                     </tbody>
                                                 </table>
