@@ -46,7 +46,6 @@ class HomeBudgetController extends Controller
 
     public function mail(Request $request)
     {
-
         $data = [
                 'Nom'  => $request->input('nom'),
                 'Telf' => $request->input('telf'),
