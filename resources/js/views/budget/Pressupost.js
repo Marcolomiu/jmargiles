@@ -2,9 +2,13 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Header from '../../components/header/Header';
 import axios from 'axios';
+import parse from 'html-react-parser';
+import pressupostVivenda from './PressupostVivenda';
+import pressupostLocalComercial from './PressupostLocalComercial';
 
 //import './header.css';
 
+/*
 const myelement = `<div id="accordion">
                         <div className="card">
                             <div className="card-header" id="headingOne">
@@ -83,8 +87,13 @@ const myelement = `<div id="accordion">
                             </div>
                         </div>
                     </div>`;
+*/
 
-const myelement1 = "<h1>React1 is {5 + 5} times better with JSX1 </h1>";
+// const myelement = <div dangerouslySetInnerHTML={{ __html: pressupostVivenda.formulari }} />;
+// const myelement1 = <div dangerouslySetInnerHTML={{ __html: pressupostLocalComercial.formulari }} />;
+
+const myelement = pressupostVivenda.formulari;
+const myelement1 = pressupostLocalComercial.formulari;
 
 //document.getElementById().
 /*
