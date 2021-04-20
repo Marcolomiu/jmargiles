@@ -8,4 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class HomeBudget extends Model
 {
     use HasFactory;
+
+    protected $table='vivenda';
+
+    //protected $fillable=['nom','telefon','email', 'descripcion' ];
 }

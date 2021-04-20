@@ -256,7 +256,7 @@ class Pressupost extends React.Component {
             fd.append('descripcio', this.refs.contactDescripcio.value);
 
             // Comprovacions cuina
-
+            
             if (this.refs.cuina_electricitat_q1.checked) {
                 fd.append('cuina_electricitat', 'q1');
             } else {
@@ -1234,13 +1234,23 @@ class Pressupost extends React.Component {
                     }
                 }
             }
-
+            
             axios.post('http://127.0.0.1:8000/api/send/budget', fd
             ).then(res=>
-                {
+                {                  
+                    console.log(res);
                     console.log(res.data);
                     this.myFormRef.reset();
                     
+                    /*
+                    if (response.data.success==true) {
+                        alert(response.data.message)
+                        // cargar datos de nuevo
+                        // this.loadDataProduct()
+                        // $("#exampleModal").modal("hide");
+                    }
+                    */
+
                     //alertify.set('notifier','position', 'top-right');
                     //alertify.success('Current position : ' + alertify.get('notifier','position'));
                     

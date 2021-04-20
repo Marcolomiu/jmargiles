@@ -3610,9 +3610,19 @@ var Pressupost = /*#__PURE__*/function (_React$Component) {
         }
 
         axios__WEBPACK_IMPORTED_MODULE_3___default().post('http://127.0.0.1:8000/api/send/budget', fd).then(function (res) {
+          console.log(res);
           console.log(res.data);
 
-          _this2.myFormRef.reset(); //alertify.set('notifier','position', 'top-right');
+          _this2.myFormRef.reset();
+          /*
+          if (response.data.success==true) {
+              alert(response.data.message)
+              // cargar datos de nuevo
+              // this.loadDataProduct()
+              // $("#exampleModal").modal("hide");
+          }
+          */
+          //alertify.set('notifier','position', 'top-right');
           //alertify.success('Current position : ' + alertify.get('notifier','position'));
           //alertify.set('notifier','delay', 10);
           //alertify.set('notifier','position', 'top-right');
@@ -6780,7 +6790,7 @@ function Home() {
           })
         })
       })
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("section", {
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("br", {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("br", {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("br", {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("br", {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("br", {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("br", {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("br", {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("br", {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("br", {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("br", {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("br", {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("section", {
       children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
         className: "sectionMargin",
         children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {

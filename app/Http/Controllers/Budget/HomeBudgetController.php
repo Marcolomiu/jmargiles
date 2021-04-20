@@ -1,7 +1,8 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Budget;
 
+use App\Http\Controllers\Controller;
 use App\Models\HomeBudget;
 use Illuminate\Http\Request;
 
@@ -35,13 +36,33 @@ class HomeBudgetController extends Controller
      */
     public function store(Request $request)
     {
+        /*
+        HomeBudget::insert([
+            'nom' => $request->input('nom'),
+            'telefon' => $request->input('telf'),
+            'email' => $request->input('email'),
+            'descripcio' => $request->input('descripcio'),
+        ]);
+    
+        $response['message'] = "Guardo exitosamente";
+        $response['success'] = true;
+    
+        return $response;
+        */
+        
         $budget = new HomeBudget();
-        $budget->name = $request->nom;
-        $budget->telf = $request->telf;
+        $budget->nom = $request->nom;
+        $budget->telefon = $request->telf;
         $budget->email = $request->email;
         $budget->descripcio = $request->descripcio;
+        
+        
 
         $budget->save();
+        return response()->json(["message" => "Bugdet created successfully."]);
+        
+        //echo($request);
+        //return response()->json([$request->all()]);
     }
 
     public function mail(Request $request)

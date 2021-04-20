@@ -22,4 +22,4 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 Route::post('send/email', [App\Http\Controllers\ContactEmailController::class, 'mail'])->name('email');
 
 //Budget Route which we used in angular http service
-Route::post('send/budget', [App\Http\Controllers\HomeBudgetController::class, 'store'])->name('budget');
+Route::post('send/budget', [App\Http\Controllers\Budget\HomeBudgetController::class, 'store'])->name('budget');

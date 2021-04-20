@@ -16,9 +16,10 @@ class CreateHomeBudgetsTable extends Migration
         Schema::create('vivenda', function (Blueprint $table) {
             $table->id();
             $table->string('nom');
-            $table->string('telefon');
+            $table->integer('telefon');
             $table->string('email');
             $table->string('descripcio');
+
             $table->timestamps();
         });
     }
@@ -30,6 +31,6 @@ class CreateHomeBudgetsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('home_budgets');
+        Schema::dropIfExists('vivenda');
     }
 }
