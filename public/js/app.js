@@ -3687,9 +3687,16 @@ var Pressupost = /*#__PURE__*/function (_React$Component) {
                 children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)("div", {
                   className: "alert alert-warning alert-dismissible fade show",
                   role: "alert",
-                  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("strong", {
-                    children: "Holy guacamole!"
-                  }), " You should check in on some of those fields below.", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("button", {
+                  children: ["Cal tenir present que aquest pressupost \xE9s aproximat. Per fer-lo m\xE9s prec\xEDs i, d\u2019acord amb els gustos i necessitats vostres, \xE9s preferible fer una visita, contactan's ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("strong", {
+                    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("a", {
+                      href: "/contacte",
+                      children: "aqu\xED"
+                    })
+                  }), ".", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)("p", {
+                    children: ["Recordem que la visita ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("strong", {
+                      children: "NO"
+                    }), " te cap cost."]
+                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("button", {
                     type: "button",
                     className: "close",
                     "data-dismiss": "alert",
@@ -5802,7 +5809,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
-  formulari: "<h1>React1 is {5 + 5} times better with JSX1 </h1>"
+  formulari: "<form ref={(el) => this.myFormRef = el}>\n\t\t\t\t\t<div id=\"accordion\">\n\t\t\t\t\t\t<div className=\"card\">\n\t\t\t\t\t\t\t<div className=\"card-header\" id=\"headingOne\">\n\t\t\t\t\t\t\t\t<h5 className=\"mb-0\">\n\t\t\t\t\t\t\t\t<button type=\"button\" className=\"btn btn-link\" data-toggle=\"collapse\" data-target=\"#collapseOne\" aria-expanded=\"false\" aria-controls=\"collapseOne\">\n\t\t\t\t\t\t\t\t\tCuina\n\t\t\t\t\t\t\t\t</button>\n\t\t\t\t\t\t\t\t</h5>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<div id=\"collapseOne\" className=\"collapse\" aria-labelledby=\"headingOne\" data-parent=\"#accordion\">\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t<div className=\"card-body\">\n\t\t\t\t\t\t\t\t\tAnim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid.\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</div>\n\n\t\t\t\t\t\t<div className=\"card\">\n\t\t\t\t\t\t\t<div className=\"card-header\" id=\"headingTwo\">\n\t\t\t\t\t\t\t\t<h5 className=\"mb-0\">\n\t\t\t\t\t\t\t\t<button type=\"button\" className=\"btn btn-link collapsed\" data-toggle=\"collapse\" data-target=\"#collapseTwo\" aria-expanded=\"false\" aria-controls=\"collapseTwo\">\n\t\t\t\t\t\t\t\t\tBany\n\t\t\t\t\t\t\t\t</button>\n\t\t\t\t\t\t\t\t</h5>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t<div id=\"collapseTwo\" className=\"collapse\" aria-labelledby=\"headingTwo\" data-parent=\"#accordion\">\n\t\t\t\t\t\t\t\t<div className=\"card-body\">\n\t\t\t\t\t\t\t\t\tAnim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid.\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</div>\n\n\t\t\t\t\t\t<div className=\"card\">\n\t\t\t\t\t\t\t<div className=\"card-header\" id=\"headingThree\">\n\t\t\t\t\t\t\t\t<h5 className=\"mb-0\">\n\t\t\t\t\t\t\t\t<button type=\"button\" className=\"btn btn-link collapsed\" data-toggle=\"collapse\" data-target=\"#collapseThree\" aria-expanded=\"true\" aria-controls=\"collapseThree\">\n\t\t\t\t\t\t\t\t\tSal\xF3\n\t\t\t\t\t\t\t\t</button>\n\t\t\t\t\t\t\t\t</h5>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t<div id=\"collapseThree\" className=\"collapse\" aria-labelledby=\"headingThree\" data-parent=\"#accordion\">\n\t\t\t\t\t\t\t\t<div className=\"card-body\">\n\t\t\t\t\t\t\t\tAnim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid.\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</div>\n\n\t\t\t\t\t\t<div className=\"card\">\n\t\t\t\t\t\t\t<div className=\"card-header\" id=\"headingFour\">\n\t\t\t\t\t\t\t\t<h5 className=\"mb-0\">\n\t\t\t\t\t\t\t\t<button type=\"button\" className=\"btn btn-link collapsed\" data-toggle=\"collapse\" data-target=\"#collapseFour\" aria-expanded=\"true\" aria-controls=\"collapseFour\">\n\t\t\t\t\t\t\t\t\tHabitaci\xF3 matrimoni (aprox 18 m2)\n\t\t\t\t\t\t\t\t</button>\n\t\t\t\t\t\t\t\t</h5>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t<div id=\"collapseFour\" className=\"collapse\" aria-labelledby=\"headingFour\" data-parent=\"#accordion\">\n\t\t\t\t\t\t\t\t<div className=\"card-body\">\n\t\t\t\t\t\t\t\t\tAnim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid.\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</div>\n\n\t\t\t\t\t\t<div className=\"card\">\n\t\t\t\t\t\t\t<div className=\"card-header\" id=\"headingFive\">\n\t\t\t\t\t\t\t\t<h5 className=\"mb-0\">\n\t\t\t\t\t\t\t\t<button type=\"button\" className=\"btn btn-link collapsed\" data-toggle=\"collapse\" data-target=\"#collapseFive\" aria-expanded=\"true\" aria-controls=\"collapseFive\">\n\t\t\t\t\t\t\t\t\tHb individual 1 (aprox 9 m2)\n\t\t\t\t\t\t\t\t</button>\n\t\t\t\t\t\t\t\t</h5>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t<div id=\"collapseFive\" className=\"collapse\" aria-labelledby=\"headingFive\" data-parent=\"#accordion\">\n\t\t\t\t\t\t\t\t<div className=\"card-body\">\n\t\t\t\t\t\t\t\t\tAnim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid.\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</div>\n\n\t\t\t\t\t\t<div className=\"card\">\n\t\t\t\t\t\t\t<div className=\"card-header\" id=\"headingSix\">\n\t\t\t\t\t\t\t\t<h5 className=\"mb-0\">\n\t\t\t\t\t\t\t\t<button type=\"button\" className=\"btn btn-link collapsed\" data-toggle=\"collapse\" data-target=\"#collapseSix\" aria-expanded=\"true\" aria-controls=\"collapseSix\">\n\t\t\t\t\t\t\t\t\tHb individual 2 (aprox 9 m2)\n\t\t\t\t\t\t\t\t</button>\n\t\t\t\t\t\t\t\t</h5>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t<div id=\"collapseSix\" className=\"collapse\" aria-labelledby=\"headingSix\" data-parent=\"#accordion\">\n\t\t\t\t\t\t\t\t<div className=\"card-body\">\n\t\t\t\t\t\t\t\t\tAnim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid.\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</div>\n\n\t\t\t\t\t\t<div className=\"card\">\n\t\t\t\t\t\t\t<div className=\"card-header\" id=\"headingSeven\">\n\t\t\t\t\t\t\t\t<h5 className=\"mb-0\">\n\t\t\t\t\t\t\t\t<button type=\"button\" className=\"btn btn-link collapsed\" data-toggle=\"collapse\" data-target=\"#collapseSeven\" aria-expanded=\"true\" aria-controls=\"collapseSeven\">\n\t\t\t\t\t\t\t\t\tRebedor/Passad\xEDs\n\t\t\t\t\t\t\t\t</button>\n\t\t\t\t\t\t\t\t</h5>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t<div id=\"collapseSeven\" className=\"collapse\" aria-labelledby=\"headingSeven\" data-parent=\"#accordion\">\n\t\t\t\t\t\t\t\t<div className=\"card-body\">\n\t\t\t\t\t\t\t\t\tAnim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid.\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t\t<br></br>\n\t\t\t\t\t<div className=\"form-group\">\n\t\t\t\t\t\t\t<input type=\"text\" className=\"form-control\" id=\"contactNom\" placeholder=\"Nom*\" ref=\"contactNom\" />\n\t\t\t\t\t\t\t<span id=\"regexNameError\" className=\"regexError\" style={{display: 'none' }}></span>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div className=\"form-group\">\n\t\t\t\t\t\t\t<input type=\"text\" className=\"form-control\" id=\"contactTelf\" placeholder=\"Tel\xE8fon*\" ref=\"contactTelf\" />\n\t\t\t\t\t\t\t<span id=\"regexTelfError\" className=\"regexError\" style={{display: 'none' }}></span>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div className=\"form-group\">\n\t\t\t\t\t\t\t<input type=\"text\" className=\"form-control\" id=\"contactEmail\" aria-describedby=\"emailHelp\" placeholder=\"Email*\" ref=\"contactEmail\" />\n\t\t\t\t\t\t\t<span id=\"regexEmailError\" className=\"regexError\" style={{display: 'none' }}></span>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div className=\"form-group\">\n\t\t\t\t\t\t\t<textarea className=\"form-control\" id=\"contactDescripcio\" placeholder=\"Qu\xE8 necessites?*\" ref=\"contactDescripcio\"></textarea>\n\t\t\t\t\t\t\t<span id=\"regexDescripcioError\" className=\"regexError\" style={{display: 'none' }}></span>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<button id=\"contactFormSubmitBtn\" type=\"submit\" className=\"btn btn-primary\" onClick={this.addFormData}>Enviar</button>\n\t\t\t\t</form>"
 });
 
 /***/ }),
@@ -6684,18 +6691,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_header_Header__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../components/header/Header */ "./resources/js/components/header/Header.js");
 /* harmony import */ var _Obres__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Obres */ "./resources/js/views/home/Obres.js");
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
-function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
-
-function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
-
-function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
-
-function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
-
-function _iterableToArrayLimit(arr, i) { if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return; var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
-
-function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
-
 
 
 
@@ -6705,59 +6700,6 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 function Home() {
-  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)([{
-    titol: 'Electricitat',
-    descripcio: "<p>Industrials:  ind\xFAstries, bars, restaurants, p\xE0rquing.</p> " + 'Domèstiques:  vivendes,  locals comercials.\n ' + '<br>' + 'Comunitàries: Serveis comuns i escomeses',
-    open: false
-  }, {
-    titol: 'Gas',
-    descripcio: 'Industrials:  bars, restaurants, indústries. ' + 'Domèstiques:  vivendes,  locals comercials Revisions, correcció de defectes.',
-    open: false
-  }, {
-    titol: 'Aigua',
-    descripcio: 'Industrials:  bars, restaurants, indústries. ' + 'Domèstiques:  vivendes,  locals comercials. ' + 'Comunitàries: Serveis comuns.' + 'Bateries d’aigua.',
-    open: false
-  }, {
-    titol: 'Butlletins',
-    descripcio: 'Revisió ' + 'Instal·lacions d’electricitat. ' + 'Instal·lacions gas i Correcció d’anomalies de gas. ' + 'Altes ' + 'Instal·lacions d’electricitat. ' + 'Instal·lacions gas. ' + 'Instal·lacions d’aigua. ' + 'Ampliacions de potència.',
-    open: false
-  }, {
-    titol: 'Recàrrega de cotxes elèctrics',
-    descripcio: 'Punts de recàrrega per a cotxe elèctric.',
-    open: false
-  }, {
-    titol: 'Projectes i Legalitzacions ',
-    descripcio: 'Legalitzacions que necessiten projecte. ' + 'Llicències d’activitats.',
-    open: false
-  }, {
-    titol: 'Porters i videoporters',
-    descripcio: 'Domèstiques:  vivendes,  locals comercials, reparacions i petites instal·lacions de ampliació i/o reparació d’instal·lacions existents. ' + 'Comunitàries: Serveis comuns.',
-    open: false
-  }, {
-    titol: 'Obres i reformes',
-    descripcio: 'Vivendes i Locals comercials: Electricitat, Gas, Aigua, Envans, Pintura, Fusteria d’alumini, Fusteria de fusta, Parquet, Terra',
-    open: false
-  }, {
-    titol: 'Reparacions i petites instal·lacions',
-    descripcio: 'Ampliació i/o reparació d’instal·lacions existents.',
-    open: false
-  }]),
-      _useState2 = _slicedToArray(_useState, 2),
-      obres = _useState2[0],
-      setObres = _useState2[1];
-
-  var toggleObres = function toggleObres(index) {
-    setObres(obres.map(function (obra, i) {
-      if (i === index) {
-        obra.open = !obra.open;
-      } else {
-        obra.open = false;
-      }
-
-      return obra;
-    }));
-  };
-
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_components_header_Header__WEBPACK_IMPORTED_MODULE_2__.default, {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
       className: "headerMargin"
@@ -6786,49 +6728,53 @@ function Home() {
           children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
             className: "obresMenu",
             children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("a", {
-              href: "#",
+              href: "#headingOne",
+              "data-toggle": "collapse",
+              "data-target": "#collapseOne",
+              "aria-expanded": "false",
+              "aria-controls": "collapseOne",
               children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("img", {
                 src: "images/home/Electricitat.png"
               })
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("a", {
-              href: "#",
-              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("img", {
-                src: "images/home/Gas.png"
-              })
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("a", {
-              href: "#",
+              href: "#headingTwo",
               children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("img", {
                 src: "images/home/Aigua.png"
               })
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("a", {
-              href: "#",
+              href: "#headingThree",
+              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("img", {
+                src: "images/home/Gas.png"
+              })
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("a", {
+              href: "#headingFour",
+              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("img", {
+                src: "images/home/Reparacions.png"
+              })
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("a", {
+              href: "#headingFive",
               children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("img", {
                 src: "images/home/Butlletins.png"
               })
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("a", {
-              href: "#",
-              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("img", {
-                src: "images/home/Recarrega_cotxes_electrics.png"
-              })
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("a", {
-              href: "#",
-              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("img", {
-                src: "images/home/Projectes_legalitzacions.png"
-              })
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("a", {
-              href: "#",
-              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("img", {
-                src: "images/home/Porters_videoporters.png"
-              })
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("a", {
-              href: "#",
+              href: "#headingSix",
               children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("img", {
                 src: "images/home/Obres_reformes.png"
               })
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("a", {
-              href: "#",
+              href: "#headingSeven",
               children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("img", {
-                src: "images/home/Reparacions.png"
+                src: "images/home/Recarrega_cotxes_electrics.png"
+              })
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("a", {
+              href: "#headingEight",
+              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("img", {
+                src: "images/home/Porters_videoporters.png"
+              })
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("a", {
+              href: "#headingNine",
+              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("img", {
+                src: "images/home/Projectes_legalitzacions.png"
               })
             })]
           })
@@ -6839,15 +6785,318 @@ function Home() {
         className: "sectionMargin",
         children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
           className: "container",
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
-            className: "obresAccordion",
-            children: obres.map(function (obra, i) {
-              return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_Obres__WEBPACK_IMPORTED_MODULE_3__.default, {
-                obra: obra,
-                index: i,
-                toggleObres: toggleObres
-              });
-            })
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
+            id: "accordion",
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
+              className: "card",
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
+                className: "card-header",
+                id: "headingOne",
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("h5", {
+                  className: "mb-0",
+                  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("button", {
+                    type: "button",
+                    className: "btn btn-link",
+                    "data-toggle": "collapse",
+                    "data-target": "#collapseOne",
+                    "aria-expanded": "false",
+                    "aria-controls": "collapseOne",
+                    children: "Electricitat"
+                  })
+                })
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
+                id: "collapseOne",
+                className: "collapse",
+                "aria-labelledby": "headingOne",
+                "data-parent": "#accordion",
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
+                  className: "card-body",
+                  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("p", {
+                    children: "Industrials: ind\xFAstries, bars, restaurants, p\xE0rquings."
+                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("p", {
+                    children: "Dom\xE8stiques: vivendes, locals comercials."
+                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("p", {
+                    children: "Comunit\xE0ries: serveis comuns i escomeses."
+                  })]
+                })
+              })]
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
+              className: "card",
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
+                className: "card-header",
+                id: "headingTwo",
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("h5", {
+                  className: "mb-0",
+                  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("button", {
+                    type: "button",
+                    className: "btn btn-link collapsed",
+                    "data-toggle": "collapse",
+                    "data-target": "#collapseTwo",
+                    "aria-expanded": "false",
+                    "aria-controls": "collapseTwo",
+                    children: "Aigua"
+                  })
+                })
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
+                id: "collapseTwo",
+                className: "collapse",
+                "aria-labelledby": "headingTwo",
+                "data-parent": "#accordion",
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
+                  className: "card-body",
+                  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("p", {
+                    children: "Industrials: bars, restaurants, ind\xFAstries."
+                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("p", {
+                    children: "Dom\xE8stiques: vivendes, locals comercials."
+                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("p", {
+                    children: "Comunit\xE0ries: serveis comuns."
+                  })]
+                })
+              })]
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
+              className: "card",
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
+                className: "card-header",
+                id: "headingThree",
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("h5", {
+                  className: "mb-0",
+                  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("button", {
+                    type: "button",
+                    className: "btn btn-link collapsed",
+                    "data-toggle": "collapse",
+                    "data-target": "#collapseThree",
+                    "aria-expanded": "true",
+                    "aria-controls": "collapseThree",
+                    children: "Gas"
+                  })
+                })
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
+                id: "collapseThree",
+                className: "collapse",
+                "aria-labelledby": "headingThree",
+                "data-parent": "#accordion",
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
+                  className: "card-body",
+                  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("p", {
+                    children: "Industrials:  bars, restaurants, ind\xFAstries."
+                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("p", {
+                    children: "Dom\xE8stiques:  vivendes,  locals comercials."
+                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("p", {
+                    children: "Revisions, correcci\xF3 de defectes."
+                  })]
+                })
+              })]
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
+              className: "card",
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
+                className: "card-header",
+                id: "headingFour",
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("h5", {
+                  className: "mb-0",
+                  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("button", {
+                    type: "button",
+                    className: "btn btn-link collapsed",
+                    "data-toggle": "collapse",
+                    "data-target": "#collapseFour",
+                    "aria-expanded": "true",
+                    "aria-controls": "collapseFour",
+                    children: "Reparacions i petites instal\xB7lacions"
+                  })
+                })
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
+                id: "collapseFour",
+                className: "collapse",
+                "aria-labelledby": "headingFour",
+                "data-parent": "#accordion",
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
+                  className: "card-body",
+                  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("p", {
+                    children: "Ampliaci\xF3 i/o reparaci\xF3 d\u2019instal\xB7lacions existents."
+                  })
+                })
+              })]
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
+              className: "card",
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
+                className: "card-header",
+                id: "headingFive",
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("h5", {
+                  className: "mb-0",
+                  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("button", {
+                    type: "button",
+                    className: "btn btn-link collapsed",
+                    "data-toggle": "collapse",
+                    "data-target": "#collapseFive",
+                    "aria-expanded": "true",
+                    "aria-controls": "collapseFive",
+                    children: "Butlletins"
+                  })
+                })
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
+                id: "collapseFive",
+                className: "collapse",
+                "aria-labelledby": "headingFive",
+                "data-parent": "#accordion",
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
+                  className: "card-body",
+                  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("p", {
+                    children: "Revisi\xF3"
+                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("p", {
+                    children: "Instal\xB7lacions d\u2019electricitat"
+                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("p", {
+                    children: "Instal\xB7lacions gas i correcci\xF3 d\u2019anomalies de gas"
+                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("p", {
+                    children: "Altes"
+                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("p", {
+                    children: "Instal\xB7lacions d\u2019electricitat"
+                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("p", {
+                    children: "Instal\xB7lacions gas"
+                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("p", {
+                    children: "Instal\xB7lacions d\u2019aigua"
+                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("p", {
+                    children: "Ampliacions de pot\xE8ncia"
+                  })]
+                })
+              })]
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
+              className: "card",
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
+                className: "card-header",
+                id: "headingSix",
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("h5", {
+                  className: "mb-0",
+                  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("button", {
+                    type: "button",
+                    className: "btn btn-link collapsed",
+                    "data-toggle": "collapse",
+                    "data-target": "#collapseSix",
+                    "aria-expanded": "true",
+                    "aria-controls": "collapseSix",
+                    children: "Obres i reformes"
+                  })
+                })
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
+                id: "collapseSix",
+                className: "collapse",
+                "aria-labelledby": "headingSix",
+                "data-parent": "#accordion",
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
+                  className: "card-body",
+                  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("p", {
+                    children: "Vivendes i Locals comercials:"
+                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("ul", {
+                    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("li", {
+                      children: "Electricitat"
+                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("li", {
+                      children: "Gas"
+                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("li", {
+                      children: "Aigua"
+                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("li", {
+                      children: "Envans"
+                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("li", {
+                      children: "Pintura"
+                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("li", {
+                      children: "Fusteria d\u2019alumini"
+                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("li", {
+                      children: "Fusteria de fusta"
+                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("li", {
+                      children: "Parquet"
+                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("li", {
+                      children: "Terra"
+                    })]
+                  })]
+                })
+              })]
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
+              className: "card",
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
+                className: "card-header",
+                id: "headingSeven",
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("h5", {
+                  className: "mb-0",
+                  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("button", {
+                    type: "button",
+                    className: "btn btn-link collapsed",
+                    "data-toggle": "collapse",
+                    "data-target": "#collapseSeven",
+                    "aria-expanded": "true",
+                    "aria-controls": "collapseSeven",
+                    children: "Rec\xE0rrega cotxes el\xE8ctrics"
+                  })
+                })
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
+                id: "collapseSeven",
+                className: "collapse",
+                "aria-labelledby": "headingSeven",
+                "data-parent": "#accordion",
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
+                  className: "card-body",
+                  children: "Punts de rec\xE0rrega per a cotxe el\xE8ctric."
+                })
+              })]
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
+              className: "card",
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
+                className: "card-header",
+                id: "headingEight",
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("h5", {
+                  className: "mb-0",
+                  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("button", {
+                    type: "button",
+                    className: "btn btn-link collapsed",
+                    "data-toggle": "collapse",
+                    "data-target": "#collapseEight",
+                    "aria-expanded": "true",
+                    "aria-controls": "collapseEight",
+                    children: "Porters i videoporters"
+                  })
+                })
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
+                id: "collapseEight",
+                className: "collapse",
+                "aria-labelledby": "headingEight",
+                "data-parent": "#accordion",
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
+                  className: "card-body",
+                  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("p", {
+                    children: "Dom\xE8stiques: vivendes, locals comercials, reparacions i petites instal\xB7lacions de ampliaci\xF3 i/o reparaci\xF3 d\u2019instal\xB7lacions existents."
+                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("p", {
+                    children: "Comunit\xE0ries: serveis comuns."
+                  })]
+                })
+              })]
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
+              className: "card",
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
+                className: "card-header",
+                id: "headingNine",
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("h5", {
+                  className: "mb-0",
+                  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("button", {
+                    type: "button",
+                    className: "btn btn-link collapsed",
+                    "data-toggle": "collapse",
+                    "data-target": "#collapseNine",
+                    "aria-expanded": "true",
+                    "aria-controls": "collapseNine",
+                    children: "Projectes i legalitzacions"
+                  })
+                })
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
+                id: "collapseNine",
+                className: "collapse",
+                "aria-labelledby": "headingNine",
+                "data-parent": "#accordion",
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
+                  className: "card-body",
+                  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("p", {
+                    children: "Legalitzacions que necessiten projecte."
+                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("p", {
+                    children: "Llic\xE8ncies d\u2019activitats."
+                  })]
+                })
+              })]
+            })]
           })
         })
       })

@@ -1300,7 +1300,10 @@ class Pressupost extends React.Component {
                             </div>
                             <div className="notificationContainer">
                                 <div className="alert alert-warning alert-dismissible fade show" role="alert">
-                                    <strong>Holy guacamole!</strong> You should check in on some of those fields below.
+                                    Cal tenir present que aquest pressupost és aproximat.
+                                    Per fer-lo més precís i, d’acord amb els gustos i necessitats vostres, és preferible fer una visita, contactan's <strong><a href="/contacte">aquí</a></strong>.
+                                    <p>Recordem que la visita <strong>NO</strong> te cap cost.</p>
+
                                     <button type="button" className="close" data-dismiss="alert" aria-label="Close">
                                         <span aria-hidden="true">&times;</span>
                                     </button>

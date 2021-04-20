@@ -8,12 +8,12 @@ body {
     font-weight: 400;
 }
 
-h1, h2, h3, h4, h5 {
-    font-family: 'metropolisbold';
+html {
+    font-size: medium;
 }
 
-p {
-    font-size: 16px;
+h1, h2, h3, h4, h5 {
+    font-family: 'metropolisbold';
 }
 
 span.regexError {
@@ -157,43 +157,11 @@ section {
     height: 10em;
 }
 
-.obresAccordion .obra {
-    margin: 2em 0;
-    border-bottom: 1px solid #e6e6e6;
-}
-
-.obresAccordion .obra .obresTitol {
-    position: relative;
+#accordion button {
     font-family: Cabin, sans-serif;
     color: #00529e;
     font-size: 20px;
     font-weight: bold;
-
-    transition: all 0.4s ease;
-}
-
-.obresAccordion .obra .obresTitol::after {
-    /* Aqui anira la flechita desplegable */
-}
-
-.obresAccordion .obra .obresDescripcio {
-    opacity: 0;
-    max-height: 0;
-    overflow-y: hidden;
-    transition: all 0.4s ease-out;
-}
-
-.obresAccordion .obra.open .obresDescripcio {
-    margin-bottom: 15px;
-}
-
-.obresAccordion .obra.open .obresDescripcio::after {
-    /* Aqui la flechita desplegable gira */
-}
-
-.obresAccordion .obra.open .obresDescripcio {
-    max-height: 1000px;
-    opacity: 1;
 }
 
 /* ---- Qui Som ---- */
@@ -271,6 +239,10 @@ section {
 }
 
 /* ---- Pressupost ---- */
+
+.notificationContainer p {
+    margin-bottom: 0;
+}
 
 .fade.show {
     opacity: 1;
