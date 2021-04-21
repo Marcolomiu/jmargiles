@@ -467,16 +467,16 @@ class Pressupost extends React.Component {
                 }
             }
 
-            if (this.refs.cuina_sostres_alumini_q1.checked) {
-                fd.append('cuina_sostres_alumini', 'q1');
+            if (this.refs.cuina_sostre_alumini_q1.checked) {
+                fd.append('cuina_sostre_alumini', 'q1');
             } else {
-                if (this.refs.cuina_sostres_alumini_q2.checked) {
-                    fd.append('cuina_sostres_alumini', 'q2');
+                if (this.refs.cuina_sostre_alumini_q2.checked) {
+                    fd.append('cuina_sostre_alumini', 'q2');
                 } else {
-                    if (this.refs.cuina_sostres_alumini_q3.checked) {
-                        fd.append('cuina_sostres_alumini', 'q3');
+                    if (this.refs.cuina_sostre_alumini_q3.checked) {
+                        fd.append('cuina_sostre_alumini', 'q3');
                     } else {
-                        fd.append('cuina_sostres_alumini', '');
+                        fd.append('cuina_sostre_alumini', '');
                     }
                 }
             }
@@ -734,17 +734,17 @@ class Pressupost extends React.Component {
                     }
                 }
             }
-
-            if (this.refs.bany1_sostres_alumini_q1.checked) {
-                fd.append('bany1_sostres_alumini', 'q1');
+            // MIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIRAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAR
+            if (this.refs.bany1_sostre_alumini_q1.checked) {
+                fd.append('bany1_sostre_alumini', 'q1');
             } else {
-                if (this.refs.bany1_sostres_alumini_q2.checked) {
-                    fd.append('bany1_sostres_alumini', 'q2');
+                if (this.refs.bany1_sostre_alumini_q2.checked) {
+                    fd.append('bany1_sostre_alumini', 'q2');
                 } else {
-                    if (this.refs.bany1_sostres_alumini_q3.checked) {
-                        fd.append('bany1_sostres_alumini', 'q3');
+                    if (this.refs.bany1_sostre_alumini_q3.checked) {
+                        fd.append('bany1_sostre_alumini', 'q3');
                     } else {
-                        fd.append('bany1_sostres_alumini', '');
+                        fd.append('bany1_sostre_alumini', '');
                     }
                 }
             }
@@ -1237,7 +1237,9 @@ class Pressupost extends React.Component {
             
             axios.post('http://127.0.0.1:8000/api/send/budget', fd
             ).then(res=>
-                {                  
+                {  
+                    document.getElementById("contactFormSubmitBtn").disabled = false;
+                    
                     console.log(res);
                     console.log(res.data);
                     this.myFormRef.reset();
@@ -1453,9 +1455,9 @@ class Pressupost extends React.Component {
 
                                                         <tr>
                                                             <th>Sostres alumini:</th>
-                                                            <td><input type="radio" name="cuina_group16" value="315" ref="cuina_sostres_alumini_q1"/></td>
-                                                            <td><input type="radio" name="cuina_group16" value="405" ref="cuina_sostres_alumini_q2"/></td>
-                                                            <td><input type="radio" name="cuina_group16" value="495" ref="cuina_sostres_alumini_q3"/></td>
+                                                            <td><input type="radio" name="cuina_group16" value="315" ref="cuina_sostre_alumini_q1"/></td>
+                                                            <td><input type="radio" name="cuina_group16" value="405" ref="cuina_sostre_alumini_q2"/></td>
+                                                            <td><input type="radio" name="cuina_group16" value="495" ref="cuina_sostre_alumini_q3"/></td>
                                                         </tr>
 
                                                         <tr>
@@ -1605,30 +1607,30 @@ class Pressupost extends React.Component {
 
                                                         <tr>
                                                             <th>Sostres pladur</th>
-                                                            <td><input type="radio" name="bany1_group15" value="100" ref="bany1_sostre_pladur_q1"/></td>
-                                                            <td><input type="radio" name="bany1_group15" value="180" ref="bany1_sostre_pladur_q2"/></td>
-                                                            <td><input type="radio" name="bany1_group15" value="210" ref="bany1_sostre_pladur_q3"/></td>
+                                                            <td><input type="radio" name="bany1_group16" value="100" ref="bany1_sostre_pladur_q1"/></td>
+                                                            <td><input type="radio" name="bany1_group16" value="180" ref="bany1_sostre_pladur_q2"/></td>
+                                                            <td><input type="radio" name="bany1_group16" value="210" ref="bany1_sostre_pladur_q3"/></td>
                                                         </tr>
 
                                                         <tr>
                                                             <th>Sostres alumini</th>
-                                                            <td><input type="radio" name="bany1_group16" value="120" ref="bany1_sostres_alumini_q1"/></td>
-                                                            <td><input type="radio" name="bany1_group16" value="200" ref="bany1_sostres_alumini_q2"/></td>
-                                                            <td><input type="radio" name="bany1_group16" value="250" ref="bany1_sostres_alumini_q3"/></td>
+                                                            <td><input type="radio" name="bany1_group17" value="120" ref="bany1_sostre_alumini_q1"/></td>
+                                                            <td><input type="radio" name="bany1_group17" value="200" ref="bany1_sostre_alumini_q2"/></td>
+                                                            <td><input type="radio" name="bany1_group17" value="250" ref="bany1_sostre_alumini_q3"/></td>
                                                         </tr>
 
                                                         <tr>
                                                             <th>Alicatat</th>
-                                                            <td><input type="radio" name="bany1_group17" value="450" ref="bany1_alicatat_q1"/></td>
-                                                            <td><input type="radio" name="bany1_group17" value="675" ref="bany1_alicatat_q2"/></td>
-                                                            <td><input type="radio" name="bany1_group17" value="825" ref="bany1_alicatat_q3"/></td>
+                                                            <td><input type="radio" name="bany1_group18" value="450" ref="bany1_alicatat_q1"/></td>
+                                                            <td><input type="radio" name="bany1_group18" value="675" ref="bany1_alicatat_q2"/></td>
+                                                            <td><input type="radio" name="bany1_group18" value="825" ref="bany1_alicatat_q3"/></td>
                                                         </tr>
 
                                                         <tr>
                                                             <th>Pintura</th>
-                                                            <td><input type="radio" name="bany1_group18" value="300" ref="bany1_pintura_q1"/></td>
-                                                            <td><input type="radio" name="bany1_group18" value="340" ref="bany1_pintura_q2"/></td>
-                                                            <td><input type="radio" name="bany1_group18" value="390" ref="bany1_pintura_q3"/></td>
+                                                            <td><input type="radio" name="bany1_group19" value="300" ref="bany1_pintura_q1"/></td>
+                                                            <td><input type="radio" name="bany1_group19" value="340" ref="bany1_pintura_q2"/></td>
+                                                            <td><input type="radio" name="bany1_group19" value="390" ref="bany1_pintura_q3"/></td>
                                                         </tr>
                                                     </tbody>
                                                 </table>

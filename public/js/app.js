@@ -2129,13 +2129,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router/esm/react-router.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router/esm/react-router.js");
 /* harmony import */ var _views_home_Home__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./views/home/Home */ "./resources/js/views/home/Home.js");
 /* harmony import */ var _views_company_information_QuiSom__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./views/company_information/QuiSom */ "./resources/js/views/company_information/QuiSom.js");
 /* harmony import */ var _views_gallery_galeria__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./views/gallery/galeria */ "./resources/js/views/gallery/galeria.js");
 /* harmony import */ var _views_contact_Contacte__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./views/contact/Contacte */ "./resources/js/views/contact/Contacte.js");
 /* harmony import */ var _views_budget_Pressupost__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./views/budget/Pressupost */ "./resources/js/views/budget/Pressupost.js");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var _views_admin_BudgetLists__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./views/admin/BudgetLists */ "./resources/js/views/admin/BudgetLists.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
 
 
 
@@ -2153,23 +2155,26 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var Main = function Main(props) {
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)(react_router_dom__WEBPACK_IMPORTED_MODULE_7__.Switch, {
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_7__.Route, {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)(react_router_dom__WEBPACK_IMPORTED_MODULE_8__.Switch, {
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_8__.Route, {
       exact: true,
       path: "/",
       component: _views_home_Home__WEBPACK_IMPORTED_MODULE_1__.default
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_7__.Route, {
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_8__.Route, {
       path: "/quisom",
       component: _views_company_information_QuiSom__WEBPACK_IMPORTED_MODULE_2__.default
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_7__.Route, {
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_8__.Route, {
       path: "/galeria",
       component: _views_gallery_galeria__WEBPACK_IMPORTED_MODULE_3__.default
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_7__.Route, {
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_8__.Route, {
       path: "/contacte",
       component: _views_contact_Contacte__WEBPACK_IMPORTED_MODULE_4__.default
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_7__.Route, {
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_8__.Route, {
       path: "/pressupost",
       component: _views_budget_Pressupost__WEBPACK_IMPORTED_MODULE_5__.default
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_8__.Route, {
+      path: "/budgetlists",
+      component: _views_admin_BudgetLists__WEBPACK_IMPORTED_MODULE_6__.default
     })]
   });
 };
@@ -2334,6 +2339,108 @@ function Header () {
 if (document.getElementById('header')) {
     ReactDOM.render(<Header />, document.getElementById('header'));
 }*/
+
+/***/ }),
+
+/***/ "./resources/js/views/admin/BudgetLists.js":
+/*!*************************************************!*\
+  !*** ./resources/js/views/admin/BudgetLists.js ***!
+  \*************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
+/* harmony import */ var _components_header_Header__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../components/header/Header */ "./resources/js/components/header/Header.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _iterableToArrayLimit(arr, i) { if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return; var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+
+
+
+
+ //import './header.css';
+
+
+
+
+function BudgetLists() {
+  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)([]),
+      _useState2 = _slicedToArray(_useState, 2),
+      budget = _useState2[0],
+      setBudget = _useState2[1];
+
+  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
+    axios__WEBPACK_IMPORTED_MODULE_3___default().get('http://127.0.0.1:8000/api/').then(function (response) {
+      setBudget(response.data);
+    });
+  });
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_components_header_Header__WEBPACK_IMPORTED_MODULE_2__.default, {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
+      className: "headerMargin"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("section", {
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
+        className: "sectionMargin",
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
+          className: "container",
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("table", {
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("thead", {
+              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("tr", {
+                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("th", {
+                  children: "#"
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("th", {
+                  children: "Nom"
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("th", {
+                  children: "Tel\xE8fon"
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("th", {
+                  children: "Email"
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("th", {
+                  children: "Descripcio"
+                })]
+              })
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("tbody", {
+              children: budget.map(function (row) {
+                return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("tr", {
+                  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("th", {
+                    children: row.id
+                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("td", {
+                    children: row.nom
+                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("td", {
+                    children: row.telefon
+                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("td", {
+                    children: row.email
+                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("td", {
+                    children: row.descripcio
+                  })]
+                }, row.id);
+              })
+            })]
+          })
+        })
+      })
+    })]
+  });
+}
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (BudgetLists);
 
 /***/ }),
 
@@ -2847,16 +2954,16 @@ var Pressupost = /*#__PURE__*/function (_React$Component) {
           }
         }
 
-        if (this.refs.cuina_sostres_alumini_q1.checked) {
-          fd.append('cuina_sostres_alumini', 'q1');
+        if (this.refs.cuina_sostre_alumini_q1.checked) {
+          fd.append('cuina_sostre_alumini', 'q1');
         } else {
-          if (this.refs.cuina_sostres_alumini_q2.checked) {
-            fd.append('cuina_sostres_alumini', 'q2');
+          if (this.refs.cuina_sostre_alumini_q2.checked) {
+            fd.append('cuina_sostre_alumini', 'q2');
           } else {
-            if (this.refs.cuina_sostres_alumini_q3.checked) {
-              fd.append('cuina_sostres_alumini', 'q3');
+            if (this.refs.cuina_sostre_alumini_q3.checked) {
+              fd.append('cuina_sostre_alumini', 'q3');
             } else {
-              fd.append('cuina_sostres_alumini', '');
+              fd.append('cuina_sostre_alumini', '');
             }
           }
         }
@@ -3112,18 +3219,19 @@ var Pressupost = /*#__PURE__*/function (_React$Component) {
               fd.append('bany1_sostre_pladur', '');
             }
           }
-        }
+        } // MIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIRAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAR
 
-        if (this.refs.bany1_sostres_alumini_q1.checked) {
-          fd.append('bany1_sostres_alumini', 'q1');
+
+        if (this.refs.bany1_sostre_alumini_q1.checked) {
+          fd.append('bany1_sostre_alumini', 'q1');
         } else {
-          if (this.refs.bany1_sostres_alumini_q2.checked) {
-            fd.append('bany1_sostres_alumini', 'q2');
+          if (this.refs.bany1_sostre_alumini_q2.checked) {
+            fd.append('bany1_sostre_alumini', 'q2');
           } else {
-            if (this.refs.bany1_sostres_alumini_q3.checked) {
-              fd.append('bany1_sostres_alumini', 'q3');
+            if (this.refs.bany1_sostre_alumini_q3.checked) {
+              fd.append('bany1_sostre_alumini', 'q3');
             } else {
-              fd.append('bany1_sostres_alumini', '');
+              fd.append('bany1_sostre_alumini', '');
             }
           }
         }
@@ -3610,6 +3718,7 @@ var Pressupost = /*#__PURE__*/function (_React$Component) {
         }
 
         axios__WEBPACK_IMPORTED_MODULE_3___default().post('http://127.0.0.1:8000/api/send/budget', fd).then(function (res) {
+          document.getElementById("contactFormSubmitBtn").disabled = false;
           console.log(res);
           console.log(res.data);
 
@@ -4143,21 +4252,21 @@ var Pressupost = /*#__PURE__*/function (_React$Component) {
                                   type: "radio",
                                   name: "cuina_group16",
                                   value: "315",
-                                  ref: "cuina_sostres_alumini_q1"
+                                  ref: "cuina_sostre_alumini_q1"
                                 })
                               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("td", {
                                 children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("input", {
                                   type: "radio",
                                   name: "cuina_group16",
                                   value: "405",
-                                  ref: "cuina_sostres_alumini_q2"
+                                  ref: "cuina_sostre_alumini_q2"
                                 })
                               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("td", {
                                 children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("input", {
                                   type: "radio",
                                   name: "cuina_group16",
                                   value: "495",
-                                  ref: "cuina_sostres_alumini_q3"
+                                  ref: "cuina_sostre_alumini_q3"
                                 })
                               })]
                             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)("tr", {
@@ -4630,21 +4739,21 @@ var Pressupost = /*#__PURE__*/function (_React$Component) {
                               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("td", {
                                 children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("input", {
                                   type: "radio",
-                                  name: "bany1_group15",
+                                  name: "bany1_group16",
                                   value: "100",
                                   ref: "bany1_sostre_pladur_q1"
                                 })
                               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("td", {
                                 children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("input", {
                                   type: "radio",
-                                  name: "bany1_group15",
+                                  name: "bany1_group16",
                                   value: "180",
                                   ref: "bany1_sostre_pladur_q2"
                                 })
                               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("td", {
                                 children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("input", {
                                   type: "radio",
-                                  name: "bany1_group15",
+                                  name: "bany1_group16",
                                   value: "210",
                                   ref: "bany1_sostre_pladur_q3"
                                 })
@@ -4655,23 +4764,23 @@ var Pressupost = /*#__PURE__*/function (_React$Component) {
                               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("td", {
                                 children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("input", {
                                   type: "radio",
-                                  name: "bany1_group16",
+                                  name: "bany1_group17",
                                   value: "120",
-                                  ref: "bany1_sostres_alumini_q1"
+                                  ref: "bany1_sostre_alumini_q1"
                                 })
                               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("td", {
                                 children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("input", {
                                   type: "radio",
-                                  name: "bany1_group16",
+                                  name: "bany1_group17",
                                   value: "200",
-                                  ref: "bany1_sostres_alumini_q2"
+                                  ref: "bany1_sostre_alumini_q2"
                                 })
                               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("td", {
                                 children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("input", {
                                   type: "radio",
-                                  name: "bany1_group16",
+                                  name: "bany1_group17",
                                   value: "250",
-                                  ref: "bany1_sostres_alumini_q3"
+                                  ref: "bany1_sostre_alumini_q3"
                                 })
                               })]
                             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)("tr", {
@@ -4680,21 +4789,21 @@ var Pressupost = /*#__PURE__*/function (_React$Component) {
                               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("td", {
                                 children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("input", {
                                   type: "radio",
-                                  name: "bany1_group17",
+                                  name: "bany1_group18",
                                   value: "450",
                                   ref: "bany1_alicatat_q1"
                                 })
                               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("td", {
                                 children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("input", {
                                   type: "radio",
-                                  name: "bany1_group17",
+                                  name: "bany1_group18",
                                   value: "675",
                                   ref: "bany1_alicatat_q2"
                                 })
                               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("td", {
                                 children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("input", {
                                   type: "radio",
-                                  name: "bany1_group17",
+                                  name: "bany1_group18",
                                   value: "825",
                                   ref: "bany1_alicatat_q3"
                                 })
@@ -4705,21 +4814,21 @@ var Pressupost = /*#__PURE__*/function (_React$Component) {
                               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("td", {
                                 children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("input", {
                                   type: "radio",
-                                  name: "bany1_group18",
+                                  name: "bany1_group19",
                                   value: "300",
                                   ref: "bany1_pintura_q1"
                                 })
                               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("td", {
                                 children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("input", {
                                   type: "radio",
-                                  name: "bany1_group18",
+                                  name: "bany1_group19",
                                   value: "340",
                                   ref: "bany1_pintura_q2"
                                 })
                               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("td", {
                                 children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("input", {
                                   type: "radio",
-                                  name: "bany1_group18",
+                                  name: "bany1_group19",
                                   value: "390",
                                   ref: "bany1_pintura_q3"
                                 })
@@ -6282,7 +6391,7 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 var images = [{
   id: '1',
-  imageName: 'https://picsum.photos/400/250?image=122',
+  imageName: 'IMG_20201107_113938.jpg',
   tag: 'Electricitat'
 }, {
   id: '2',

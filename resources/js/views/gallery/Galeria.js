@@ -7,7 +7,7 @@ import SRLWrapped from 'simple-react-lightbox';
 //import './galeriaScript';
 
 const images = [
-    { id: '1', imageName: 'https://picsum.photos/400/250?image=122', tag: 'Electricitat' },
+    { id: '1', imageName: 'IMG_20201107_113938.jpg', tag: 'Electricitat' },
     { id: '2', imageName: 'https://picsum.photos/400/250?image=526', tag: 'Electricitat' },
     { id: '3', imageName: 'https://picsum.photos/400/250?image=626', tag: 'Aigua' },
     { id: '4', imageName: 'https://picsum.photos/400/250?image=486', tag: 'Aigua' },
@@ -22,6 +22,9 @@ const images = [
     { id: '13', imageName: 'https://picsum.photos/400/250?image=526', tag: 'Obres i Reformes' }
 ];
 
+const TagButton = ( {name, handleSetTag} ) => {
+    return <button className="galleryFilterBtn" align="center" onClick={ () => handleSetTag(name) }>{ name }</button>
+}
 
 function Galeria () {
     
@@ -57,7 +60,7 @@ function Galeria () {
                         {filteredImages.map(image => 
                             <div key={image.id}>
                                 <a href={`${image.imageName}`}>
-                                    <img className="image" src={`${image.imageName}`} alt="" />
+                                    <img className="image" src={`../../../../public/images/gallery/${image.imageName}`} alt="" />
                                 </a>
                             </div>)
                         }
@@ -211,10 +214,6 @@ function Galeria () {
             </section>
         </div>
     );
-}
-
-const TagButton = ( {name, handleSetTag} ) => {
-    return <button className="galleryFilterBtn" align="center" onClick={ () => handleSetTag(name) }>{ name }</button>
 }
 
 export default Galeria;

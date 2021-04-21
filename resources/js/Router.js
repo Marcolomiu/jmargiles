@@ -6,6 +6,8 @@ import Galeria from './views/gallery/galeria';
 import Contacte from './views/contact/Contacte';
 import Pressupost from './views/budget/Pressupost';
 
+import BudgetLists from './views/admin/BudgetLists';
+
 //import Login from './views/Login/Login';
 //import Register from './views/Register/Register';
 //import NotFound from './views/NotFound/NotFound'
@@ -21,6 +23,8 @@ const Main = props => (
         <Route path='/galeria' component={Galeria}/>
         <Route path='/contacte' component={Contacte}/>
         <Route path='/pressupost' component={Pressupost}/>
+
+        <Route path='/budgetlists' component={BudgetLists}/>
         
         {/*User will LogIn*/}
         {/*<Route path='/login' component={Login}/>*/}
