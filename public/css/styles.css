@@ -20,6 +20,27 @@ span.regexError {
     color: red;
 }
 
+.btn.btn-block {
+    text-align: left;
+}
+
+button.close > span {
+    font-size: 2rem;
+}
+
+.btn-jma {
+    font-family: Cabin, sans-serif;
+    color: #fff;
+    background-color: #3375da;
+    border-color: #3375da;
+    margin-left: 1rem;
+}
+
+.switchButtons {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
 /* ---- Section ---- */
 
 section {
@@ -210,6 +231,10 @@ section {
 
 .image {
     width: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
 }
 
 .gallery_product{

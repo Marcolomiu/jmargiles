@@ -6,11 +6,15 @@ import SRLWrapped from 'simple-react-lightbox';
 //import * as GalleryScript from '../gallery/galeriaScript';
 //import './galeriaScript';
 
+
+//how to center image inside a grid
+//https://stackoverflow.com/questions/37085983/how-to-center-image-inside-grid-col
+
 const images = [
-    { id: '1', imageName: 'IMG_20201107_113938.jpg', tag: 'Electricitat' },
-    { id: '2', imageName: 'https://picsum.photos/400/250?image=526', tag: 'Electricitat' },
-    { id: '3', imageName: 'https://picsum.photos/400/250?image=626', tag: 'Aigua' },
-    { id: '4', imageName: 'https://picsum.photos/400/250?image=486', tag: 'Aigua' },
+    { id: '1', imageName: '20200324_171155.jpg', tag: 'Aigua' },
+    { id: '2', imageName: 'IMG_20201107_113938.jpg', tag: 'Aigua' },
+    { id: '3', imageName: 'https://picsum.photos/400/250?image=626', tag: 'Electricitat' },
+    { id: '4', imageName: 'https://picsum.photos/400/250?image=486', tag: 'Electricitat' },
     { id: '5', imageName: 'https://picsum.photos/400/250?image=846', tag: 'Gas' },
     { id: '6', imageName: 'https://picsum.photos/400/250?image=1066', tag: 'Gas' },
     { id: '7', imageName: 'https://picsum.photos/400/250?image=506', tag: 'Porters/Videoportes' },
@@ -23,7 +27,7 @@ const images = [
 ];
 
 const TagButton = ( {name, handleSetTag} ) => {
-    return <button className="galleryFilterBtn" align="center" onClick={ () => handleSetTag(name) }>{ name }</button>
+    return <button className="btn btn-jma" onClick={ () => handleSetTag(name) }>{ name }</button>
 }
 
 function Galeria () {
@@ -46,7 +50,7 @@ function Galeria () {
                     <h1 className="gallery-title">Galeria</h1>
                 </div>
 
-                <div className="col-lg-12 col-md-12 col-sm-12 col-xs-12" align="center" handleSetTag={setTag}>
+                <div className="switchButtons col-lg-12 col-md-12 col-sm-12 col-xs-12" handleSetTag={setTag}>
                     <TagButton name="Tots" handleSetTag={setTag} />
                     <TagButton name="Electricitat" handleSetTag={setTag} />
                     <TagButton name="Aigua" handleSetTag={setTag} />
@@ -60,7 +64,7 @@ function Galeria () {
                         {filteredImages.map(image => 
                             <div key={image.id}>
                                 <a href={`${image.imageName}`}>
-                                    <img className="image" src={`../../../../public/images/gallery/${image.imageName}`} alt="" />
+                                    <img className="image" src={`/images/gallery/${image.imageName}`} alt="" />
                                 </a>
                             </div>)
                         }

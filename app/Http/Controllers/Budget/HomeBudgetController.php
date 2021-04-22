@@ -15,7 +15,8 @@ class HomeBudgetController extends Controller
      */
     public function index()
     {
-        //
+        $budget = HomeBudget::all();
+        return $budget;
     }
 
     /**
@@ -140,35 +141,13 @@ class HomeBudgetController extends Controller
         $budget->rebedor_sostre_fals = $request->rebedor_sostre_fals;
         $budget->rebedor_pintura = $request->rebedor_pintura;
 
-
+        //return response($request);
         $budget->save();
         return response()->json(["message" => "Bugdet created successfully."]);
         
         //echo($request);
         //return response()->json([$request->all()]);
     }
-
-    public function mail(Request $request)
-    {
-        $data = [
-                'Nom'  => $request->input('nom'),
-                'Telf' => $request->input('telf'),
-                'Email' => $request->input('email'),
-                'Descripcio' => $request->input('descripcio')
-                ];
-
-        //Mail Function
-        Mail::send('email.contactEmail', ['data1' => $data], function ($m) {
-
-            $m->to('marcargiles1@hotmail.com')->subject('Correu Formulari Web');
-        });
-
-        //Json Response For Angular frontend
-        return response()->json(["message" => "Email sent successfully."]);
-    }
-
-
-
 
     /**
      * Display the specified resource.

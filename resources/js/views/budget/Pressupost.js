@@ -1307,8 +1307,8 @@ class Pressupost extends React.Component {
                     <div className="sectionMargin">
                         <div className="container">
                             <div className="switchButtons">
-                                <button className="switchButtons vivenda" align="center" onClick={() => this.formButton("vivenda")}>Vivenda</button>
-                                <button className="switchButtons barRestaurant" align="center" onClick={() => this.formButton("barRestaurant")}>Local Comercial</button>
+                                <button className="btn btn-jma vivenda" align="center" onClick={() => this.formButton("vivenda")}>Vivenda</button>
+                                <button className="btn btn-jma barRestaurant" align="center" onClick={() => this.formButton("barRestaurant")}>Local Comercial</button>
                             </div>
                             <div className="notificationContainer">
                                 <div className="alert alert-warning alert-dismissible fade show" role="alert">
@@ -1327,7 +1327,7 @@ class Pressupost extends React.Component {
                                         <div className="card">
                                             <div className="card-header" id="headingOne">
                                                 <h5 className="mb-0">
-                                                <button type="button" className="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                                <button type="button" className="btn btn-link btn-block collapsed" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
                                                     Cuina
                                                 </button>
                                                 </h5>
@@ -1481,7 +1481,7 @@ class Pressupost extends React.Component {
                                         <div className="card">
                                             <div className="card-header" id="headingTwo">
                                                 <h5 className="mb-0">
-                                                <button type="button" className="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                                <button type="button" className="btn btn-link btn-block collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
                                                     Bany
                                                 </button>
                                                 </h5>
@@ -1640,7 +1640,7 @@ class Pressupost extends React.Component {
                                         <div className="card">
                                             <div className="card-header" id="headingThree">
                                                 <h5 className="mb-0">
-                                                <button type="button" className="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+                                                <button type="button" className="btn btn-link btn-block collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
                                                     Saló
                                                 </button>
                                                 </h5>
@@ -1715,7 +1715,7 @@ class Pressupost extends React.Component {
                                         <div className="card">
                                             <div className="card-header" id="headingFour">
                                                 <h5 className="mb-0">
-                                                <button type="button" className="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
+                                                <button type="button" className="btn btn-link btn-block collapsed" data-toggle="collapse" data-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
                                                     Habitació matrimoni (aprox 18 m2)
                                                 </button>
                                                 </h5>
@@ -1790,7 +1790,7 @@ class Pressupost extends React.Component {
                                         <div className="card">
                                             <div className="card-header" id="headingFive">
                                                 <h5 className="mb-0">
-                                                <button type="button" className="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFive" aria-expanded="true" aria-controls="collapseFive">
+                                                <button type="button" className="btn btn-link btn-block collapsed" data-toggle="collapse" data-target="#collapseFive" aria-expanded="true" aria-controls="collapseFive">
                                                     Hb individual 1 (aprox 9 m2)
                                                 </button>
                                                 </h5>
@@ -1865,7 +1865,7 @@ class Pressupost extends React.Component {
                                         <div className="card">
                                             <div className="card-header" id="headingSix">
                                                 <h5 className="mb-0">
-                                                <button type="button" className="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseSix" aria-expanded="true" aria-controls="collapseSix">
+                                                <button type="button" className="btn btn-link btn-block collapsed" data-toggle="collapse" data-target="#collapseSix" aria-expanded="true" aria-controls="collapseSix">
                                                     Hb individual 2 (aprox 9 m2)
                                                 </button>
                                                 </h5>
@@ -1940,7 +1940,7 @@ class Pressupost extends React.Component {
                                         <div className="card">
                                             <div className="card-header" id="headingSeven">
                                                 <h5 className="mb-0">
-                                                <button type="button" className="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseSeven" aria-expanded="true" aria-controls="collapseSeven">
+                                                <button type="button" className="btn btn-link btn-block collapsed" data-toggle="collapse" data-target="#collapseSeven" aria-expanded="true" aria-controls="collapseSeven">
                                                     Rebedor/Passadís
                                                 </button>
                                                 </h5>
@@ -2008,7 +2008,7 @@ class Pressupost extends React.Component {
                                             <textarea className="form-control" id="contactDescripcio" placeholder="Què necessites?*" ref="contactDescripcio"></textarea>
                                             <span id="regexDescripcioError" className="regexError" style={{display: 'none' }}></span>
                                         </div>
-                                        <button id="contactFormSubmitBtn" type="submit" className="btn btn-primary" onClick={this.addFormData}>Enviar</button>
+                                        <button id="contactFormSubmitBtn" type="submit" className="btn btn-jma" onClick={this.addFormData}>Enviar</button>
                                 </form>
                             </div>
                         </div>

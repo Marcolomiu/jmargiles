@@ -3787,14 +3787,14 @@ var Pressupost = /*#__PURE__*/function (_React$Component) {
               children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)("div", {
                 className: "switchButtons",
                 children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("button", {
-                  className: "switchButtons vivenda",
+                  className: "btn btn-jma vivenda",
                   align: "center",
                   onClick: function onClick() {
                     return _this3.formButton("vivenda");
                   },
                   children: "Vivenda"
                 }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("button", {
-                  className: "switchButtons barRestaurant",
+                  className: "btn btn-jma barRestaurant",
                   align: "center",
                   onClick: function onClick() {
                     return _this3.formButton("barRestaurant");
@@ -3843,7 +3843,7 @@ var Pressupost = /*#__PURE__*/function (_React$Component) {
                           className: "mb-0",
                           children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("button", {
                             type: "button",
-                            className: "btn btn-link",
+                            className: "btn btn-link btn-block collapsed",
                             "data-toggle": "collapse",
                             "data-target": "#collapseOne",
                             "aria-expanded": "false",
@@ -4332,7 +4332,7 @@ var Pressupost = /*#__PURE__*/function (_React$Component) {
                           className: "mb-0",
                           children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("button", {
                             type: "button",
-                            className: "btn btn-link collapsed",
+                            className: "btn btn-link btn-block collapsed",
                             "data-toggle": "collapse",
                             "data-target": "#collapseTwo",
                             "aria-expanded": "false",
@@ -4846,7 +4846,7 @@ var Pressupost = /*#__PURE__*/function (_React$Component) {
                           className: "mb-0",
                           children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("button", {
                             type: "button",
-                            className: "btn btn-link collapsed",
+                            className: "btn btn-link btn-block collapsed",
                             "data-toggle": "collapse",
                             "data-target": "#collapseThree",
                             "aria-expanded": "true",
@@ -5060,7 +5060,7 @@ var Pressupost = /*#__PURE__*/function (_React$Component) {
                           className: "mb-0",
                           children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("button", {
                             type: "button",
-                            className: "btn btn-link collapsed",
+                            className: "btn btn-link btn-block collapsed",
                             "data-toggle": "collapse",
                             "data-target": "#collapseFour",
                             "aria-expanded": "true",
@@ -5274,7 +5274,7 @@ var Pressupost = /*#__PURE__*/function (_React$Component) {
                           className: "mb-0",
                           children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("button", {
                             type: "button",
-                            className: "btn btn-link collapsed",
+                            className: "btn btn-link btn-block collapsed",
                             "data-toggle": "collapse",
                             "data-target": "#collapseFive",
                             "aria-expanded": "true",
@@ -5488,7 +5488,7 @@ var Pressupost = /*#__PURE__*/function (_React$Component) {
                           className: "mb-0",
                           children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("button", {
                             type: "button",
-                            className: "btn btn-link collapsed",
+                            className: "btn btn-link btn-block collapsed",
                             "data-toggle": "collapse",
                             "data-target": "#collapseSix",
                             "aria-expanded": "true",
@@ -5702,7 +5702,7 @@ var Pressupost = /*#__PURE__*/function (_React$Component) {
                           className: "mb-0",
                           children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("button", {
                             type: "button",
-                            className: "btn btn-link collapsed",
+                            className: "btn btn-link btn-block collapsed",
                             "data-toggle": "collapse",
                             "data-target": "#collapseSeven",
                             "aria-expanded": "true",
@@ -5896,7 +5896,7 @@ var Pressupost = /*#__PURE__*/function (_React$Component) {
                   }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("button", {
                     id: "contactFormSubmitBtn",
                     type: "submit",
-                    className: "btn btn-primary",
+                    className: "btn btn-jma",
                     onClick: this.addFormData,
                     children: "Enviar"
                   })]
@@ -6386,25 +6386,27 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
  //import * as GalleryScript from '../gallery/galeriaScript';
 //import './galeriaScript';
+//how to center image inside a grid
+//https://stackoverflow.com/questions/37085983/how-to-center-image-inside-grid-col
 
 
 
 var images = [{
   id: '1',
-  imageName: 'IMG_20201107_113938.jpg',
-  tag: 'Electricitat'
+  imageName: '20200324_171155.jpg',
+  tag: 'Aigua'
 }, {
   id: '2',
-  imageName: 'https://picsum.photos/400/250?image=526',
-  tag: 'Electricitat'
+  imageName: 'IMG_20201107_113938.jpg',
+  tag: 'Aigua'
 }, {
   id: '3',
   imageName: 'https://picsum.photos/400/250?image=626',
-  tag: 'Aigua'
+  tag: 'Electricitat'
 }, {
   id: '4',
   imageName: 'https://picsum.photos/400/250?image=486',
-  tag: 'Aigua'
+  tag: 'Electricitat'
 }, {
   id: '5',
   imageName: 'https://picsum.photos/400/250?image=846',
@@ -6443,6 +6445,18 @@ var images = [{
   tag: 'Obres i Reformes'
 }];
 
+var TagButton = function TagButton(_ref) {
+  var name = _ref.name,
+      handleSetTag = _ref.handleSetTag;
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("button", {
+    className: "btn btn-jma",
+    onClick: function onClick() {
+      return handleSetTag(name);
+    },
+    children: name
+  });
+};
+
 function Galeria() {
   var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)('Tots'),
       _useState2 = _slicedToArray(_useState, 2),
@@ -6470,8 +6484,7 @@ function Galeria() {
           children: "Galeria"
         })
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
-        className: "col-lg-12 col-md-12 col-sm-12 col-xs-12",
-        align: "center",
+        className: "switchButtons col-lg-12 col-md-12 col-sm-12 col-xs-12",
         handleSetTag: setTag,
         children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(TagButton, {
           name: "Tots",
@@ -6501,7 +6514,7 @@ function Galeria() {
                 href: "".concat(image.imageName),
                 children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("img", {
                   className: "image",
-                  src: "".concat(image.imageName),
+                  src: "/images/gallery/".concat(image.imageName),
                   alt: ""
                 })
               })
@@ -6776,19 +6789,6 @@ function Galeria() {
     })]
   });
 }
-
-var TagButton = function TagButton(_ref) {
-  var name = _ref.name,
-      handleSetTag = _ref.handleSetTag;
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("button", {
-    className: "galleryFilterBtn",
-    align: "center",
-    onClick: function onClick() {
-      return handleSetTag(name);
-    },
-    children: name
-  });
-};
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Galeria);
 

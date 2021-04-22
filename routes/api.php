@@ -23,3 +23,5 @@ Route::post('send/email', [App\Http\Controllers\ContactEmailController::class, '
 
 //Budget Route which we used in angular http service
 Route::post('send/budget', [App\Http\Controllers\Budget\HomeBudgetController::class, 'store'])->name('budget');
+
+Route::get('/', [App\Http\Controllers\Budget\HomeBudgetController::class, 'index']);
