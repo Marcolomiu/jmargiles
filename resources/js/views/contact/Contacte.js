@@ -180,7 +180,9 @@ class Contacte extends React.Component {
                                             <textarea className="form-control" id="contactDescripcio" placeholder="Què necessites?*" ref="contactDescripcio"></textarea>
                                             <span id="regexDescripcioError" className="regexError" style={{display: 'none' }}></span>
                                         </div>
-                                        <button id="contactFormSubmitBtn" type="submit" className="btn btn-primary" onClick={this.addFormData}>Enviar</button>
+                                        <div className="form-btn">
+                                            <button id="contactFormSubmitBtn" type="submit" className="btn btn-jma" onClick={this.addFormData}>Enviar</button>
+                                        </div>
                                     </form>
                                 </div>
                             </div>

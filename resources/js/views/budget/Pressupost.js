@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import ReactDOM from 'react-dom';
 import Header from '../../components/header/Header';
 import axios from 'axios';
@@ -101,6 +101,15 @@ document.getElementsByClassName('').addEventListener('change', function() {
     document.querySelector(this).siblings('input[type="checkbox"]').not(this).prop('checked', false);
 });
 */
+/*
+const [budgetCost, setBudgetCost] = useState(0);
+
+useEffect(() => {
+    axios.get('http://127.0.0.1:8000/api/')
+    .then(response => {
+        setBudgetCost(response.data);
+    })
+})*/
 
 class Pressupost extends React.Component {
 
@@ -108,9 +117,15 @@ class Pressupost extends React.Component {
     {
         super(props);
         this.addFormData = this.addFormData.bind(this);
+
+        this.state = {
+            budgetCost: 0
+        };
     }
 
-    
+    // https://reactjs.org/docs/hooks-state.html
+
+
     componentDidMount() {
         this._radioClick();
     }
@@ -131,7 +146,7 @@ class Pressupost extends React.Component {
                     console.log(" ");
                     console.log(" ");
                     
-                    let budgetCost = 0;
+                    let auxBudgetCost = 0;
 
                     let inputsAux = document.getElementsByTagName("input"),
                     y = inputsAux.length;
@@ -141,16 +156,20 @@ class Pressupost extends React.Component {
                         if(inputsAux[y].type === "radio") {
                             //inputsAux[y].addEventListener("change", function() {
                                 if (inputsAux[y].checked === true) {
-                                    budgetCost += Number(inputsAux[y].value);
+                                    auxBudgetCost += Number(inputsAux[y].value);
                                     console.log("Value: " + inputsAux[y].value);
                                     console.log(" ");
                                 }
                             //},0);
                         }
                     }
-                    console.log("Cost total: " + budgetCost);
+                    console.log("Cost total: " + auxBudgetCost);
+
+                    this.setState({ budgetCost: auxBudgetCost })
+
                     console.log(" ");
                     console.log(" ");
+                    console.log(this.props.budgetCost);
                     console.log(" ");
                 },0);                
             }
@@ -1299,6 +1318,9 @@ class Pressupost extends React.Component {
     // <button className="switchButtons vivenda">Z</button>
 
     render() {
+
+        const { budgetCost } = this.state;
+
         return (
             <div>
                 <Header/>
@@ -1991,7 +2013,12 @@ class Pressupost extends React.Component {
                                             </div>
                                         </div>
                                     </div>
-                                    <br></br>
+                                    <div className="card">
+                                        <div className="card-body">
+                                            <p>Cost total</p>
+                                            <h1>{ this.state.budgetCost }</h1>
+                                        </div>
+                                    </div>
                                     <div className="form-group">
                                             <input type="text" className="form-control" id="contactNom" placeholder="Nom*" ref="contactNom" />
                                             <span id="regexNameError" className="regexError" style={{display: 'none' }}></span>
@@ -2008,7 +2035,9 @@ class Pressupost extends React.Component {
                                             <textarea className="form-control" id="contactDescripcio" placeholder="Què necessites?*" ref="contactDescripcio"></textarea>
                                             <span id="regexDescripcioError" className="regexError" style={{display: 'none' }}></span>
                                         </div>
-                                        <button id="contactFormSubmitBtn" type="submit" className="btn btn-jma" onClick={this.addFormData}>Enviar</button>
+                                        <div className="form-btn">
+                                            <button id="contactFormSubmitBtn" type="submit" className="btn btn-jma" onClick={this.addFormData}>Enviar</button>
+                                        </div>
                                 </form>
                             </div>
                         </div>

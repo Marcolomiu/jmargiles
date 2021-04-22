@@ -2588,6 +2588,16 @@ document.getElementsByClassName('').addEventListener('change', function() {
 });
 */
 
+/*
+const [budgetCost, setBudgetCost] = useState(0);
+
+useEffect(() => {
+    axios.get('http://127.0.0.1:8000/api/')
+    .then(response => {
+        setBudgetCost(response.data);
+    })
+})*/
+
 var Pressupost = /*#__PURE__*/function (_React$Component) {
   _inherits(Pressupost, _React$Component);
 
@@ -2600,8 +2610,12 @@ var Pressupost = /*#__PURE__*/function (_React$Component) {
 
     _this = _super.call(this, props);
     _this.addFormData = _this.addFormData.bind(_assertThisInitialized(_this));
+    _this.state = {
+      budgetCost: 0
+    };
     return _this;
-  }
+  } // https://reactjs.org/docs/hooks-state.html
+
 
   _createClass(Pressupost, [{
     key: "componentDidMount",
@@ -2625,7 +2639,7 @@ var Pressupost = /*#__PURE__*/function (_React$Component) {
             console.log(" ");
             console.log(" ");
             console.log(" ");
-            var budgetCost = 0;
+            var auxBudgetCost = 0;
             var inputsAux = document.getElementsByTagName("input"),
                 y = inputsAux.length;
             console.log(y);
@@ -2634,7 +2648,7 @@ var Pressupost = /*#__PURE__*/function (_React$Component) {
               if (inputsAux[y].type === "radio") {
                 //inputsAux[y].addEventListener("change", function() {
                 if (inputsAux[y].checked === true) {
-                  budgetCost += Number(inputsAux[y].value);
+                  auxBudgetCost += Number(inputsAux[y].value);
                   console.log("Value: " + inputsAux[y].value);
                   console.log(" ");
                 } //},0);
@@ -2642,9 +2656,13 @@ var Pressupost = /*#__PURE__*/function (_React$Component) {
               }
             }
 
-            console.log("Cost total: " + budgetCost);
+            console.log("Cost total: " + auxBudgetCost);
+            this.setState({
+              budgetCost: auxBudgetCost
+            });
             console.log(" ");
             console.log(" ");
+            console.log(this.props.budgetCost);
             console.log(" ");
           }, 0);
         }
@@ -3776,6 +3794,7 @@ var Pressupost = /*#__PURE__*/function (_React$Component) {
     value: function render() {
       var _this3 = this;
 
+      var budgetCost = this.state.budgetCost;
       return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)("div", {
         children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_components_header_Header__WEBPACK_IMPORTED_MODULE_2__.default, {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("div", {
           className: "headerMargin"
@@ -5833,7 +5852,17 @@ var Pressupost = /*#__PURE__*/function (_React$Component) {
                         })]
                       })]
                     })]
-                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("br", {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)("div", {
+                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("div", {
+                    className: "card",
+                    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)("div", {
+                      className: "card-body",
+                      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("p", {
+                        children: "Cost total"
+                      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("h1", {
+                        children: this.state.budgetCost
+                      })]
+                    })
+                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)("div", {
                     className: "form-group",
                     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("input", {
                       type: "text",
@@ -5893,12 +5922,15 @@ var Pressupost = /*#__PURE__*/function (_React$Component) {
                         display: 'none'
                       }
                     })]
-                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("button", {
-                    id: "contactFormSubmitBtn",
-                    type: "submit",
-                    className: "btn btn-jma",
-                    onClick: this.addFormData,
-                    children: "Enviar"
+                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("div", {
+                    className: "form-btn",
+                    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("button", {
+                      id: "contactFormSubmitBtn",
+                      type: "submit",
+                      className: "btn btn-jma",
+                      onClick: this.addFormData,
+                      children: "Enviar"
+                    })
                   })]
                 })
               })]
@@ -6312,12 +6344,15 @@ var Contacte = /*#__PURE__*/function (_React$Component) {
                           display: 'none'
                         }
                       })]
-                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("button", {
-                      id: "contactFormSubmitBtn",
-                      type: "submit",
-                      className: "btn btn-primary",
-                      onClick: this.addFormData,
-                      children: "Enviar"
+                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("div", {
+                      className: "form-btn",
+                      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("button", {
+                        id: "contactFormSubmitBtn",
+                        type: "submit",
+                        className: "btn btn-jma",
+                        onClick: this.addFormData,
+                        children: "Enviar"
+                      })
                     })]
                   })]
                 })]
