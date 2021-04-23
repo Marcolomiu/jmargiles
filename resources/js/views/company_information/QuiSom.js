@@ -12,11 +12,11 @@ function Quisom() {
                 <div className="sectionMargin">
                     <div className="container">
                         <div className="row">
-                            <div className="quisom-image col-7">
+                            <div className="quisom-image d-none d-lg-block col-lg-7">
                                 <img src="images/quisom/quisom_imatge.png"></img>
                             </div>
                             
-                            <div className="col-5">
+                            <div className="textDiv col-lg-5 col-12">
                                 <p>En Josep M. Argilés som un grup de professionals formats i especialitzats en tots els àmbits que oferim.</p>
 
                                 <p>Sempre en constant aprenentatge i motivats per fer les coses cada dia millor.</p>
@@ -27,6 +27,9 @@ function Quisom() {
 
                                 <p>Volem seguir creixent i ampliant el nostre capital humà. Creiem en les persones i portem anys recolzats en professionals eficaços.</p>
                                 <p>També apostem per les noves tecnologies. Per això tenim un programa de formació permanent per tal d’aplicar-les correctament en benefici dels nostres clients.</p>
+                            </div>
+                            <div className="quisom-image d-lg-none col-12">
+                                <img src="images/quisom/quisom_imatge.png"></img>
                             </div>
                         </div>
                     </div>
