@@ -137,6 +137,9 @@ class Pressupost extends React.Component {
 
         while(x--) {
             if(inputs[x].type === "radio") {
+
+                let aux = this;
+
                 inputs[x].addEventListener("change", function() {
                     console.log("Checked: " + this.checked);
                     console.log("Name: " + this.name);
@@ -165,11 +168,11 @@ class Pressupost extends React.Component {
                     }
                     console.log("Cost total: " + auxBudgetCost);
 
-                    this.setState({ budgetCost: auxBudgetCost })
+                    aux.setState({ budgetCost: auxBudgetCost })
 
                     console.log(" ");
                     console.log(" ");
-                    console.log(this.props.budgetCost);
+                    console.log(aux.state.budgetCost);
                     console.log(" ");
                 },0);                
             }
@@ -753,7 +756,7 @@ class Pressupost extends React.Component {
                     }
                 }
             }
-            // MIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIRAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAR
+
             if (this.refs.bany1_sostre_alumini_q1.checked) {
                 fd.append('bany1_sostre_alumini', 'q1');
             } else {
@@ -2013,7 +2016,7 @@ class Pressupost extends React.Component {
                                             </div>
                                         </div>
                                     </div>
-                                    <div className="card">
+                                    <div className="card card-price">
                                         <div className="card-body">
                                             <p>Cost total</p>
                                             <h1>{ this.state.budgetCost }</h1>

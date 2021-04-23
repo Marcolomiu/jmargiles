@@ -145,7 +145,7 @@ class Contacte extends React.Component {
                     <div className="sectionMargin">
                         <div className="container">
                             <div className="row">
-                                <div className="col-7">
+                                <div className="col-lg-7 col-12">
 
                                     <p>Telf: 659 51 41 70</p>
                                     <p>Contacte: info@rgil.es</p>
@@ -158,7 +158,7 @@ class Contacte extends React.Component {
                                         loadingElement = {<p>Cargant</p>}
                                     />
                                 </div>
-                                <div className="col-5 mb-5 mt-5 text-left">
+                                <div className="col-lg-5 col-12 mb-5 mt-5 text-left">
 
                                     <h2>Contacte</h2>
                                     <p>Contacte amb JMA Instal·lacions</p>

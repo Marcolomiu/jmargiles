@@ -62,6 +62,7 @@ class HomeBudgetController extends Controller
         //Kitchen
         $budget->cuina_electricitat = $request->cuina_electricitat;
         $budget->cuina_aigua = $request->cuina_aigua;
+        $budget->cuina_gas = $request->cuina_gas;
         $budget->cuina_mobles240 = $request->cuina_mobles240;
         $budget->cuina_encimera_gas = $request->cuina_encimera_gas;
         $budget->cuina_encimera_vitroceramica = $request->cuina_encimera_vitroceramica;

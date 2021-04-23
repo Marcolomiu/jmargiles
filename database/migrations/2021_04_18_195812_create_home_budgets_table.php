@@ -25,6 +25,7 @@ class CreateHomeBudgetsTable extends Migration
             //Kitchen
             $table->string('cuina_electricitat', 10)->nullable();
             $table->string('cuina_aigua', 10)->nullable();
+            $table->string('cuina_gas', 10)->nullable();
             $table->string('cuina_mobles240', 10)->nullable();
             $table->string('cuina_encimera_gas', 10)->nullable();
             $table->string('cuina_encimera_vitroceramica', 10)->nullable();

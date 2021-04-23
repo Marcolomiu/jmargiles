@@ -10,20 +10,29 @@ import SRLWrapped from 'simple-react-lightbox';
 //how to center image inside a grid
 //https://stackoverflow.com/questions/37085983/how-to-center-image-inside-grid-col
 
+//https://picsum.photos/400/250?image=122
+
 const images = [
-    { id: '1', imageName: '20200324_171155.jpg', tag: 'Aigua' },
-    { id: '2', imageName: 'IMG_20201107_113938.jpg', tag: 'Aigua' },
-    { id: '3', imageName: 'https://picsum.photos/400/250?image=626', tag: 'Electricitat' },
-    { id: '4', imageName: 'https://picsum.photos/400/250?image=486', tag: 'Electricitat' },
-    { id: '5', imageName: 'https://picsum.photos/400/250?image=846', tag: 'Gas' },
-    { id: '6', imageName: 'https://picsum.photos/400/250?image=1066', tag: 'Gas' },
-    { id: '7', imageName: 'https://picsum.photos/400/250?image=506', tag: 'Porters/Videoportes' },
-    { id: '8', imageName: 'https://picsum.photos/400/250?image=1026', tag: 'Porters/Videoportes' },
-    { id: '9', imageName: 'https://picsum.photos/400/250?image=1077', tag: 'Obres i Reformes' },
-    { id: '10', imageName: 'https://picsum.photos/400/250?image=102', tag: 'Recàrrega cotxes elèctrics' },
-    { id: '11', imageName: 'https://picsum.photos/400/250?image=106', tag: 'Recàrrega cotxes elèctrics' },
-    { id: '12', imageName: 'https://picsum.photos/400/250?image=122', tag: 'Aigua' },
-    { id: '13', imageName: 'https://picsum.photos/400/250?image=526', tag: 'Obres i Reformes' }
+    { id: '1', imageName: '122-400x250.jpg', tag: 'Obres i Reformes' },
+    { id: '2', imageName: '123-400x250.jpg', tag: 'Aigua' },
+    { id: '3', imageName: '124-400x250.jpg', tag: 'Electricitat' },
+    { id: '4', imageName: '128-400x250.jpg', tag: 'Recàrrega cotxes elèctrics' },
+    { id: '5', imageName: '136-400x250.jpg', tag: 'Gas' },
+    { id: '6', imageName: '140-400x250.jpg', tag: 'Porters/Videoportes' },
+    { id: '7', imageName: '152-400x250.jpg', tag: 'Porters/Videoportes' },
+    { id: '8', imageName: '164-400x250.jpg', tag: 'Electricitat' },
+    { id: '9', imageName: '166-400x250.jpg', tag: 'Obres i Reformes' },
+    { id: '10', imageName: '168-400x250.jpg', tag: 'Recàrrega cotxes elèctrics' },
+    { id: '11', imageName: '175-400x250.jpg', tag: 'Recàrrega cotxes elèctrics' },
+    { id: '12', imageName: '179-400x250.jpg', tag: 'Aigua' },
+    { id: '13', imageName: '182-400x250.jpg', tag: 'Gas' },
+    { id: '14', imageName: '188-400x250.jpg', tag: 'Porters/Videoportes' },
+    { id: '15', imageName: '191-400x250.jpg', tag: 'Aigua' },
+    { id: '16', imageName: '193-400x250.jpg', tag: 'Obres i Reformes' },
+    { id: '17', imageName: '195-400x250.jpg', tag: 'Gas' },
+    { id: '18', imageName: '197-400x250.jpg', tag: 'Recàrrega cotxes elèctrics' },
+    { id: '19', imageName: '199-400x250.jpg', tag: 'Aigua' },
+    { id: '20', imageName: '1000-400x250.jpg', tag: 'Electricitat' }
 ];
 
 const TagButton = ( {name, handleSetTag} ) => {
@@ -62,7 +71,7 @@ function Galeria () {
                 <SRLWrapped>
                     <div className="galleryContainer">
                         {filteredImages.map(image => 
-                            <div key={image.id}>
+                            <div className="imageContainer" key={image.id}>
                                 <a href={`${image.imageName}`}>
                                     <img className="image" src={`/images/gallery/${image.imageName}`} alt="" />
                                 </a>
@@ -70,151 +79,6 @@ function Galeria () {
                         }
                     </div>
                 </SRLWrapped>
-            </section>
-            
-            <br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br>
-            <br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br>
-            <br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br>
-            <br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br>
-
-            <section className="portfolio" id="portfolio">
-                <div className="container-fluid">
-                    <div className="row">
-
-                        <div className="gallery col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                            <h1 className="gallery-title">Gallery</h1>
-                        </div>
-
-                        <div className="col-lg-12 col-md-12 col-sm-12 col-xs-12" align="center">
-                            <button className="galleryFilterBtn" data-filter="all">All</button>
-                            <button className="galleryFilterBtn" data-filter="category1">Designing</button>
-                            <button className="galleryFilterBtn" data-filter="category2">Development</button>
-                            <button className="galleryFilterBtn" data-filter="category3">Graphics</button>
-                        </div>
-                        
-                        <br/>
-
-                        <div className="gallery_product col-sm-3 col-xs-6 filter category1">
-                            <a className="fancybox" rel="ligthbox" href="https://picsum.photos/400/250?image=122">
-                                <img className="img-responsive" alt="" src="https://picsum.photos/400/250?image=122" />
-                                <div className='img-info'>
-                                    <h4>Image Title 1</h4>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                                </div>
-                            </a>
-                        </div>
-
-                        <div className="gallery_product col-sm-3 col-xs-6 filter category2">
-                            <a className="fancybox" rel="ligthbox" href="https://picsum.photos/400/250?image=526">
-                                <img className="img-responsive" alt="" src="https://picsum.photos/400/250?image=526" />
-                                <div className='img-info'>
-                                    <h4>Image Title 2</h4>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                                </div>
-                            </a>
-                        </div>
-
-                        <div className="gallery_product col-sm-3 col-xs-6 filter category3">
-                            <a className="fancybox" rel="ligthbox" href="https://picsum.photos/400/250?image=626">
-                                <img className="img-responsive" alt="" src="https://picsum.photos/400/250?image=626" />
-                                <div className='img-info'>
-                                    <h4>Image Title 3</h4>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                                </div>
-                            </a>
-                        </div>
-
-                        <div className="gallery_product col-sm-3 col-xs-6 filter category1">
-                            <a className="fancybox" rel="ligthbox" href="https://picsum.photos/400/250?image=626">
-                                <img className="img-responsive" alt="" src="https://picsum.photos/400/250?image=626" />
-                                <div className='img-info'>
-                                    <h4>Image Title 4</h4>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                                </div>
-                            </a>
-                        </div>
-
-                        <div className="gallery_product col-sm-3 col-xs-6 filter category2">
-                            <a className="fancybox" rel="ligthbox" href="https://picsum.photos/400/250?image=486">
-                                <img className="img-responsive" alt="" src="https://picsum.photos/400/250?image=486" />
-                                <div className='img-info'>
-                                    <h4>Image Title 5</h4>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                                </div>
-                            </a>
-                        </div>
-
-                        <div className="gallery_product col-sm-3 col-xs-6 filter category3">
-                            <a className="fancybox" rel="ligthbox" href="https://picsum.photos/400/250?image=846">
-                                <img className="img-responsive" alt="" src="https://picsum.photos/400/250?image=846" />
-                                <div className='img-info'>
-                                    <h4>Image Title 6</h4>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                                </div>
-                            </a>
-                        </div>
-
-                        <div className="gallery_product col-sm-3 col-xs-6 filter category1">
-                            <a className="fancybox" rel="ligthbox" href="https://picsum.photos/400/250?image=1066">
-                                <img className="img-responsive" alt="" src="https://picsum.photos/400/250?image=1066" />
-                                <div className='img-info'>
-                                    <h4>Image Title 7</h4>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                                </div>
-                            </a>
-                        </div>
-
-                        <div className="gallery_product col-sm-3 col-xs-6 filter category2">
-                            <a className="fancybox" rel="ligthbox" href="https://picsum.photos/400/250?image=506">
-                                <img className="img-responsive" alt="" src="https://picsum.photos/400/250?image=506" />
-                                <div className='img-info'>
-                                    <h4>Image Title 8</h4>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                                </div>
-                            </a>
-                        </div>
-
-                        <div className="gallery_product col-sm-3 col-xs-6 filter category3">
-                            <a className="fancybox" rel="ligthbox" href="https://picsum.photos/400/250?image=1026">
-                                <img className="img-responsive" alt="" src="https://picsum.photos/400/250?image=1026" />
-                                <div className='img-info'>
-                                    <h4>Image Title 9</h4>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                                </div>
-                            </a>
-                        </div>
-
-                        <div className="gallery_product col-sm-3 col-xs-6 filter category1">
-                            <a className="fancybox" rel="ligthbox" href="https://picsum.photos/400/250?image=1077">
-                                <img className="img-responsive" alt="" src="https://picsum.photos/400/250?image=1077" />
-                                <div className='img-info'>
-                                    <h4>Image Title 10</h4>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                                </div>
-                            </a>
-                        </div>
-
-                        <div className="gallery_product col-sm-3 col-xs-6 filter category2">
-                            <a className="fancybox" rel="ligthbox" href="https://picsum.photos/400/250?image=102">
-                                <img className="img-responsive" alt="" src="https://picsum.photos/400/250?image=102" />
-                                <div className='img-info'>
-                                    <h4>Image Title 11</h4>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                                </div>
-                            </a>
-                        </div>
-
-                        <div className="gallery_product col-sm-3 col-xs-6 filter category3">
-                            <a className="fancybox" rel="ligthbox" href="https://picsum.photos/400/250?image=106">
-                                <img className="img-responsive" alt="" src="https://picsum.photos/400/250?image=106" />
-                                <div className='img-info'>
-                                    <h4>Image Title 12</h4>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
             </section>
         </div>
     );
