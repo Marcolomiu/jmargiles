@@ -52,17 +52,6 @@ class Home extends React.Component {
                         </div>
                     </div>
                 </section>
-                <br></br>
-                <br></br>
-                <br></br>
-                <br></br>
-                <br></br>
-                <br></br>
-                <br></br>
-                <br></br>
-                <br></br>
-                <br></br>
-                <br></br>
                 <section>
                     <div className="sectionMargin">
                         <div className="container">

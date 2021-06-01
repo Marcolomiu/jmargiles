@@ -58,7 +58,7 @@ section {
 
 .sectionMargin {
     display: block;
-    margin: 32px 0px;
+    padding: 2em 0em;
 }
 
 /* ---- Header ---- */
@@ -171,20 +171,30 @@ section {
 
 /* ---- Home ---- */
 
+.slogan {
+    font-family: Cabin, sans-serif;
+}
+
 .slogan h2, .slogan h1 {
+    font-family: Cabin, sans-serif;
     text-align: center;
 }
 
 .obresMenu {
+    /*
     position: relative;
     background-image: url('../images/logo_sense_lletra.png');
     background-repeat: no-repeat; 
     background-size: 10%;
     background-position: center;
+    */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1em; /*movil ok*/
 }
 
 .obresMenu a img {
-    height: 10em;
+    width: 100%; /*movil ok*/
 }
 
 #accordion button {

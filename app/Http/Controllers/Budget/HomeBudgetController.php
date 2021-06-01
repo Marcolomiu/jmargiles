@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Budget;
 use App\Http\Controllers\Controller;
 use App\Models\HomeBudget;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 
 class HomeBudgetController extends Controller
 {
@@ -144,7 +145,31 @@ class HomeBudgetController extends Controller
 
         //return response($request);
         $budget->save();
-        return response()->json(["message" => "Bugdet created successfully."]);
+        
+        /*
+        // Start Email
+        $data = [
+            'Nom'  => $request->input('nom'),
+            'Telf' => $request->input('telf'),
+            'Email' => $request->input('email'),
+            'Descripcio' => $request->input('descripcio'),
+
+            // 'Nom'  => $budget->nom,
+            // 'Telf' => $budget->telefon,
+            // 'Email' => $budget->email,
+            // 'Descripcio' => $budget->descripcio,
+
+        //Mail Function
+        Mail::send('email.contactEmail', ['data1' => $data], function ($m) {
+
+            $m->to('marcargiles1@hotmail.com')->subject('Correu Formulari Web');
+        });
+
+        // End Email
+        */
+        
+        // return response()->json(["message" => "Bugdet created & email sent successfully."]);
+        return response()->json(["message" => "Bugdet created successfully"]);
         
         //echo($request);
         //return response()->json([$request->all()]);

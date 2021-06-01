@@ -14,7 +14,7 @@ function BudgetLists() {
 		.then(response => {
 			setBudget(response.data);
 		})
-	})
+	}, [])
 
     return (
         <div>

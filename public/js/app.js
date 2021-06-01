@@ -2392,7 +2392,7 @@ function BudgetLists() {
     axios__WEBPACK_IMPORTED_MODULE_3___default().get('http://127.0.0.1:8000/api/').then(function (response) {
       setBudget(response.data);
     });
-  });
+  }, []);
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_components_header_Header__WEBPACK_IMPORTED_MODULE_2__.default, {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
       className: "headerMargin"
@@ -2944,7 +2944,8 @@ var Pressupost = /*#__PURE__*/function (_React$Component) {
       }
 
       if (regex) {
-        document.getElementById("contactFormSubmitBtn").disabled = true;
+        document.getElementById("contactFormSubmitBtn").disabled = true; // Disable submit button
+
         var fd = new FormData();
         fd.append('nom', this.refs.contactNom.value);
         fd.append('telf', this.refs.contactTelf.value);
@@ -2952,13 +2953,13 @@ var Pressupost = /*#__PURE__*/function (_React$Component) {
         fd.append('descripcio', this.refs.contactDescripcio.value); // Comprovacions cuina
 
         if (this.refs.cuina_electricitat_q1.checked) {
-          fd.append('cuina_electricitat', 'q1');
+          fd.append('cuina_electricitat', 'Q1');
         } else {
           if (this.refs.cuina_electricitat_q2.checked) {
-            fd.append('cuina_electricitat', 'q2');
+            fd.append('cuina_electricitat', 'Q2');
           } else {
             if (this.refs.cuina_electricitat_q3.checked) {
-              fd.append('cuina_electricitat', 'q3');
+              fd.append('cuina_electricitat', 'Q3');
             } else {
               fd.append('cuina_electricitat', '');
             }
@@ -2966,13 +2967,13 @@ var Pressupost = /*#__PURE__*/function (_React$Component) {
         }
 
         if (this.refs.cuina_aigua_q1.checked) {
-          fd.append('cuina_aigua', 'q1');
+          fd.append('cuina_aigua', 'Q1');
         } else {
           if (this.refs.cuina_aigua_q2.checked) {
-            fd.append('cuina_aigua', 'q2');
+            fd.append('cuina_aigua', 'Q2');
           } else {
             if (this.refs.cuina_aigua_q3.checked) {
-              fd.append('cuina_aigua', 'q3');
+              fd.append('cuina_aigua', 'Q3');
             } else {
               fd.append('cuina_aigua', '');
             }
@@ -2980,13 +2981,13 @@ var Pressupost = /*#__PURE__*/function (_React$Component) {
         }
 
         if (this.refs.cuina_gas_q1.checked) {
-          fd.append('cuina_gas', 'q1');
+          fd.append('cuina_gas', 'Q1');
         } else {
           if (this.refs.cuina_gas_q2.checked) {
-            fd.append('cuina_gas', 'q2');
+            fd.append('cuina_gas', 'Q2');
           } else {
             if (this.refs.cuina_gas_q3.checked) {
-              fd.append('cuina_gas', 'q3');
+              fd.append('cuina_gas', 'Q3');
             } else {
               fd.append('cuina_gas', '');
             }
@@ -2994,13 +2995,13 @@ var Pressupost = /*#__PURE__*/function (_React$Component) {
         }
 
         if (this.refs.cuina_mobles240_q1.checked) {
-          fd.append('cuina_mobles240', 'q1');
+          fd.append('cuina_mobles240', 'Q1');
         } else {
           if (this.refs.cuina_mobles240_q2.checked) {
-            fd.append('cuina_mobles240', 'q2');
+            fd.append('cuina_mobles240', 'Q2');
           } else {
             if (this.refs.cuina_mobles240_q3.checked) {
-              fd.append('cuina_mobles240', 'q3');
+              fd.append('cuina_mobles240', 'Q3');
             } else {
               fd.append('cuina_mobles240', '');
             }
@@ -3008,13 +3009,13 @@ var Pressupost = /*#__PURE__*/function (_React$Component) {
         }
 
         if (this.refs.cuina_encimera_gas_q1.checked) {
-          fd.append('cuina_encimera_gas', 'q1');
+          fd.append('cuina_encimera_gas', 'Q1');
         } else {
           if (this.refs.cuina_encimera_gas_q2.checked) {
-            fd.append('cuina_encimera_gas', 'q2');
+            fd.append('cuina_encimera_gas', 'Q2');
           } else {
             if (this.refs.cuina_encimera_gas_q3.checked) {
-              fd.append('cuina_encimera_gas', 'q3');
+              fd.append('cuina_encimera_gas', 'Q3');
             } else {
               fd.append('cuina_encimera_gas', '');
             }
@@ -3022,13 +3023,13 @@ var Pressupost = /*#__PURE__*/function (_React$Component) {
         }
 
         if (this.refs.cuina_encimera_vitroceramica_q1.checked) {
-          fd.append('cuina_encimera_vitroceramica', 'q1');
+          fd.append('cuina_encimera_vitroceramica', 'Q1');
         } else {
           if (this.refs.cuina_encimera_vitroceramica_q2.checked) {
-            fd.append('cuina_encimera_vitroceramica', 'q2');
+            fd.append('cuina_encimera_vitroceramica', 'Q2');
           } else {
             if (this.refs.cuina_encimera_vitroceramica_q3.checked) {
-              fd.append('cuina_encimera_vitroceramica', 'q3');
+              fd.append('cuina_encimera_vitroceramica', 'Q3');
             } else {
               fd.append('cuina_encimera_vitroceramica', '');
             }
@@ -3036,13 +3037,13 @@ var Pressupost = /*#__PURE__*/function (_React$Component) {
         }
 
         if (this.refs.cuina_encimera_induccio_q1.checked) {
-          fd.append('cuina_encimera_induccio', 'q1');
+          fd.append('cuina_encimera_induccio', 'Q1');
         } else {
           if (this.refs.cuina_encimera_induccio_q2.checked) {
-            fd.append('cuina_encimera_induccio', 'q2');
+            fd.append('cuina_encimera_induccio', 'Q2');
           } else {
             if (this.refs.cuina_encimera_induccio_q3.checked) {
-              fd.append('cuina_encimera_induccio', 'q3');
+              fd.append('cuina_encimera_induccio', 'Q3');
             } else {
               fd.append('cuina_encimera_induccio', '');
             }
@@ -3050,13 +3051,13 @@ var Pressupost = /*#__PURE__*/function (_React$Component) {
         }
 
         if (this.refs.cuina_rentaplats_q1.checked) {
-          fd.append('cuina_rentaplats', 'q1');
+          fd.append('cuina_rentaplats', 'Q1');
         } else {
           if (this.refs.cuina_rentaplats_q2.checked) {
-            fd.append('cuina_rentaplats', 'q2');
+            fd.append('cuina_rentaplats', 'Q2');
           } else {
             if (this.refs.cuina_rentaplats_q3.checked) {
-              fd.append('cuina_rentaplats', 'q3');
+              fd.append('cuina_rentaplats', 'Q3');
             } else {
               fd.append('cuina_rentaplats', '');
             }
@@ -3064,13 +3065,13 @@ var Pressupost = /*#__PURE__*/function (_React$Component) {
         }
 
         if (this.refs.cuina_forn_q1.checked) {
-          fd.append('cuina_forn', 'q1');
+          fd.append('cuina_forn', 'Q1');
         } else {
           if (this.refs.cuina_forn_q2.checked) {
-            fd.append('cuina_forn', 'q2');
+            fd.append('cuina_forn', 'Q2');
           } else {
             if (this.refs.cuina_forn_q3.checked) {
-              fd.append('cuina_forn', 'q3');
+              fd.append('cuina_forn', 'Q3');
             } else {
               fd.append('cuina_forn', '');
             }
@@ -3078,13 +3079,13 @@ var Pressupost = /*#__PURE__*/function (_React$Component) {
         }
 
         if (this.refs.cuina_fregadora_q1.checked) {
-          fd.append('cuina_fregadora', 'q1');
+          fd.append('cuina_fregadora', 'Q1');
         } else {
           if (this.refs.cuina_fregadora_q2.checked) {
-            fd.append('cuina_fregadora', 'q2');
+            fd.append('cuina_fregadora', 'Q2');
           } else {
             if (this.refs.cuina_fregadora_q3.checked) {
-              fd.append('cuina_fregadora', 'q3');
+              fd.append('cuina_fregadora', 'Q3');
             } else {
               fd.append('cuina_fregadora', '');
             }
@@ -3092,13 +3093,13 @@ var Pressupost = /*#__PURE__*/function (_React$Component) {
         }
 
         if (this.refs.cuina_campana_q1.checked) {
-          fd.append('cuina_campana', 'q1');
+          fd.append('cuina_campana', 'Q1');
         } else {
           if (this.refs.cuina_campana_q2.checked) {
-            fd.append('cuina_campana', 'q2');
+            fd.append('cuina_campana', 'Q2');
           } else {
             if (this.refs.cuina_campana_q3.checked) {
-              fd.append('cuina_campana', 'q3');
+              fd.append('cuina_campana', 'Q3');
             } else {
               fd.append('cuina_campana', '');
             }
@@ -3106,13 +3107,13 @@ var Pressupost = /*#__PURE__*/function (_React$Component) {
         }
 
         if (this.refs.cuina_aixeta_q1.checked) {
-          fd.append('cuina_aixeta', 'q1');
+          fd.append('cuina_aixeta', 'Q1');
         } else {
           if (this.refs.cuina_aixeta_q2.checked) {
-            fd.append('cuina_aixeta', 'q2');
+            fd.append('cuina_aixeta', 'Q2');
           } else {
             if (this.refs.cuina_aixeta_q3.checked) {
-              fd.append('cuina_aixeta', 'q3');
+              fd.append('cuina_aixeta', 'Q3');
             } else {
               fd.append('cuina_aixeta', '');
             }
@@ -3120,13 +3121,13 @@ var Pressupost = /*#__PURE__*/function (_React$Component) {
         }
 
         if (this.refs.cuina_rentadora_q1.checked) {
-          fd.append('cuina_rentadora', 'q1');
+          fd.append('cuina_rentadora', 'Q1');
         } else {
           if (this.refs.cuina_rentadora_q2.checked) {
-            fd.append('cuina_rentadora', 'q2');
+            fd.append('cuina_rentadora', 'Q2');
           } else {
             if (this.refs.cuina_rentadora_q3.checked) {
-              fd.append('cuina_rentadora', 'q3');
+              fd.append('cuina_rentadora', 'Q3');
             } else {
               fd.append('cuina_rentadora', '');
             }
@@ -3134,13 +3135,13 @@ var Pressupost = /*#__PURE__*/function (_React$Component) {
         }
 
         if (this.refs.cuina_caldera_q1.checked) {
-          fd.append('cuina_caldera', 'q1');
+          fd.append('cuina_caldera', 'Q1');
         } else {
           if (this.refs.cuina_caldera_q2.checked) {
-            fd.append('cuina_caldera', 'q2');
+            fd.append('cuina_caldera', 'Q2');
           } else {
             if (this.refs.cuina_caldera_q3.checked) {
-              fd.append('cuina_caldera', 'q3');
+              fd.append('cuina_caldera', 'Q3');
             } else {
               fd.append('cuina_caldera', '');
             }
@@ -3148,13 +3149,13 @@ var Pressupost = /*#__PURE__*/function (_React$Component) {
         }
 
         if (this.refs.cuina_sostre_pladur_q1.checked) {
-          fd.append('cuina_sostre_pladur', 'q1');
+          fd.append('cuina_sostre_pladur', 'Q1');
         } else {
           if (this.refs.cuina_sostre_pladur_q2.checked) {
-            fd.append('cuina_sostre_pladur', 'q2');
+            fd.append('cuina_sostre_pladur', 'Q2');
           } else {
             if (this.refs.cuina_sostre_pladur_q3.checked) {
-              fd.append('cuina_sostre_pladur', 'q3');
+              fd.append('cuina_sostre_pladur', 'Q3');
             } else {
               fd.append('cuina_sostre_pladur', '');
             }
@@ -3162,13 +3163,13 @@ var Pressupost = /*#__PURE__*/function (_React$Component) {
         }
 
         if (this.refs.cuina_sostre_alumini_q1.checked) {
-          fd.append('cuina_sostre_alumini', 'q1');
+          fd.append('cuina_sostre_alumini', 'Q1');
         } else {
           if (this.refs.cuina_sostre_alumini_q2.checked) {
-            fd.append('cuina_sostre_alumini', 'q2');
+            fd.append('cuina_sostre_alumini', 'Q2');
           } else {
             if (this.refs.cuina_sostre_alumini_q3.checked) {
-              fd.append('cuina_sostre_alumini', 'q3');
+              fd.append('cuina_sostre_alumini', 'Q3');
             } else {
               fd.append('cuina_sostre_alumini', '');
             }
@@ -3176,13 +3177,13 @@ var Pressupost = /*#__PURE__*/function (_React$Component) {
         }
 
         if (this.refs.cuina_alicatat_q1.checked) {
-          fd.append('cuina_alicatat', 'q1');
+          fd.append('cuina_alicatat', 'Q1');
         } else {
           if (this.refs.cuina_alicatat_q2.checked) {
-            fd.append('cuina_alicatat', 'q2');
+            fd.append('cuina_alicatat', 'Q2');
           } else {
             if (this.refs.cuina_alicatat_q3.checked) {
-              fd.append('cuina_alicatat', 'q3');
+              fd.append('cuina_alicatat', 'Q3');
             } else {
               fd.append('cuina_alicatat', '');
             }
@@ -3190,13 +3191,13 @@ var Pressupost = /*#__PURE__*/function (_React$Component) {
         }
 
         if (this.refs.cuina_pintura_q1.checked) {
-          fd.append('cuina_pintura', 'q1');
+          fd.append('cuina_pintura', 'Q1');
         } else {
           if (this.refs.cuina_pintura_q2.checked) {
-            fd.append('cuina_pintura', 'q2');
+            fd.append('cuina_pintura', 'Q2');
           } else {
             if (this.refs.cuina_pintura_q3.checked) {
-              fd.append('cuina_pintura', 'q3');
+              fd.append('cuina_pintura', 'Q3');
             } else {
               fd.append('cuina_pintura', '');
             }
@@ -3205,13 +3206,13 @@ var Pressupost = /*#__PURE__*/function (_React$Component) {
 
 
         if (this.refs.bany1_electricitat_q1.checked) {
-          fd.append('bany1_electricitat', 'q1');
+          fd.append('bany1_electricitat', 'Q1');
         } else {
           if (this.refs.bany1_electricitat_q2.checked) {
-            fd.append('bany1_electricitat', 'q2');
+            fd.append('bany1_electricitat', 'Q2');
           } else {
             if (this.refs.bany1_electricitat_q3.checked) {
-              fd.append('bany1_electricitat', 'q3');
+              fd.append('bany1_electricitat', 'Q3');
             } else {
               fd.append('bany1_electricitat', '');
             }
@@ -3219,13 +3220,13 @@ var Pressupost = /*#__PURE__*/function (_React$Component) {
         }
 
         if (this.refs.bany1_aigua_q1.checked) {
-          fd.append('bany1_aigua', 'q1');
+          fd.append('bany1_aigua', 'Q1');
         } else {
           if (this.refs.bany1_aigua_q2.checked) {
-            fd.append('bany1_aigua', 'q2');
+            fd.append('bany1_aigua', 'Q2');
           } else {
             if (this.refs.bany1_aigua_q3.checked) {
-              fd.append('bany1_aigua', 'q3');
+              fd.append('bany1_aigua', 'Q3');
             } else {
               fd.append('bany1_aigua', '');
             }
@@ -3233,13 +3234,13 @@ var Pressupost = /*#__PURE__*/function (_React$Component) {
         }
 
         if (this.refs.bany1_moble_rentamans_q1.checked) {
-          fd.append('bany1_moble_rentamans', 'q1');
+          fd.append('bany1_moble_rentamans', 'Q1');
         } else {
           if (this.refs.bany1_moble_rentamans_q2.checked) {
-            fd.append('bany1_moble_rentamans', 'q2');
+            fd.append('bany1_moble_rentamans', 'Q2');
           } else {
             if (this.refs.bany1_moble_rentamans_q3.checked) {
-              fd.append('bany1_moble_rentamans', 'q3');
+              fd.append('bany1_moble_rentamans', 'Q3');
             } else {
               fd.append('bany1_moble_rentamans', '');
             }
@@ -3247,13 +3248,13 @@ var Pressupost = /*#__PURE__*/function (_React$Component) {
         }
 
         if (this.refs.bany1_rentamans_q1.checked) {
-          fd.append('bany1_rentamans', 'q1');
+          fd.append('bany1_rentamans', 'Q1');
         } else {
           if (this.refs.bany1_rentamans_q2.checked) {
-            fd.append('bany1_rentamans', 'q2');
+            fd.append('bany1_rentamans', 'Q2');
           } else {
             if (this.refs.bany1_rentamans_q3.checked) {
-              fd.append('bany1_rentamans', 'q3');
+              fd.append('bany1_rentamans', 'Q3');
             } else {
               fd.append('bany1_rentamans', '');
             }
@@ -3261,13 +3262,13 @@ var Pressupost = /*#__PURE__*/function (_React$Component) {
         }
 
         if (this.refs.bany1_mirall_q1.checked) {
-          fd.append('bany1_mirall', 'q1');
+          fd.append('bany1_mirall', 'Q1');
         } else {
           if (this.refs.bany1_mirall_q2.checked) {
-            fd.append('bany1_mirall', 'q2');
+            fd.append('bany1_mirall', 'Q2');
           } else {
             if (this.refs.bany1_mirall_q3.checked) {
-              fd.append('bany1_mirall', 'q3');
+              fd.append('bany1_mirall', 'Q3');
             } else {
               fd.append('bany1_mirall', '');
             }
@@ -3275,13 +3276,13 @@ var Pressupost = /*#__PURE__*/function (_React$Component) {
         }
 
         if (this.refs.bany1_mampara_banyera_q1.checked) {
-          fd.append('bany1_mampara_banyera', 'q1');
+          fd.append('bany1_mampara_banyera', 'Q1');
         } else {
           if (this.refs.bany1_mampara_banyera_q2.checked) {
-            fd.append('bany1_mampara_banyera', 'q2');
+            fd.append('bany1_mampara_banyera', 'Q2');
           } else {
             if (this.refs.bany1_mampara_banyera_q3.checked) {
-              fd.append('bany1_mampara_banyera', 'q3');
+              fd.append('bany1_mampara_banyera', 'Q3');
             } else {
               fd.append('bany1_mampara_banyera', '');
             }
@@ -3289,13 +3290,13 @@ var Pressupost = /*#__PURE__*/function (_React$Component) {
         }
 
         if (this.refs.bany1_mampara_dutxa_q1.checked) {
-          fd.append('bany1_mampara_dutxa', 'q1');
+          fd.append('bany1_mampara_dutxa', 'Q1');
         } else {
           if (this.refs.bany1_mampara_dutxa_q2.checked) {
-            fd.append('bany1_mampara_dutxa', 'q2');
+            fd.append('bany1_mampara_dutxa', 'Q2');
           } else {
             if (this.refs.bany1_mampara_dutxa_q3.checked) {
-              fd.append('bany1_mampara_dutxa', 'q3');
+              fd.append('bany1_mampara_dutxa', 'Q3');
             } else {
               fd.append('bany1_mampara_dutxa', '');
             }
@@ -3303,13 +3304,13 @@ var Pressupost = /*#__PURE__*/function (_React$Component) {
         }
 
         if (this.refs.bany1_aixeta_dutxa_q1.checked) {
-          fd.append('bany1_aixeta_dutxa', 'q1');
+          fd.append('bany1_aixeta_dutxa', 'Q1');
         } else {
           if (this.refs.bany1_aixeta_dutxa_q2.checked) {
-            fd.append('bany1_aixeta_dutxa', 'q2');
+            fd.append('bany1_aixeta_dutxa', 'Q2');
           } else {
             if (this.refs.bany1_aixeta_dutxa_q3.checked) {
-              fd.append('bany1_aixeta_dutxa', 'q3');
+              fd.append('bany1_aixeta_dutxa', 'Q3');
             } else {
               fd.append('bany1_aixeta_dutxa', '');
             }
@@ -3317,13 +3318,13 @@ var Pressupost = /*#__PURE__*/function (_React$Component) {
         }
 
         if (this.refs.bany1_aixeta_bany_q1.checked) {
-          fd.append('bany1_aixeta_bany', 'q1');
+          fd.append('bany1_aixeta_bany', 'Q1');
         } else {
           if (this.refs.bany1_aixeta_bany_q2.checked) {
-            fd.append('bany1_aixeta_bany', 'q2');
+            fd.append('bany1_aixeta_bany', 'Q2');
           } else {
             if (this.refs.bany1_aixeta_bany_q3.checked) {
-              fd.append('bany1_aixeta_bany', 'q3');
+              fd.append('bany1_aixeta_bany', 'Q3');
             } else {
               fd.append('bany1_aixeta_bany', '');
             }
@@ -3331,13 +3332,13 @@ var Pressupost = /*#__PURE__*/function (_React$Component) {
         }
 
         if (this.refs.bany1_accesoris_bany_q1.checked) {
-          fd.append('bany1_accesoris_bany', 'q1');
+          fd.append('bany1_accesoris_bany', 'Q1');
         } else {
           if (this.refs.bany1_accesoris_bany_q2.checked) {
-            fd.append('bany1_accesoris_bany', 'q2');
+            fd.append('bany1_accesoris_bany', 'Q2');
           } else {
             if (this.refs.bany1_accesoris_bany_q3.checked) {
-              fd.append('bany1_accesoris_bany', 'q3');
+              fd.append('bany1_accesoris_bany', 'Q3');
             } else {
               fd.append('bany1_accesoris_bany', '');
             }
@@ -3345,13 +3346,13 @@ var Pressupost = /*#__PURE__*/function (_React$Component) {
         }
 
         if (this.refs.bany1_tovalloler_q1.checked) {
-          fd.append('bany1_tovalloler', 'q1');
+          fd.append('bany1_tovalloler', 'Q1');
         } else {
           if (this.refs.bany1_tovalloler_q2.checked) {
-            fd.append('bany1_tovalloler', 'q2');
+            fd.append('bany1_tovalloler', 'Q2');
           } else {
             if (this.refs.bany1_tovalloler_q3.checked) {
-              fd.append('bany1_tovalloler', 'q3');
+              fd.append('bany1_tovalloler', 'Q3');
             } else {
               fd.append('bany1_tovalloler', '');
             }
@@ -3359,13 +3360,13 @@ var Pressupost = /*#__PURE__*/function (_React$Component) {
         }
 
         if (this.refs.bany1_wc_q1.checked) {
-          fd.append('bany1_wc', 'q1');
+          fd.append('bany1_wc', 'Q1');
         } else {
           if (this.refs.bany1_wc_q2.checked) {
-            fd.append('bany1_wc', 'q2');
+            fd.append('bany1_wc', 'Q2');
           } else {
             if (this.refs.bany1_wc_q3.checked) {
-              fd.append('bany1_wc', 'q3');
+              fd.append('bany1_wc', 'Q3');
             } else {
               fd.append('bany1_wc', '');
             }
@@ -3373,13 +3374,13 @@ var Pressupost = /*#__PURE__*/function (_React$Component) {
         }
 
         if (this.refs.bany1_bidet_q1.checked) {
-          fd.append('bany1_bidet', 'q1');
+          fd.append('bany1_bidet', 'Q1');
         } else {
           if (this.refs.bany1_bidet_q2.checked) {
-            fd.append('bany1_bidet', 'q2');
+            fd.append('bany1_bidet', 'Q2');
           } else {
             if (this.refs.bany1_bidet_q3.checked) {
-              fd.append('bany1_bidet', 'q3');
+              fd.append('bany1_bidet', 'Q3');
             } else {
               fd.append('bany1_bidet', '');
             }
@@ -3387,13 +3388,13 @@ var Pressupost = /*#__PURE__*/function (_React$Component) {
         }
 
         if (this.refs.bany1_banyera_q1.checked) {
-          fd.append('bany1_banyera', 'q1');
+          fd.append('bany1_banyera', 'Q1');
         } else {
           if (this.refs.bany1_banyera_q2.checked) {
-            fd.append('bany1_banyera', 'q2');
+            fd.append('bany1_banyera', 'Q2');
           } else {
             if (this.refs.bany1_banyera_q3.checked) {
-              fd.append('bany1_banyera', 'q3');
+              fd.append('bany1_banyera', 'Q3');
             } else {
               fd.append('bany1_banyera', '');
             }
@@ -3401,13 +3402,13 @@ var Pressupost = /*#__PURE__*/function (_React$Component) {
         }
 
         if (this.refs.bany1_dutxa_q1.checked) {
-          fd.append('bany1_dutxa', 'q1');
+          fd.append('bany1_dutxa', 'Q1');
         } else {
           if (this.refs.bany1_dutxa_q2.checked) {
-            fd.append('bany1_dutxa', 'q2');
+            fd.append('bany1_dutxa', 'Q2');
           } else {
             if (this.refs.bany1_dutxa_q3.checked) {
-              fd.append('bany1_dutxa', 'q3');
+              fd.append('bany1_dutxa', 'Q3');
             } else {
               fd.append('bany1_dutxa', '');
             }
@@ -3415,13 +3416,13 @@ var Pressupost = /*#__PURE__*/function (_React$Component) {
         }
 
         if (this.refs.bany1_sostre_pladur_q1.checked) {
-          fd.append('bany1_sostre_pladur', 'q1');
+          fd.append('bany1_sostre_pladur', 'Q1');
         } else {
           if (this.refs.bany1_sostre_pladur_q2.checked) {
-            fd.append('bany1_sostre_pladur', 'q2');
+            fd.append('bany1_sostre_pladur', 'Q2');
           } else {
             if (this.refs.bany1_sostre_pladur_q3.checked) {
-              fd.append('bany1_sostre_pladur', 'q3');
+              fd.append('bany1_sostre_pladur', 'Q3');
             } else {
               fd.append('bany1_sostre_pladur', '');
             }
@@ -3429,13 +3430,13 @@ var Pressupost = /*#__PURE__*/function (_React$Component) {
         }
 
         if (this.refs.bany1_sostre_alumini_q1.checked) {
-          fd.append('bany1_sostre_alumini', 'q1');
+          fd.append('bany1_sostre_alumini', 'Q1');
         } else {
           if (this.refs.bany1_sostre_alumini_q2.checked) {
-            fd.append('bany1_sostre_alumini', 'q2');
+            fd.append('bany1_sostre_alumini', 'Q2');
           } else {
             if (this.refs.bany1_sostre_alumini_q3.checked) {
-              fd.append('bany1_sostre_alumini', 'q3');
+              fd.append('bany1_sostre_alumini', 'Q3');
             } else {
               fd.append('bany1_sostre_alumini', '');
             }
@@ -3443,13 +3444,13 @@ var Pressupost = /*#__PURE__*/function (_React$Component) {
         }
 
         if (this.refs.bany1_alicatat_q1.checked) {
-          fd.append('bany1_alicatat', 'q1');
+          fd.append('bany1_alicatat', 'Q1');
         } else {
           if (this.refs.bany1_alicatat_q2.checked) {
-            fd.append('bany1_alicatat', 'q2');
+            fd.append('bany1_alicatat', 'Q2');
           } else {
             if (this.refs.bany1_alicatat_q3.checked) {
-              fd.append('bany1_alicatat', 'q3');
+              fd.append('bany1_alicatat', 'Q3');
             } else {
               fd.append('bany1_alicatat', '');
             }
@@ -3457,13 +3458,13 @@ var Pressupost = /*#__PURE__*/function (_React$Component) {
         }
 
         if (this.refs.bany1_pintura_q1.checked) {
-          fd.append('bany1_pintura', 'q1');
+          fd.append('bany1_pintura', 'Q1');
         } else {
           if (this.refs.bany1_pintura_q2.checked) {
-            fd.append('bany1_pintura', 'q2');
+            fd.append('bany1_pintura', 'Q2');
           } else {
             if (this.refs.bany1_pintura_q3.checked) {
-              fd.append('bany1_pintura', 'q3');
+              fd.append('bany1_pintura', 'Q3');
             } else {
               fd.append('bany1_pintura', '');
             }
@@ -3472,13 +3473,13 @@ var Pressupost = /*#__PURE__*/function (_React$Component) {
 
 
         if (this.refs.salo_interruptors_endolls_q1.checked) {
-          fd.append('salo_interruptors_endolls', 'q1');
+          fd.append('salo_interruptors_endolls', 'Q1');
         } else {
           if (this.refs.salo_interruptors_endolls_q2.checked) {
-            fd.append('salo_interruptors_endolls', 'q2');
+            fd.append('salo_interruptors_endolls', 'Q2');
           } else {
             if (this.refs.salo_interruptors_endolls_q3.checked) {
-              fd.append('salo_interruptors_endolls', 'q3');
+              fd.append('salo_interruptors_endolls', 'Q3');
             } else {
               fd.append('salo_interruptors_endolls', '');
             }
@@ -3486,13 +3487,13 @@ var Pressupost = /*#__PURE__*/function (_React$Component) {
         }
 
         if (this.refs.salo_tv_q1.checked) {
-          fd.append('salo_tv', 'q1');
+          fd.append('salo_tv', 'Q1');
         } else {
           if (this.refs.salo_tv_q2.checked) {
-            fd.append('salo_tv', 'q2');
+            fd.append('salo_tv', 'Q2');
           } else {
             if (this.refs.salo_tv_q3.checked) {
-              fd.append('salo_tv', 'q3');
+              fd.append('salo_tv', 'Q3');
             } else {
               fd.append('salo_tv', '');
             }
@@ -3500,13 +3501,13 @@ var Pressupost = /*#__PURE__*/function (_React$Component) {
         }
 
         if (this.refs.salo_dades_internet_q1.checked) {
-          fd.append('salo_dades_internet', 'q1');
+          fd.append('salo_dades_internet', 'Q1');
         } else {
           if (this.refs.salo_dades_internet_q2.checked) {
-            fd.append('salo_dades_internet', 'q2');
+            fd.append('salo_dades_internet', 'Q2');
           } else {
             if (this.refs.salo_dades_internet_q3.checked) {
-              fd.append('salo_dades_internet', 'q3');
+              fd.append('salo_dades_internet', 'Q3');
             } else {
               fd.append('salo_dades_internet', '');
             }
@@ -3514,13 +3515,13 @@ var Pressupost = /*#__PURE__*/function (_React$Component) {
         }
 
         if (this.refs.salo_aire_condicionat_q1.checked) {
-          fd.append('salo_aire_condicionat', 'q1');
+          fd.append('salo_aire_condicionat', 'Q1');
         } else {
           if (this.refs.salo_aire_condicionat_q2.checked) {
-            fd.append('salo_aire_condicionat', 'q2');
+            fd.append('salo_aire_condicionat', 'Q2');
           } else {
             if (this.refs.salo_aire_condicionat_q3.checked) {
-              fd.append('salo_aire_condicionat', 'q3');
+              fd.append('salo_aire_condicionat', 'Q3');
             } else {
               fd.append('salo_aire_condicionat', '');
             }
@@ -3528,13 +3529,13 @@ var Pressupost = /*#__PURE__*/function (_React$Component) {
         }
 
         if (this.refs.salo_calefaccio_q1.checked) {
-          fd.append('salo_calefaccio', 'q1');
+          fd.append('salo_calefaccio', 'Q1');
         } else {
           if (this.refs.salo_calefaccio_q2.checked) {
-            fd.append('salo_calefaccio', 'q2');
+            fd.append('salo_calefaccio', 'Q2');
           } else {
             if (this.refs.salo_calefaccio_q3.checked) {
-              fd.append('salo_calefaccio', 'q3');
+              fd.append('salo_calefaccio', 'Q3');
             } else {
               fd.append('salo_calefaccio', '');
             }
@@ -3542,13 +3543,13 @@ var Pressupost = /*#__PURE__*/function (_React$Component) {
         }
 
         if (this.refs.salo_sostre_fals_q1.checked) {
-          fd.append('salo_sostre_fals', 'q1');
+          fd.append('salo_sostre_fals', 'Q1');
         } else {
           if (this.refs.salo_sostre_fals_q2.checked) {
-            fd.append('salo_sostre_fals', 'q2');
+            fd.append('salo_sostre_fals', 'Q2');
           } else {
             if (this.refs.salo_sostre_fals_q3.checked) {
-              fd.append('salo_sostre_fals', 'q3');
+              fd.append('salo_sostre_fals', 'Q3');
             } else {
               fd.append('salo_sostre_fals', '');
             }
@@ -3556,13 +3557,13 @@ var Pressupost = /*#__PURE__*/function (_React$Component) {
         }
 
         if (this.refs.salo_pintura_q1.checked) {
-          fd.append('salo_pintura', 'q1');
+          fd.append('salo_pintura', 'Q1');
         } else {
           if (this.refs.salo_pintura_q2.checked) {
-            fd.append('salo_pintura', 'q2');
+            fd.append('salo_pintura', 'Q2');
           } else {
             if (this.refs.salo_pintura_q3.checked) {
-              fd.append('salo_pintura', 'q3');
+              fd.append('salo_pintura', 'Q3');
             } else {
               fd.append('salo_pintura', '');
             }
@@ -3571,13 +3572,13 @@ var Pressupost = /*#__PURE__*/function (_React$Component) {
 
 
         if (this.refs.hb_mat1_interruptors_endolls_q1.checked) {
-          fd.append('hb_mat1_interruptors_endolls', 'q1');
+          fd.append('hb_mat1_interruptors_endolls', 'Q1');
         } else {
           if (this.refs.hb_mat1_interruptors_endolls_q2.checked) {
-            fd.append('hb_mat1_interruptors_endolls', 'q2');
+            fd.append('hb_mat1_interruptors_endolls', 'Q2');
           } else {
             if (this.refs.hb_mat1_interruptors_endolls_q3.checked) {
-              fd.append('hb_mat1_interruptors_endolls', 'q3');
+              fd.append('hb_mat1_interruptors_endolls', 'Q3');
             } else {
               fd.append('hb_mat1_interruptors_endolls', '');
             }
@@ -3585,13 +3586,13 @@ var Pressupost = /*#__PURE__*/function (_React$Component) {
         }
 
         if (this.refs.hb_mat1_tv_q1.checked) {
-          fd.append('hb_mat1_tv', 'q1');
+          fd.append('hb_mat1_tv', 'Q1');
         } else {
           if (this.refs.hb_mat1_tv_q2.checked) {
-            fd.append('hb_mat1_tv', 'q2');
+            fd.append('hb_mat1_tv', 'Q2');
           } else {
             if (this.refs.hb_mat1_tv_q3.checked) {
-              fd.append('hb_mat1_tv', 'q3');
+              fd.append('hb_mat1_tv', 'Q3');
             } else {
               fd.append('hb_mat1_tv', '');
             }
@@ -3599,13 +3600,13 @@ var Pressupost = /*#__PURE__*/function (_React$Component) {
         }
 
         if (this.refs.hb_mat1_dades_internet_q1.checked) {
-          fd.append('hb_mat1_dades_internet', 'q1');
+          fd.append('hb_mat1_dades_internet', 'Q1');
         } else {
           if (this.refs.hb_mat1_dades_internet_q2.checked) {
-            fd.append('hb_mat1_dades_internet', 'q2');
+            fd.append('hb_mat1_dades_internet', 'Q2');
           } else {
             if (this.refs.hb_mat1_dades_internet_q3.checked) {
-              fd.append('hb_mat1_dades_internet', 'q3');
+              fd.append('hb_mat1_dades_internet', 'Q3');
             } else {
               fd.append('hb_mat1_dades_internet', '');
             }
@@ -3613,13 +3614,13 @@ var Pressupost = /*#__PURE__*/function (_React$Component) {
         }
 
         if (this.refs.hb_mat1_aire_condicionat_q1.checked) {
-          fd.append('hb_mat1_aire_condicionat', 'q1');
+          fd.append('hb_mat1_aire_condicionat', 'Q1');
         } else {
           if (this.refs.hb_mat1_aire_condicionat_q2.checked) {
-            fd.append('hb_mat1_aire_condicionat', 'q2');
+            fd.append('hb_mat1_aire_condicionat', 'Q2');
           } else {
             if (this.refs.hb_mat1_aire_condicionat_q3.checked) {
-              fd.append('hb_mat1_aire_condicionat', 'q3');
+              fd.append('hb_mat1_aire_condicionat', 'Q3');
             } else {
               fd.append('hb_mat1_aire_condicionat', '');
             }
@@ -3627,13 +3628,13 @@ var Pressupost = /*#__PURE__*/function (_React$Component) {
         }
 
         if (this.refs.hb_mat1_calefaccio_q1.checked) {
-          fd.append('hb_mat1_calefaccio', 'q1');
+          fd.append('hb_mat1_calefaccio', 'Q1');
         } else {
           if (this.refs.hb_mat1_calefaccio_q2.checked) {
-            fd.append('hb_mat1_calefaccio', 'q2');
+            fd.append('hb_mat1_calefaccio', 'Q2');
           } else {
             if (this.refs.hb_mat1_calefaccio_q3.checked) {
-              fd.append('hb_mat1_calefaccio', 'q3');
+              fd.append('hb_mat1_calefaccio', 'Q3');
             } else {
               fd.append('hb_mat1_calefaccio', '');
             }
@@ -3641,13 +3642,13 @@ var Pressupost = /*#__PURE__*/function (_React$Component) {
         }
 
         if (this.refs.hb_mat1_sostre_fals_q1.checked) {
-          fd.append('hb_mat1_sostre_fals', 'q1');
+          fd.append('hb_mat1_sostre_fals', 'Q1');
         } else {
           if (this.refs.hb_mat1_sostre_fals_q2.checked) {
-            fd.append('hb_mat1_sostre_fals', 'q2');
+            fd.append('hb_mat1_sostre_fals', 'Q2');
           } else {
             if (this.refs.hb_mat1_sostre_fals_q3.checked) {
-              fd.append('hb_mat1_sostre_fals', 'q3');
+              fd.append('hb_mat1_sostre_fals', 'Q3');
             } else {
               fd.append('hb_mat1_sostre_fals', '');
             }
@@ -3655,13 +3656,13 @@ var Pressupost = /*#__PURE__*/function (_React$Component) {
         }
 
         if (this.refs.hb_mat1_pintura_q1.checked) {
-          fd.append('hb_mat1_pintura', 'q1');
+          fd.append('hb_mat1_pintura', 'Q1');
         } else {
           if (this.refs.hb_mat1_pintura_q2.checked) {
-            fd.append('hb_mat1_pintura', 'q2');
+            fd.append('hb_mat1_pintura', 'Q2');
           } else {
             if (this.refs.hb_mat1_pintura_q3.checked) {
-              fd.append('hb_mat1_pintura', 'q3');
+              fd.append('hb_mat1_pintura', 'Q3');
             } else {
               fd.append('hb_mat1_pintura', '');
             }
@@ -3670,13 +3671,13 @@ var Pressupost = /*#__PURE__*/function (_React$Component) {
 
 
         if (this.refs.hb_ind1_interruptors_endolls_q1.checked) {
-          fd.append('hb_ind1_interruptors_endolls', 'q1');
+          fd.append('hb_ind1_interruptors_endolls', 'Q1');
         } else {
           if (this.refs.hb_ind1_interruptors_endolls_q2.checked) {
-            fd.append('hb_ind1_interruptors_endolls', 'q2');
+            fd.append('hb_ind1_interruptors_endolls', 'Q2');
           } else {
             if (this.refs.hb_ind1_interruptors_endolls_q3.checked) {
-              fd.append('hb_ind1_interruptors_endolls', 'q3');
+              fd.append('hb_ind1_interruptors_endolls', 'Q3');
             } else {
               fd.append('hb_ind1_interruptors_endolls', '');
             }
@@ -3684,13 +3685,13 @@ var Pressupost = /*#__PURE__*/function (_React$Component) {
         }
 
         if (this.refs.hb_ind1_tv_q1.checked) {
-          fd.append('hb_ind1_tv', 'q1');
+          fd.append('hb_ind1_tv', 'Q1');
         } else {
           if (this.refs.hb_ind1_tv_q2.checked) {
-            fd.append('hb_ind1_tv', 'q2');
+            fd.append('hb_ind1_tv', 'Q2');
           } else {
             if (this.refs.hb_ind1_tv_q3.checked) {
-              fd.append('hb_ind1_tv', 'q3');
+              fd.append('hb_ind1_tv', 'Q3');
             } else {
               fd.append('hb_ind1_tv', '');
             }
@@ -3698,13 +3699,13 @@ var Pressupost = /*#__PURE__*/function (_React$Component) {
         }
 
         if (this.refs.hb_ind1_dades_internet_q1.checked) {
-          fd.append('hb_ind1_dades_internet', 'q1');
+          fd.append('hb_ind1_dades_internet', 'Q1');
         } else {
           if (this.refs.hb_ind1_dades_internet_q2.checked) {
-            fd.append('hb_ind1_dades_internet', 'q2');
+            fd.append('hb_ind1_dades_internet', 'Q2');
           } else {
             if (this.refs.hb_ind1_dades_internet_q3.checked) {
-              fd.append('hb_ind1_dades_internet', 'q3');
+              fd.append('hb_ind1_dades_internet', 'Q3');
             } else {
               fd.append('hb_ind1_dades_internet', '');
             }
@@ -3712,13 +3713,13 @@ var Pressupost = /*#__PURE__*/function (_React$Component) {
         }
 
         if (this.refs.hb_ind1_aire_condicionat_q1.checked) {
-          fd.append('hb_ind1_aire_condicionat', 'q1');
+          fd.append('hb_ind1_aire_condicionat', 'Q1');
         } else {
           if (this.refs.hb_ind1_aire_condicionat_q2.checked) {
-            fd.append('hb_ind1_aire_condicionat', 'q2');
+            fd.append('hb_ind1_aire_condicionat', 'Q2');
           } else {
             if (this.refs.hb_ind1_aire_condicionat_q3.checked) {
-              fd.append('hb_ind1_aire_condicionat', 'q3');
+              fd.append('hb_ind1_aire_condicionat', 'Q3');
             } else {
               fd.append('hb_ind1_aire_condicionat', '');
             }
@@ -3726,13 +3727,13 @@ var Pressupost = /*#__PURE__*/function (_React$Component) {
         }
 
         if (this.refs.hb_ind1_calefaccio_q1.checked) {
-          fd.append('hb_ind1_calefaccio', 'q1');
+          fd.append('hb_ind1_calefaccio', 'Q1');
         } else {
           if (this.refs.hb_ind1_calefaccio_q2.checked) {
-            fd.append('hb_ind1_calefaccio', 'q2');
+            fd.append('hb_ind1_calefaccio', 'Q2');
           } else {
             if (this.refs.hb_ind1_calefaccio_q3.checked) {
-              fd.append('hb_ind1_calefaccio', 'q3');
+              fd.append('hb_ind1_calefaccio', 'Q3');
             } else {
               fd.append('hb_ind1_calefaccio', '');
             }
@@ -3740,13 +3741,13 @@ var Pressupost = /*#__PURE__*/function (_React$Component) {
         }
 
         if (this.refs.hb_ind1_sostre_fals_q1.checked) {
-          fd.append('hb_ind1_sostre_fals', 'q1');
+          fd.append('hb_ind1_sostre_fals', 'Q1');
         } else {
           if (this.refs.hb_ind1_sostre_fals_q2.checked) {
-            fd.append('hb_ind1_sostre_fals', 'q2');
+            fd.append('hb_ind1_sostre_fals', 'Q2');
           } else {
             if (this.refs.hb_ind1_sostre_fals_q3.checked) {
-              fd.append('hb_ind1_sostre_fals', 'q3');
+              fd.append('hb_ind1_sostre_fals', 'Q3');
             } else {
               fd.append('hb_ind1_sostre_fals', '');
             }
@@ -3754,13 +3755,13 @@ var Pressupost = /*#__PURE__*/function (_React$Component) {
         }
 
         if (this.refs.hb_ind1_pintura_q1.checked) {
-          fd.append('hb_ind1_pintura', 'q1');
+          fd.append('hb_ind1_pintura', 'Q1');
         } else {
           if (this.refs.hb_ind1_pintura_q2.checked) {
-            fd.append('hb_ind1_pintura', 'q2');
+            fd.append('hb_ind1_pintura', 'Q2');
           } else {
             if (this.refs.hb_ind1_pintura_q3.checked) {
-              fd.append('hb_ind1_pintura', 'q3');
+              fd.append('hb_ind1_pintura', 'Q3');
             } else {
               fd.append('hb_ind1_pintura', '');
             }
@@ -3769,13 +3770,13 @@ var Pressupost = /*#__PURE__*/function (_React$Component) {
 
 
         if (this.refs.hb_ind2_interruptors_endolls_q1.checked) {
-          fd.append('hb_ind2_interruptors_endolls', 'q1');
+          fd.append('hb_ind2_interruptors_endolls', 'Q1');
         } else {
           if (this.refs.hb_ind2_interruptors_endolls_q2.checked) {
-            fd.append('hb_ind2_interruptors_endolls', 'q2');
+            fd.append('hb_ind2_interruptors_endolls', 'Q2');
           } else {
             if (this.refs.hb_ind2_interruptors_endolls_q3.checked) {
-              fd.append('hb_ind2_interruptors_endolls', 'q3');
+              fd.append('hb_ind2_interruptors_endolls', 'Q3');
             } else {
               fd.append('hb_ind2_interruptors_endolls', '');
             }
@@ -3783,13 +3784,13 @@ var Pressupost = /*#__PURE__*/function (_React$Component) {
         }
 
         if (this.refs.hb_ind2_tv_q1.checked) {
-          fd.append('hb_ind2_tv', 'q1');
+          fd.append('hb_ind2_tv', 'Q1');
         } else {
           if (this.refs.hb_ind2_tv_q2.checked) {
-            fd.append('hb_ind2_tv', 'q2');
+            fd.append('hb_ind2_tv', 'Q2');
           } else {
             if (this.refs.hb_ind2_tv_q3.checked) {
-              fd.append('hb_ind2_tv', 'q3');
+              fd.append('hb_ind2_tv', 'Q3');
             } else {
               fd.append('hb_ind2_tv', '');
             }
@@ -3797,13 +3798,13 @@ var Pressupost = /*#__PURE__*/function (_React$Component) {
         }
 
         if (this.refs.hb_ind2_dades_internet_q1.checked) {
-          fd.append('hb_ind2_dades_internet', 'q1');
+          fd.append('hb_ind2_dades_internet', 'Q1');
         } else {
           if (this.refs.hb_ind2_dades_internet_q2.checked) {
-            fd.append('hb_ind2_dades_internet', 'q2');
+            fd.append('hb_ind2_dades_internet', 'Q2');
           } else {
             if (this.refs.hb_ind2_dades_internet_q3.checked) {
-              fd.append('hb_ind2_dades_internet', 'q3');
+              fd.append('hb_ind2_dades_internet', 'Q3');
             } else {
               fd.append('hb_ind2_dades_internet', '');
             }
@@ -3811,13 +3812,13 @@ var Pressupost = /*#__PURE__*/function (_React$Component) {
         }
 
         if (this.refs.hb_ind2_aire_condicionat_q1.checked) {
-          fd.append('hb_ind2_aire_condicionat', 'q1');
+          fd.append('hb_ind2_aire_condicionat', 'Q1');
         } else {
           if (this.refs.hb_ind2_aire_condicionat_q2.checked) {
-            fd.append('hb_ind2_aire_condicionat', 'q2');
+            fd.append('hb_ind2_aire_condicionat', 'Q2');
           } else {
             if (this.refs.hb_ind2_aire_condicionat_q3.checked) {
-              fd.append('hb_ind2_aire_condicionat', 'q3');
+              fd.append('hb_ind2_aire_condicionat', 'Q3');
             } else {
               fd.append('hb_ind2_aire_condicionat', '');
             }
@@ -3825,13 +3826,13 @@ var Pressupost = /*#__PURE__*/function (_React$Component) {
         }
 
         if (this.refs.hb_ind2_calefaccio_q1.checked) {
-          fd.append('hb_ind2_calefaccio', 'q1');
+          fd.append('hb_ind2_calefaccio', 'Q1');
         } else {
           if (this.refs.hb_ind2_calefaccio_q2.checked) {
-            fd.append('hb_ind2_calefaccio', 'q2');
+            fd.append('hb_ind2_calefaccio', 'Q2');
           } else {
             if (this.refs.hb_ind2_calefaccio_q3.checked) {
-              fd.append('hb_ind2_calefaccio', 'q3');
+              fd.append('hb_ind2_calefaccio', 'Q3');
             } else {
               fd.append('hb_ind2_calefaccio', '');
             }
@@ -3839,13 +3840,13 @@ var Pressupost = /*#__PURE__*/function (_React$Component) {
         }
 
         if (this.refs.hb_ind2_sostre_fals_q1.checked) {
-          fd.append('hb_ind2_sostre_fals', 'q1');
+          fd.append('hb_ind2_sostre_fals', 'Q1');
         } else {
           if (this.refs.hb_ind2_sostre_fals_q2.checked) {
-            fd.append('hb_ind2_sostre_fals', 'q2');
+            fd.append('hb_ind2_sostre_fals', 'Q2');
           } else {
             if (this.refs.hb_ind2_sostre_fals_q3.checked) {
-              fd.append('hb_ind2_sostre_fals', 'q3');
+              fd.append('hb_ind2_sostre_fals', 'Q3');
             } else {
               fd.append('hb_ind2_sostre_fals', '');
             }
@@ -3853,13 +3854,13 @@ var Pressupost = /*#__PURE__*/function (_React$Component) {
         }
 
         if (this.refs.hb_ind2_pintura_q1.checked) {
-          fd.append('hb_ind2_pintura', 'q1');
+          fd.append('hb_ind2_pintura', 'Q1');
         } else {
           if (this.refs.hb_ind2_pintura_q2.checked) {
-            fd.append('hb_ind2_pintura', 'q2');
+            fd.append('hb_ind2_pintura', 'Q2');
           } else {
             if (this.refs.hb_ind2_pintura_q3.checked) {
-              fd.append('hb_ind2_pintura', 'q3');
+              fd.append('hb_ind2_pintura', 'Q3');
             } else {
               fd.append('hb_ind2_pintura', '');
             }
@@ -3868,13 +3869,13 @@ var Pressupost = /*#__PURE__*/function (_React$Component) {
 
 
         if (this.refs.rebedor_interruptors_endolls_q1.checked) {
-          fd.append('rebedor_interruptors_endolls', 'q1');
+          fd.append('rebedor_interruptors_endolls', 'Q1');
         } else {
           if (this.refs.rebedor_interruptors_endolls_q2.checked) {
-            fd.append('rebedor_interruptors_endolls', 'q2');
+            fd.append('rebedor_interruptors_endolls', 'Q2');
           } else {
             if (this.refs.rebedor_interruptors_endolls_q3.checked) {
-              fd.append('rebedor_interruptors_endolls', 'q3');
+              fd.append('rebedor_interruptors_endolls', 'Q3');
             } else {
               fd.append('rebedor_interruptors_endolls', '');
             }
@@ -3882,13 +3883,13 @@ var Pressupost = /*#__PURE__*/function (_React$Component) {
         }
 
         if (this.refs.rebedor_calefaccio_q1.checked) {
-          fd.append('rebedor_calefaccio', 'q1');
+          fd.append('rebedor_calefaccio', 'Q1');
         } else {
           if (this.refs.rebedor_calefaccio_q2.checked) {
-            fd.append('rebedor_calefaccio', 'q2');
+            fd.append('rebedor_calefaccio', 'Q2');
           } else {
             if (this.refs.rebedor_calefaccio_q3.checked) {
-              fd.append('rebedor_calefaccio', 'q3');
+              fd.append('rebedor_calefaccio', 'Q3');
             } else {
               fd.append('rebedor_calefaccio', '');
             }
@@ -3896,13 +3897,13 @@ var Pressupost = /*#__PURE__*/function (_React$Component) {
         }
 
         if (this.refs.rebedor_sostre_fals_q1.checked) {
-          fd.append('rebedor_sostre_fals', 'q1');
+          fd.append('rebedor_sostre_fals', 'Q1');
         } else {
           if (this.refs.rebedor_sostre_fals_q2.checked) {
-            fd.append('rebedor_sostre_fals', 'q2');
+            fd.append('rebedor_sostre_fals', 'Q2');
           } else {
             if (this.refs.rebedor_sostre_fals_q3.checked) {
-              fd.append('rebedor_sostre_fals', 'q3');
+              fd.append('rebedor_sostre_fals', 'Q3');
             } else {
               fd.append('rebedor_sostre_fals', '');
             }
@@ -3910,20 +3911,21 @@ var Pressupost = /*#__PURE__*/function (_React$Component) {
         }
 
         if (this.refs.rebedor_pintura_q1.checked) {
-          fd.append('rebedor_pintura', 'q1');
+          fd.append('rebedor_pintura', 'Q1');
         } else {
           if (this.refs.rebedor_pintura_q2.checked) {
-            fd.append('rebedor_pintura', 'q2');
+            fd.append('rebedor_pintura', 'Q2');
           } else {
             if (this.refs.rebedor_pintura_q3.checked) {
-              fd.append('rebedor_pintura', 'q3');
+              fd.append('rebedor_pintura', 'Q3');
             } else {
               fd.append('rebedor_pintura', '');
             }
           }
-        }
+        } // axios.post('api/send/email', fd);
 
-        axios__WEBPACK_IMPORTED_MODULE_3___default().post('http://127.0.0.1:8000/api/send/budget', fd).then(function (res) {
+
+        axios__WEBPACK_IMPORTED_MODULE_3___default().post('api/send/homeBudget', fd).then(function (res) {
           document.getElementById("contactFormSubmitBtn").disabled = false;
           console.log(res);
           console.log(res.data);
@@ -4070,11 +4072,11 @@ var Pressupost = /*#__PURE__*/function (_React$Component) {
                           children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)("tbody", {
                             children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)("tr", {
                               children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("th", {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("th", {
-                                children: "Qualitat 1"
+                                children: "Qualitat Normal"
                               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("th", {
-                                children: "Qualitat 2"
+                                children: "Qualitat Alta"
                               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("th", {
-                                children: "Qualitat 3"
+                                children: "Qualitat Premium"
                               })]
                             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)("tr", {
                               children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("th", {
@@ -4559,11 +4561,11 @@ var Pressupost = /*#__PURE__*/function (_React$Component) {
                           children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)("tbody", {
                             children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)("tr", {
                               children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("th", {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("th", {
-                                children: "Qualitat 1"
+                                children: "Qualitat Normal"
                               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("th", {
-                                children: "Qualitat 2"
+                                children: "Qualitat Alta"
                               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("th", {
-                                children: "Qualitat 3"
+                                children: "Qualitat Premium"
                               })]
                             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)("tr", {
                               children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("th", {
@@ -5073,11 +5075,11 @@ var Pressupost = /*#__PURE__*/function (_React$Component) {
                           children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)("tbody", {
                             children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)("tr", {
                               children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("th", {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("th", {
-                                children: "Qualitat 1"
+                                children: "Qualitat Normal"
                               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("th", {
-                                children: "Qualitat 2"
+                                children: "Qualitat Alta"
                               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("th", {
-                                children: "Qualitat 3"
+                                children: "Qualitat Premium"
                               })]
                             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)("tr", {
                               children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("th", {
@@ -5287,11 +5289,11 @@ var Pressupost = /*#__PURE__*/function (_React$Component) {
                           children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)("tbody", {
                             children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)("tr", {
                               children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("th", {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("th", {
-                                children: "Qualitat 1"
+                                children: "Qualitat Normal"
                               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("th", {
-                                children: "Qualitat 2"
+                                children: "Qualitat Alta"
                               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("th", {
-                                children: "Qualitat 3"
+                                children: "Qualitat Premium"
                               })]
                             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)("tr", {
                               children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("th", {
@@ -5486,7 +5488,7 @@ var Pressupost = /*#__PURE__*/function (_React$Component) {
                             "data-target": "#collapseFive",
                             "aria-expanded": "true",
                             "aria-controls": "collapseFive",
-                            children: "Hb individual 1 (aprox 9 m2)"
+                            children: "Habitaci\xF3 individual 1 (aprox 9 m2)"
                           })
                         })
                       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)("div", {
@@ -5501,11 +5503,11 @@ var Pressupost = /*#__PURE__*/function (_React$Component) {
                           children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)("tbody", {
                             children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)("tr", {
                               children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("th", {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("th", {
-                                children: "Qualitat 1"
+                                children: "Qualitat Normal"
                               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("th", {
-                                children: "Qualitat 2"
+                                children: "Qualitat Alta"
                               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("th", {
-                                children: "Qualitat 3"
+                                children: "Qualitat Premium"
                               })]
                             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)("tr", {
                               children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("th", {
@@ -5700,7 +5702,7 @@ var Pressupost = /*#__PURE__*/function (_React$Component) {
                             "data-target": "#collapseSix",
                             "aria-expanded": "true",
                             "aria-controls": "collapseSix",
-                            children: "Hb individual 2 (aprox 9 m2)"
+                            children: "Habitaci\xF3 individual 2 (aprox 9 m2)"
                           })
                         })
                       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)("div", {
@@ -5715,11 +5717,11 @@ var Pressupost = /*#__PURE__*/function (_React$Component) {
                           children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)("tbody", {
                             children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)("tr", {
                               children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("th", {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("th", {
-                                children: "Qualitat 1"
+                                children: "Qualitat Normal"
                               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("th", {
-                                children: "Qualitat 2"
+                                children: "Qualitat Alta"
                               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("th", {
-                                children: "Qualitat 3"
+                                children: "Qualitat Premium"
                               })]
                             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)("tr", {
                               children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("th", {
@@ -5929,11 +5931,11 @@ var Pressupost = /*#__PURE__*/function (_React$Component) {
                           children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)("tbody", {
                             children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)("tr", {
                               children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("th", {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("th", {
-                                children: "Qualitat 1"
+                                children: "Qualitat Normal"
                               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("th", {
-                                children: "Qualitat 2"
+                                children: "Qualitat Alta"
                               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("th", {
-                                children: "Qualitat 3"
+                                children: "Qualitat Premium"
                               })]
                             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)("tr", {
                               children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("th", {
@@ -6046,8 +6048,8 @@ var Pressupost = /*#__PURE__*/function (_React$Component) {
                       className: "card-body",
                       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("p", {
                         children: "Cost total"
-                      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("h1", {
-                        children: this.state.budgetCost
+                      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)("h1", {
+                        children: [this.state.budgetCost, " \u20AC"]
                       })]
                     })
                   }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)("div", {
@@ -6389,7 +6391,7 @@ var Contacte = /*#__PURE__*/function (_React$Component) {
         fd.append('telf', this.refs.contactTelf.value);
         fd.append('email', this.refs.contactEmail.value);
         fd.append('descripcio', this.refs.contactDescripcio.value);
-        axios__WEBPACK_IMPORTED_MODULE_3___default().post('http://127.0.0.1:8000/api/send/email', fd).then(function (res) {
+        axios__WEBPACK_IMPORTED_MODULE_3___default().post('api/send/contactEmail', fd).then(function (res) {
           console.log(res.data);
 
           _this2.myFormRef.reset();
@@ -6704,11 +6706,11 @@ var images = [{
 
 var TagButton = function TagButton(_ref) {
   var name = _ref.name,
-      handlesettag = _ref.handlesettag;
+      handleSetTag = _ref.handleSetTag;
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("button", {
     className: "btn btn-jma",
     onClick: function onClick() {
-      return handlesettag(name);
+      return handleSetTag(name);
     },
     children: name
   });
@@ -6742,25 +6744,25 @@ function Galeria() {
         })
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
         className: "switchButtons col-lg-12 col-md-12 col-sm-12 col-xs-12",
-        handlesettag: setTag,
+        handleSetTag: setTag,
         children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(TagButton, {
           name: "Tots",
-          handlesettag: setTag
+          handleSetTag: setTag
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(TagButton, {
           name: "Electricitat",
-          handlesettag: setTag
+          handleSetTag: setTag
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(TagButton, {
           name: "Aigua",
-          handlesettag: setTag
+          handleSetTag: setTag
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(TagButton, {
           name: "Gas",
-          handlesettag: setTag
+          handleSetTag: setTag
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(TagButton, {
           name: "Porters/Videoportes",
-          handlesettag: setTag
+          handleSetTag: setTag
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(TagButton, {
           name: "Obres i Reformes",
-          handlesettag: setTag
+          handleSetTag: setTag
         })]
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(simple_react_lightbox__WEBPACK_IMPORTED_MODULE_3__.default, {
         children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
@@ -6785,6 +6787,12 @@ function Galeria() {
 }
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Galeria);
+/*
+// eslint-disable-next-line react/prop-types
+export const wrapRootElement = ({ element }) => (
+    <SimpleReactLightbox>{element}</SimpleReactLightbox>
+);
+*/
 
 /***/ }),
 
@@ -7008,7 +7016,7 @@ var Home = /*#__PURE__*/function (_React$Component) {
               })
             })
           })
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("br", {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("br", {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("br", {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("br", {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("br", {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("br", {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("br", {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("br", {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("br", {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("br", {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("br", {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("section", {
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("section", {
           children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
             className: "sectionMargin",
             children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {

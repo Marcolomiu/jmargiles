@@ -95,8 +95,7 @@ class Contacte extends React.Component {
             fd.append('email', this.refs.contactEmail.value);
             fd.append('descripcio', this.refs.contactDescripcio.value);
             
-            axios.post('http://127.0.0.1:8000/api/send/email', fd
-            ).then(res=>
+            axios.post('api/send/contactEmail', fd).then(res=>
                 {
                     console.log(res.data);
                     this.myFormRef.reset();
@@ -107,7 +106,8 @@ class Contacte extends React.Component {
                     //alertify.set('notifier','delay', 10);
                     //alertify.set('notifier','position', 'top-right');
                     //alertify.success('Email enviat, ens posarem en contacte amb tu el més aviat possible!');
-                });
+                }
+            );
             
             /*
             .then(res=>
