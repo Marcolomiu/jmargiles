@@ -2738,7 +2738,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var html_react_parser__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! html-react-parser */ "./node_modules/html-react-parser/index.mjs");
 /* harmony import */ var _PressupostVivenda__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./PressupostVivenda */ "./resources/js/views/budget/PressupostVivenda.js");
-/* harmony import */ var _PressupostLocalComercial__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./PressupostLocalComercial */ "./resources/js/views/budget/PressupostLocalComercial.js");
+/* harmony import */ var _PressupostLocalComercialForm__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./PressupostLocalComercialForm */ "./resources/js/views/budget/PressupostLocalComercialForm.js");
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
@@ -2776,7 +2776,7 @@ var formulari; // const vivenda = <div dangerouslySetInnerHTML={{ __html: pressu
 // const localComercial = <div dangerouslySetInnerHTML={{ __html: pressupostLocalComercial.formulari }} />;
 
 var vivenda = _PressupostVivenda__WEBPACK_IMPORTED_MODULE_5__.default.formulari;
-var localComercial = _PressupostLocalComercial__WEBPACK_IMPORTED_MODULE_6__.default.formulari; //document.getElementById().
+var localComercial = _PressupostLocalComercialForm__WEBPACK_IMPORTED_MODULE_6__.default.formulari; //document.getElementById().
 
 /*
 document.getElementsByClassName('').addEventListener('change', function() {
@@ -3967,17 +3967,25 @@ var Pressupost = /*#__PURE__*/function (_React$Component) {
     }
   }, {
     key: "formButton",
-    value: function formButton(className) {
+    value: function formButton(e) {
       // alert(className);
-      if (className === "vivenda") {
-        document.getElementById("pressupostBody").innerHTML = "";
-        document.getElementById("pressupostBody").insertAdjacentHTML('beforeend', vivenda);
+      if (e === "vivenda") {
+        react_dom__WEBPACK_IMPORTED_MODULE_1__.render( /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(Pressupost, {}), document.getElementById("index")); //document.getElementById("pressupostBody").innerHTML = "";
+
+        /*return(
+            <div dangerouslySetInnerHTML={{ __html: `This text is set using dangerouslySetInnerHTML` }}>    
+            </div>
+        )*/
+        //console.log(<div dangerouslySetInnerHTML={{ __html: vivenda }} />);
+        //document.getElementById("pressupostBody").insertAdjacentElement = <div dangerouslySetInnerHTML={{ __html: vivenda }} />;
+        //document.getElementById("pressupostBody").insertAdjacentHTML('beforeend', vivenda);
       }
 
-      if (className === "localComercial") {
-        document.getElementById("pressupostBody").innerHTML = "";
-        document.getElementById("pressupostBody").insertAdjacentHTML('beforeend', localComercial);
-      }
+      if (e === "localComercial") {
+        react_dom__WEBPACK_IMPORTED_MODULE_1__.render( /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(Pressupost, {}), document.getElementById("index")); //document.getElementById("pressupostBody").innerHTML = "";
+        //document.getElementById("pressupostBody").insertAdjacentHTML('beforeend', localComercial);
+      } //ReactDOM.render(<Pressupost />, document.getElementById("pressupostBody"));
+
     } // <button className="switchButtons vivenda">X</button>
     // <button className="switchButtons vivenda">Z</button>
 
@@ -6143,10 +6151,10 @@ var Pressupost = /*#__PURE__*/function (_React$Component) {
 
 /***/ }),
 
-/***/ "./resources/js/views/budget/PressupostLocalComercial.js":
-/*!***************************************************************!*\
-  !*** ./resources/js/views/budget/PressupostLocalComercial.js ***!
-  \***************************************************************/
+/***/ "./resources/js/views/budget/PressupostLocalComercialForm.js":
+/*!*******************************************************************!*\
+  !*** ./resources/js/views/budget/PressupostLocalComercialForm.js ***!
+  \*******************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -6171,8 +6179,2014 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
+
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
-  formulari: "<div id=\"accordion\">\n\t\t\t\t\t<div className=\"card\">\n\t\t\t\t\t\t<div className=\"card-header\" id=\"headingOne\">\n\t\t\t\t\t\t\t<h5 className=\"mb-0\">\n\t\t\t\t\t\t\t<button type=\"button\" className=\"btn btn-link btn-block collapsed\" data-toggle=\"collapse\" data-target=\"#collapseOne\" aria-expanded=\"false\" aria-controls=\"collapseOne\">\n\t\t\t\t\t\t\t\tCuina\n\t\t\t\t\t\t\t</button>\n\t\t\t\t\t\t\t</h5>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\n\t\t\t\t\t\t<div id=\"collapseOne\" className=\"collapse\" aria-labelledby=\"headingOne\" data-parent=\"#accordion\">\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<div className=\"card-body\">\n\t\t\t\t\t\t\t\tAnim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid.\n\t\t\t\t\t\t\t</div>\n\n\t\t\t\t\t\t\t<table>\n\t\t\t\t\t\t\t\t<tbody>\n\t\t\t\t\t\t\t\t\t<tr>\n\t\t\t\t\t\t\t\t\t\t<th></th>\n\t\t\t\t\t\t\t\t\t\t<th>Qualitat Normal</th>\n\t\t\t\t\t\t\t\t\t\t<th>Qualitat Alta</th>\n\t\t\t\t\t\t\t\t\t\t<th>Qualitat Premium</th>\n\t\t\t\t\t\t\t\t\t</tr>\n\n\t\t\t\t\t\t\t\t\t<tr>\n\t\t\t\t\t\t\t\t\t\t<th>Electricitat:</th>\n\t\t\t\t\t\t\t\t\t\t<td><input type=\"radio\" name=\"cuina_group1\" value=\"500\" ref=\"cuina_electricitat_q1\"/></td>\n\t\t\t\t\t\t\t\t\t\t<td><input type=\"radio\" name=\"cuina_group1\" value=\"600\" ref=\"cuina_electricitat_q2\"/></td>\n\t\t\t\t\t\t\t\t\t\t<td><input type=\"radio\" name=\"cuina_group1\" value=\"700\" ref=\"cuina_electricitat_q3\"/></td>\n\t\t\t\t\t\t\t\t\t</tr>\n\n\t\t\t\t\t\t\t\t\t<tr>\n\t\t\t\t\t\t\t\t\t\t<th>Aigua:</th>\n\t\t\t\t\t\t\t\t\t\t<td><input type=\"radio\" name=\"cuina_group2\" value=\"500\" ref=\"cuina_aigua_q1\"/></td>\n\t\t\t\t\t\t\t\t\t\t<td><input type=\"radio\" name=\"cuina_group2\" value=\"600\" ref=\"cuina_aigua_q2\"/></td>\n\t\t\t\t\t\t\t\t\t\t<td><input type=\"radio\" name=\"cuina_group2\" value=\"700\" ref=\"cuina_aigua_q3\"/></td>\n\t\t\t\t\t\t\t\t\t</tr>\n\n\t\t\t\t\t\t\t\t\t<tr>\n\t\t\t\t\t\t\t\t\t\t<th>Gas:</th>\n\t\t\t\t\t\t\t\t\t\t<td><input type=\"radio\" name=\"cuina_group3\" value=\"500\" ref=\"cuina_gas_q1\"/></td>\n\t\t\t\t\t\t\t\t\t\t<td><input type=\"radio\" name=\"cuina_group3\" value=\"600\" ref=\"cuina_gas_q2\"/></td>\n\t\t\t\t\t\t\t\t\t\t<td><input type=\"radio\" name=\"cuina_group3\" value=\"700\" ref=\"cuina_gas_q3\"/></td>\n\t\t\t\t\t\t\t\t\t</tr>\n\n\t\t\t\t\t\t\t\t\t<tr>\n\t\t\t\t\t\t\t\t\t\t<th>Mobles 2,40m lineals:</th>\n\t\t\t\t\t\t\t\t\t\t<td><input type=\"radio\" name=\"cuina_group4\" value=\"500\" ref=\"cuina_mobles240_q1\"/></td>\n\t\t\t\t\t\t\t\t\t\t<td><input type=\"radio\" name=\"cuina_group4\" value=\"600\" ref=\"cuina_mobles240_q2\"/></td>\n\t\t\t\t\t\t\t\t\t\t<td><input type=\"radio\" name=\"cuina_group4\" value=\"700\" ref=\"cuina_mobles240_q3\"/></td>\n\t\t\t\t\t\t\t\t\t</tr>\n\n\t\t\t\t\t\t\t\t\t<tr>\n\t\t\t\t\t\t\t\t\t\t<th>Encimera gas:</th>\n\t\t\t\t\t\t\t\t\t\t<td><input type=\"radio\" name=\"cuina_group5\" value=\"500\" ref=\"cuina_encimera_gas_q1\"/></td>\n\t\t\t\t\t\t\t\t\t\t<td><input type=\"radio\" name=\"cuina_group5\" value=\"600\" ref=\"cuina_encimera_gas_q2\"/></td>\n\t\t\t\t\t\t\t\t\t\t<td><input type=\"radio\" name=\"cuina_group5\" value=\"700\" ref=\"cuina_encimera_gas_q3\"/></td>\n\t\t\t\t\t\t\t\t\t</tr>\n\n\t\t\t\t\t\t\t\t\t<tr>\n\t\t\t\t\t\t\t\t\t\t<th>Encimera vitrocer\xE0mica:</th>\n\t\t\t\t\t\t\t\t\t\t<td><input type=\"radio\" name=\"cuina_group6\" value=\"150\" ref=\"cuina_encimera_vitroceramica_q1\"/></td>\n\t\t\t\t\t\t\t\t\t\t<td><input type=\"radio\" name=\"cuina_group6\" value=\"230\" ref=\"cuina_encimera_vitroceramica_q2\"/></td>\n\t\t\t\t\t\t\t\t\t\t<td><input type=\"radio\" name=\"cuina_group6\" value=\"250\" ref=\"cuina_encimera_vitroceramica_q3\"/></td>\n\t\t\t\t\t\t\t\t\t</tr>\n\n\t\t\t\t\t\t\t\t\t<tr>\n\t\t\t\t\t\t\t\t\t\t<th>Encimera inducci\xF3:</th>\n\t\t\t\t\t\t\t\t\t\t<td><input type=\"radio\" name=\"cuina_group7\" value=\"190\" ref=\"cuina_encimera_induccio_q1\"/></td>\n\t\t\t\t\t\t\t\t\t\t<td><input type=\"radio\" name=\"cuina_group7\" value=\"240\" ref=\"cuina_encimera_induccio_q2\"/></td>\n\t\t\t\t\t\t\t\t\t\t<td><input type=\"radio\" name=\"cuina_group7\" value=\"700\" ref=\"cuina_encimera_induccio_q3\"/></td>\n\t\t\t\t\t\t\t\t\t</tr>\n\n\t\t\t\t\t\t\t\t\t<tr>\n\t\t\t\t\t\t\t\t\t\t<th>Rentaplats:</th>\n\t\t\t\t\t\t\t\t\t\t<td><input type=\"radio\" name=\"cuina_group8\" value=\"220\" ref=\"cuina_rentaplats_q1\"/></td>\n\t\t\t\t\t\t\t\t\t\t<td><input type=\"radio\" name=\"cuina_group8\" value=\"300\" ref=\"cuina_rentaplats_q2\"/></td>\n\t\t\t\t\t\t\t\t\t\t<td><input type=\"radio\" name=\"cuina_group8\" value=\"550\" ref=\"cuina_rentaplats_q3\"/></td>\n\t\t\t\t\t\t\t\t\t</tr>\n\n\t\t\t\t\t\t\t\t\t<tr>\n\t\t\t\t\t\t\t\t\t\t<th>Forn:</th>\n\t\t\t\t\t\t\t\t\t\t<td><input type=\"radio\" name=\"cuina_group9\" value=\"250\" ref=\"cuina_forn_q1\"/></td>\n\t\t\t\t\t\t\t\t\t\t<td><input type=\"radio\" name=\"cuina_group9\" value=\"300\" ref=\"cuina_forn_q2\"/></td>\n\t\t\t\t\t\t\t\t\t\t<td><input type=\"radio\" name=\"cuina_group9\" value=\"400\" ref=\"cuina_forn_q3\"/></td>\n\t\t\t\t\t\t\t\t\t</tr>\n\n\t\t\t\t\t\t\t\t\t<tr>\n\t\t\t\t\t\t\t\t\t\t<th>Fregadora:</th>\n\t\t\t\t\t\t\t\t\t\t<td><input type=\"radio\" name=\"cuina_group10\" value=\"50\" ref=\"cuina_fregadora_q1\"/></td>\n\t\t\t\t\t\t\t\t\t\t<td><input type=\"radio\" name=\"cuina_group10\" value=\"100\" ref=\"cuina_fregadora_q2\"/></td>\n\t\t\t\t\t\t\t\t\t\t<td><input type=\"radio\" name=\"cuina_group10\" value=\"150\" ref=\"cuina_fregadora_q3\"/></td>\n\t\t\t\t\t\t\t\t\t</tr>\n\n\t\t\t\t\t\t\t\t\t<tr>\n\t\t\t\t\t\t\t\t\t\t<th>Campana:</th>\n\t\t\t\t\t\t\t\t\t\t<td><input type=\"radio\" name=\"cuina_group11\" value=\"70\" ref=\"cuina_campana_q1\"/></td>\n\t\t\t\t\t\t\t\t\t\t<td><input type=\"radio\" name=\"cuina_group11\" value=\"150\" ref=\"cuina_campana_q2\"/></td>\n\t\t\t\t\t\t\t\t\t\t<td><input type=\"radio\" name=\"cuina_group11\" value=\"200\" ref=\"cuina_campana_q3\"/></td>\n\t\t\t\t\t\t\t\t\t</tr>\n\n\t\t\t\t\t\t\t\t\t<tr>\n\t\t\t\t\t\t\t\t\t\t<th>Aixeta:</th>\n\t\t\t\t\t\t\t\t\t\t<td><input type=\"radio\" name=\"cuina_group12\" value=\"45\" ref=\"cuina_aixeta_q1\"/></td>\n\t\t\t\t\t\t\t\t\t\t<td><input type=\"radio\" name=\"cuina_group12\" value=\"70\" ref=\"cuina_aixeta_q2\"/></td>\n\t\t\t\t\t\t\t\t\t\t<td><input type=\"radio\" name=\"cuina_group12\" value=\"100\" ref=\"cuina_aixeta_q3\"/></td>\n\t\t\t\t\t\t\t\t\t</tr>\n\n\t\t\t\t\t\t\t\t\t<tr>\n\t\t\t\t\t\t\t\t\t\t<th>Rentadora:</th>\n\t\t\t\t\t\t\t\t\t\t<td><input type=\"radio\" name=\"cuina_group13\" value=\"325\" ref=\"cuina_rentadora_q1\"/></td>\n\t\t\t\t\t\t\t\t\t\t<td><input type=\"radio\" name=\"cuina_group13\" value=\"500\" ref=\"cuina_rentadora_q2\"/></td>\n\t\t\t\t\t\t\t\t\t\t<td><input type=\"radio\" name=\"cuina_group13\" value=\"650\" ref=\"cuina_rentadora_q3\"/></td>\n\t\t\t\t\t\t\t\t\t</tr>\n\n\t\t\t\t\t\t\t\t\t<tr>\n\t\t\t\t\t\t\t\t\t\t<th>Caldera:</th>\n\t\t\t\t\t\t\t\t\t\t<td><input type=\"radio\" name=\"cuina_group14\" value=\"1400\" ref=\"cuina_caldera_q1\"/></td>\n\t\t\t\t\t\t\t\t\t\t<td><input type=\"radio\" name=\"cuina_group14\" value=\"1800\" ref=\"cuina_caldera_q2\"/></td>\n\t\t\t\t\t\t\t\t\t\t<td><input type=\"radio\" name=\"cuina_group14\" value=\"2000\" ref=\"cuina_caldera_q3\"/></td>\n\t\t\t\t\t\t\t\t\t</tr>\n\n\t\t\t\t\t\t\t\t\t<tr>\n\t\t\t\t\t\t\t\t\t\t<th>Sostres pladur:</th>\n\t\t\t\t\t\t\t\t\t\t<td><input type=\"radio\" name=\"cuina_group15\" value=\"225\" ref=\"cuina_sostre_pladur_q1\"/></td>\n\t\t\t\t\t\t\t\t\t\t<td><input type=\"radio\" name=\"cuina_group15\" value=\"315\" ref=\"cuina_sostre_pladur_q2\"/></td>\n\t\t\t\t\t\t\t\t\t\t<td><input type=\"radio\" name=\"cuina_group15\" value=\"405\" ref=\"cuina_sostre_pladur_q3\"/></td>\n\t\t\t\t\t\t\t\t\t</tr>\n\n\t\t\t\t\t\t\t\t\t<tr>\n\t\t\t\t\t\t\t\t\t\t<th>Sostres alumini:</th>\n\t\t\t\t\t\t\t\t\t\t<td><input type=\"radio\" name=\"cuina_group16\" value=\"315\" ref=\"cuina_sostre_alumini_q1\"/></td>\n\t\t\t\t\t\t\t\t\t\t<td><input type=\"radio\" name=\"cuina_group16\" value=\"405\" ref=\"cuina_sostre_alumini_q2\"/></td>\n\t\t\t\t\t\t\t\t\t\t<td><input type=\"radio\" name=\"cuina_group16\" value=\"495\" ref=\"cuina_sostre_alumini_q3\"/></td>\n\t\t\t\t\t\t\t\t\t</tr>\n\n\t\t\t\t\t\t\t\t\t<tr>\n\t\t\t\t\t\t\t\t\t\t<th>Alicatat:</th>\n\t\t\t\t\t\t\t\t\t\t<td><input type=\"radio\" name=\"cuina_group17\" value=\"900\" ref=\"cuina_alicatat_q1\"/></td>\n\t\t\t\t\t\t\t\t\t\t<td><input type=\"radio\" name=\"cuina_group17\" value=\"1350\" ref=\"cuina_alicatat_q2\"/></td>\n\t\t\t\t\t\t\t\t\t\t<td><input type=\"radio\" name=\"cuina_group17\" value=\"1650\" ref=\"cuina_alicatat_q3\"/></td>\n\t\t\t\t\t\t\t\t\t</tr>\n\n\t\t\t\t\t\t\t\t\t<tr>\n\t\t\t\t\t\t\t\t\t\t<th>Pintura:</th>\n\t\t\t\t\t\t\t\t\t\t<td><input type=\"radio\" name=\"cuina_group18\" value=\"750\" ref=\"cuina_pintura_q1\"/></td>\n\t\t\t\t\t\t\t\t\t\t<td><input type=\"radio\" name=\"cuina_group18\" value=\"850\" ref=\"cuina_pintura_q2\"/></td>\n\t\t\t\t\t\t\t\t\t\t<td><input type=\"radio\" name=\"cuina_group18\" value=\"950\" ref=\"cuina_pintura_q3\"/></td>\n\t\t\t\t\t\t\t\t\t</tr>\n\t\t\t\t\t\t\t\t</tbody>\n\t\t\t\t\t\t\t</table>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\n\t\t\t\t\t<div className=\"card\">\n\t\t\t\t\t\t<div className=\"card-header\" id=\"headingTwo\">\n\t\t\t\t\t\t\t<h5 className=\"mb-0\">\n\t\t\t\t\t\t\t<button type=\"button\" className=\"btn btn-link btn-block collapsed\" data-toggle=\"collapse\" data-target=\"#collapseTwo\" aria-expanded=\"false\" aria-controls=\"collapseTwo\">\n\t\t\t\t\t\t\t\tBany\n\t\t\t\t\t\t\t</button>\n\t\t\t\t\t\t\t</h5>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div id=\"collapseTwo\" className=\"collapse\" aria-labelledby=\"headingTwo\" data-parent=\"#accordion\">\n\t\t\t\t\t\t\t<div className=\"card-body\">\n\t\t\t\t\t\t\t\tAnim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid.\n\t\t\t\t\t\t\t</div>\n\n\t\t\t\t\t\t\t<table>\n\t\t\t\t\t\t\t\t<tbody>\n\t\t\t\t\t\t\t\t\t<tr>\n\t\t\t\t\t\t\t\t\t\t<th></th>\n\t\t\t\t\t\t\t\t\t\t<th>Qualitat Normal</th>\n\t\t\t\t\t\t\t\t\t\t<th>Qualitat Alta</th>\n\t\t\t\t\t\t\t\t\t\t<th>Qualitat Premium</th>\n\t\t\t\t\t\t\t\t\t</tr>\n\n\t\t\t\t\t\t\t\t\t<tr>\n\t\t\t\t\t\t\t\t\t\t<th>Electricitat</th>\n\t\t\t\t\t\t\t\t\t\t<td><input type=\"radio\" name=\"bany1_group1\" value=\"220\" ref=\"bany1_electricitat_q1\"/></td>\n\t\t\t\t\t\t\t\t\t\t<td><input type=\"radio\" name=\"bany1_group1\" value=\"280\" ref=\"bany1_electricitat_q2\"/></td>\n\t\t\t\t\t\t\t\t\t\t<td><input type=\"radio\" name=\"bany1_group1\" value=\"280\" ref=\"bany1_electricitat_q3\"/></td>\n\t\t\t\t\t\t\t\t\t</tr>\n\n\t\t\t\t\t\t\t\t\t<tr>\n\t\t\t\t\t\t\t\t\t\t<th>Aigua</th>\n\t\t\t\t\t\t\t\t\t\t<td><input type=\"radio\" name=\"bany1_group2\" value=\"180\" ref=\"bany1_aigua_q1\"/></td>\n\t\t\t\t\t\t\t\t\t\t<td><input type=\"radio\" name=\"bany1_group2\" value=\"220\" ref=\"bany1_aigua_q2\"/></td>\n\t\t\t\t\t\t\t\t\t\t<td><input type=\"radio\" name=\"bany1_group2\" value=\"260\" ref=\"bany1_aigua_q3\"/></td>\n\t\t\t\t\t\t\t\t\t</tr>\n\n\t\t\t\t\t\t\t\t\t<tr>\n\t\t\t\t\t\t\t\t\t\t<th>Moble rentamans</th>\n\t\t\t\t\t\t\t\t\t\t<td><input type=\"radio\" name=\"bany1_group3\" value=\"140\" ref=\"bany1_moble_rentamans_q1\"/></td>\n\t\t\t\t\t\t\t\t\t\t<td><input type=\"radio\" name=\"bany1_group3\" value=\"250\" ref=\"bany1_moble_rentamans_q2\"/></td>\n\t\t\t\t\t\t\t\t\t\t<td><input type=\"radio\" name=\"bany1_group3\" value=\"350\" ref=\"bany1_moble_rentamans_q3\"/></td>\n\t\t\t\t\t\t\t\t\t</tr>\n\n\t\t\t\t\t\t\t\t\t<tr>\n\t\t\t\t\t\t\t\t\t\t<th>Rentamans</th>\n\t\t\t\t\t\t\t\t\t\t<td><input type=\"radio\" name=\"bany1_group4\" value=\"60\" ref=\"bany1_rentamans_q1\"/></td>\n\t\t\t\t\t\t\t\t\t\t<td><input type=\"radio\" name=\"bany1_group4\" value=\"90\" ref=\"bany1_rentamans_q2\"/></td>\n\t\t\t\t\t\t\t\t\t\t<td><input type=\"radio\" name=\"bany1_group4\" value=\"120\" ref=\"bany1_rentamans_q3\"/></td>\n\t\t\t\t\t\t\t\t\t</tr>\n\n\t\t\t\t\t\t\t\t\t<tr>\n\t\t\t\t\t\t\t\t\t\t<th>Mirall</th>\n\t\t\t\t\t\t\t\t\t\t<td><input type=\"radio\" name=\"bany1_group5\" value=\"40\" ref=\"bany1_mirall_q1\"/></td>\n\t\t\t\t\t\t\t\t\t\t<td><input type=\"radio\" name=\"bany1_group5\" value=\"60\" ref=\"bany1_mirall_q2\"/></td>\n\t\t\t\t\t\t\t\t\t\t<td><input type=\"radio\" name=\"bany1_group5\" value=\"80\" ref=\"bany1_mirall_q3\"/></td>\n\t\t\t\t\t\t\t\t\t</tr>\n\n\t\t\t\t\t\t\t\t\t<tr>\n\t\t\t\t\t\t\t\t\t\t<th>Mampara banyera</th>\n\t\t\t\t\t\t\t\t\t\t<td><input type=\"radio\" name=\"bany1_group6\" value=\"80\" ref=\"bany1_mampara_banyera_q1\"/></td>\n\t\t\t\t\t\t\t\t\t\t<td><input type=\"radio\" name=\"bany1_group6\" value=\"120\" ref=\"bany1_mampara_banyera_q2\"/></td>\n\t\t\t\t\t\t\t\t\t\t<td><input type=\"radio\" name=\"bany1_group6\" value=\"190\" ref=\"bany1_mampara_banyera_q3\"/></td>\n\t\t\t\t\t\t\t\t\t</tr>\n\n\t\t\t\t\t\t\t\t\t<tr>\n\t\t\t\t\t\t\t\t\t\t<th>Mampara dutxa</th>\n\t\t\t\t\t\t\t\t\t\t<td><input type=\"radio\" name=\"bany1_group7\" value=\"90\" ref=\"bany1_mampara_dutxa_q1\"/></td>\n\t\t\t\t\t\t\t\t\t\t<td><input type=\"radio\" name=\"bany1_group7\" value=\"140\" ref=\"bany1_mampara_dutxa_q2\"/></td>\n\t\t\t\t\t\t\t\t\t\t<td><input type=\"radio\" name=\"bany1_group7\" value=\"230\" ref=\"bany1_mampara_dutxa_q3\"/></td>\n\t\t\t\t\t\t\t\t\t</tr>\n\n\t\t\t\t\t\t\t\t\t<tr>\n\t\t\t\t\t\t\t\t\t\t<th>Aixeta dutxa</th>\n\t\t\t\t\t\t\t\t\t\t<td><input type=\"radio\" name=\"bany1_group8\" value=\"45\" ref=\"bany1_aixeta_dutxa_q1\"/></td>\n\t\t\t\t\t\t\t\t\t\t<td><input type=\"radio\" name=\"bany1_group8\" value=\"75\" ref=\"bany1_aixeta_dutxa_q2\"/></td>\n\t\t\t\t\t\t\t\t\t\t<td><input type=\"radio\" name=\"bany1_group8\" value=\"190\" ref=\"bany1_aixeta_dutxa_q3\"/></td>\n\t\t\t\t\t\t\t\t\t</tr>\n\n\t\t\t\t\t\t\t\t\t<tr>\n\t\t\t\t\t\t\t\t\t\t<th>Aixeta bany</th>\n\t\t\t\t\t\t\t\t\t\t<td><input type=\"radio\" name=\"bany1_group9\" value=\"50\" ref=\"bany1_aixeta_bany_q1\"/></td>\n\t\t\t\t\t\t\t\t\t\t<td><input type=\"radio\" name=\"bany1_group9\" value=\"85\" ref=\"bany1_aixeta_bany_q2\"/></td>\n\t\t\t\t\t\t\t\t\t\t<td><input type=\"radio\" name=\"bany1_group9\" value=\"130\" ref=\"bany1_aixeta_bany_q3\"/></td>\n\t\t\t\t\t\t\t\t\t</tr>\n\n\t\t\t\t\t\t\t\t\t<tr>\n\t\t\t\t\t\t\t\t\t\t<th>Accesoris bany</th>\n\t\t\t\t\t\t\t\t\t\t<td><input type=\"radio\" name=\"bany1_group10\" value=\"45\" ref=\"bany1_accesoris_bany_q1\"/></td>\n\t\t\t\t\t\t\t\t\t\t<td><input type=\"radio\" name=\"bany1_group10\" value=\"65\" ref=\"bany1_accesoris_bany_q2\"/></td>\n\t\t\t\t\t\t\t\t\t\t<td><input type=\"radio\" name=\"bany1_group10\" value=\"85\" ref=\"bany1_accesoris_bany_q3\"/></td>\n\t\t\t\t\t\t\t\t\t</tr>\n\n\t\t\t\t\t\t\t\t\t<tr>\n\t\t\t\t\t\t\t\t\t\t<th>Tovalloler</th>\n\t\t\t\t\t\t\t\t\t\t<td><input type=\"radio\" name=\"bany1_group11\" value=\"45\" ref=\"bany1_tovalloler_q1\"/></td>\n\t\t\t\t\t\t\t\t\t\t<td><input type=\"radio\" name=\"bany1_group11\" value=\"90\" ref=\"bany1_tovalloler_q2\"/></td>\n\t\t\t\t\t\t\t\t\t\t<td><input type=\"radio\" name=\"bany1_group11\" value=\"130\" ref=\"bany1_tovalloler_q3\"/></td>\n\t\t\t\t\t\t\t\t\t</tr>\n\n\t\t\t\t\t\t\t\t\t<tr>\n\t\t\t\t\t\t\t\t\t\t<th>W.C.</th>\n\t\t\t\t\t\t\t\t\t\t<td><input type=\"radio\" name=\"bany1_group12\" value=\"140\" ref=\"bany1_wc_q1\"/></td>\n\t\t\t\t\t\t\t\t\t\t<td><input type=\"radio\" name=\"bany1_group12\" value=\"220\" ref=\"bany1_wc_q2\"/></td>\n\t\t\t\t\t\t\t\t\t\t<td><input type=\"radio\" name=\"bany1_group12\" value=\"345\" ref=\"bany1_wc_q3\"/></td>\n\t\t\t\t\t\t\t\t\t</tr>\n\n\t\t\t\t\t\t\t\t\t<tr>\n\t\t\t\t\t\t\t\t\t\t<th>Bidet</th>\n\t\t\t\t\t\t\t\t\t\t<td><input type=\"radio\" name=\"bany1_group13\" value=\"65\" ref=\"bany1_bidet_q1\"/></td>\n\t\t\t\t\t\t\t\t\t\t<td><input type=\"radio\" name=\"bany1_group13\" value=\"100\" ref=\"bany1_bidet_q2\"/></td>\n\t\t\t\t\t\t\t\t\t\t<td><input type=\"radio\" name=\"bany1_group13\" value=\"140\" ref=\"bany1_bidet_q3\"/></td>\n\t\t\t\t\t\t\t\t\t</tr>\n\n\t\t\t\t\t\t\t\t\t<tr>\n\t\t\t\t\t\t\t\t\t\t<th>Banyera</th>\n\t\t\t\t\t\t\t\t\t\t<td><input type=\"radio\" name=\"bany1_group14\" value=\"80\" ref=\"bany1_banyera_q1\"/></td>\n\t\t\t\t\t\t\t\t\t\t<td><input type=\"radio\" name=\"bany1_group14\" value=\"130\" ref=\"bany1_banyera_q2\"/></td>\n\t\t\t\t\t\t\t\t\t\t<td><input type=\"radio\" name=\"bany1_group14\" value=\"470\" ref=\"bany1_banyera_q3\"/></td>\n\t\t\t\t\t\t\t\t\t</tr>\n\n\t\t\t\t\t\t\t\t\t<tr>\n\t\t\t\t\t\t\t\t\t\t<th>Dutxa</th>\n\t\t\t\t\t\t\t\t\t\t<td><input type=\"radio\" name=\"bany1_group15\" value=\"90\" ref=\"bany1_dutxa_q1\"/></td>\n\t\t\t\t\t\t\t\t\t\t<td><input type=\"radio\" name=\"bany1_group15\" value=\"150\" ref=\"bany1_dutxa_q2\"/></td>\n\t\t\t\t\t\t\t\t\t\t<td><input type=\"radio\" name=\"bany1_group15\" value=\"230\" ref=\"bany1_dutxa_q3\"/></td>\n\t\t\t\t\t\t\t\t\t</tr>\n\n\t\t\t\t\t\t\t\t\t<tr>\n\t\t\t\t\t\t\t\t\t\t<th>Sostres pladur</th>\n\t\t\t\t\t\t\t\t\t\t<td><input type=\"radio\" name=\"bany1_group16\" value=\"100\" ref=\"bany1_sostre_pladur_q1\"/></td>\n\t\t\t\t\t\t\t\t\t\t<td><input type=\"radio\" name=\"bany1_group16\" value=\"180\" ref=\"bany1_sostre_pladur_q2\"/></td>\n\t\t\t\t\t\t\t\t\t\t<td><input type=\"radio\" name=\"bany1_group16\" value=\"210\" ref=\"bany1_sostre_pladur_q3\"/></td>\n\t\t\t\t\t\t\t\t\t</tr>\n\n\t\t\t\t\t\t\t\t\t<tr>\n\t\t\t\t\t\t\t\t\t\t<th>Sostres alumini</th>\n\t\t\t\t\t\t\t\t\t\t<td><input type=\"radio\" name=\"bany1_group17\" value=\"120\" ref=\"bany1_sostre_alumini_q1\"/></td>\n\t\t\t\t\t\t\t\t\t\t<td><input type=\"radio\" name=\"bany1_group17\" value=\"200\" ref=\"bany1_sostre_alumini_q2\"/></td>\n\t\t\t\t\t\t\t\t\t\t<td><input type=\"radio\" name=\"bany1_group17\" value=\"250\" ref=\"bany1_sostre_alumini_q3\"/></td>\n\t\t\t\t\t\t\t\t\t</tr>\n\n\t\t\t\t\t\t\t\t\t<tr>\n\t\t\t\t\t\t\t\t\t\t<th>Alicatat</th>\n\t\t\t\t\t\t\t\t\t\t<td><input type=\"radio\" name=\"bany1_group18\" value=\"450\" ref=\"bany1_alicatat_q1\"/></td>\n\t\t\t\t\t\t\t\t\t\t<td><input type=\"radio\" name=\"bany1_group18\" value=\"675\" ref=\"bany1_alicatat_q2\"/></td>\n\t\t\t\t\t\t\t\t\t\t<td><input type=\"radio\" name=\"bany1_group18\" value=\"825\" ref=\"bany1_alicatat_q3\"/></td>\n\t\t\t\t\t\t\t\t\t</tr>\n\n\t\t\t\t\t\t\t\t\t<tr>\n\t\t\t\t\t\t\t\t\t\t<th>Pintura</th>\n\t\t\t\t\t\t\t\t\t\t<td><input type=\"radio\" name=\"bany1_group19\" value=\"300\" ref=\"bany1_pintura_q1\"/></td>\n\t\t\t\t\t\t\t\t\t\t<td><input type=\"radio\" name=\"bany1_group19\" value=\"340\" ref=\"bany1_pintura_q2\"/></td>\n\t\t\t\t\t\t\t\t\t\t<td><input type=\"radio\" name=\"bany1_group19\" value=\"390\" ref=\"bany1_pintura_q3\"/></td>\n\t\t\t\t\t\t\t\t\t</tr>\n\t\t\t\t\t\t\t\t</tbody>\n\t\t\t\t\t\t\t</table>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\n\t\t\t\t\t<div className=\"card\">\n\t\t\t\t\t\t<div className=\"card-header\" id=\"headingThree\">\n\t\t\t\t\t\t\t<h5 className=\"mb-0\">\n\t\t\t\t\t\t\t<button type=\"button\" className=\"btn btn-link btn-block collapsed\" data-toggle=\"collapse\" data-target=\"#collapseThree\" aria-expanded=\"true\" aria-controls=\"collapseThree\">\n\t\t\t\t\t\t\t\tSal\xF3\n\t\t\t\t\t\t\t</button>\n\t\t\t\t\t\t\t</h5>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div id=\"collapseThree\" className=\"collapse\" aria-labelledby=\"headingThree\" data-parent=\"#accordion\">\n\t\t\t\t\t\t\t<div className=\"card-body\">\n\t\t\t\t\t\t\tAnim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid.\n\t\t\t\t\t\t\t</div>\n\n\t\t\t\t\t\t\t<table>\n\t\t\t\t\t\t\t\t<tbody>\n\t\t\t\t\t\t\t\t\t<tr>\n\t\t\t\t\t\t\t\t\t\t<th></th>\n\t\t\t\t\t\t\t\t\t\t<th>Qualitat Normal</th>\n\t\t\t\t\t\t\t\t\t\t<th>Qualitat Alta</th>\n\t\t\t\t\t\t\t\t\t\t<th>Qualitat Premium</th>\n\t\t\t\t\t\t\t\t\t</tr>\n\n\t\t\t\t\t\t\t\t\t<tr>\n\t\t\t\t\t\t\t\t\t\t<th>Interruptors i endolls</th>\n\t\t\t\t\t\t\t\t\t\t<td><input type=\"radio\" name=\"salo_group1\" value=\"210\" ref=\"salo_interruptors_endolls_q1\"/></td>\n\t\t\t\t\t\t\t\t\t\t<td><input type=\"radio\" name=\"salo_group1\" value=\"315\" ref=\"salo_interruptors_endolls_q2\"/></td>\n\t\t\t\t\t\t\t\t\t\t<td><input type=\"radio\" name=\"salo_group1\" value=\"365\" ref=\"salo_interruptors_endolls_q3\"/></td>\n\t\t\t\t\t\t\t\t\t</tr>\n\n\t\t\t\t\t\t\t\t\t<tr>\n\t\t\t\t\t\t\t\t\t\t<th>TV</th>\n\t\t\t\t\t\t\t\t\t\t<td><input type=\"radio\" name=\"salo_group2\" value=\"30\" ref=\"salo_tv_q1\"/></td>\n\t\t\t\t\t\t\t\t\t\t<td><input type=\"radio\" name=\"salo_group2\" value=\"45\" ref=\"salo_tv_q2\"/></td>\n\t\t\t\t\t\t\t\t\t\t<td><input type=\"radio\" name=\"salo_group2\" value=\"50\" ref=\"salo_tv_q3\"/></td>\n\t\t\t\t\t\t\t\t\t</tr>\n\n\t\t\t\t\t\t\t\t\t<tr>\n\t\t\t\t\t\t\t\t\t\t<th>Dades ordinador</th>\n\t\t\t\t\t\t\t\t\t\t<td><input type=\"radio\" name=\"salo_group3\" value=\"40\" ref=\"salo_dades_internet_q1\"/></td>\n\t\t\t\t\t\t\t\t\t\t<td><input type=\"radio\" name=\"salo_group3\" value=\"45\" ref=\"salo_dades_internet_q2\"/></td>\n\t\t\t\t\t\t\t\t\t\t<td><input type=\"radio\" name=\"salo_group3\" value=\"50\" ref=\"salo_dades_internet_q3\"/></td>\n\t\t\t\t\t\t\t\t\t</tr>\n\n\t\t\t\t\t\t\t\t\t<tr>\n\t\t\t\t\t\t\t\t\t\t<th>Aire Condicionat</th>\n\t\t\t\t\t\t\t\t\t\t<td><input type=\"radio\" name=\"salo_group4\" value=\"1100\" ref=\"salo_aire_condicionat_q1\"/></td>\n\t\t\t\t\t\t\t\t\t\t<td><input type=\"radio\" name=\"salo_group4\" value=\"1200\" ref=\"salo_aire_condicionat_q2\"/></td>\n\t\t\t\t\t\t\t\t\t\t<td><input type=\"radio\" name=\"salo_group4\" value=\"1300\" ref=\"salo_aire_condicionat_q3\"/></td>\n\t\t\t\t\t\t\t\t\t</tr>\n\n\t\t\t\t\t\t\t\t\t<tr>\n\t\t\t\t\t\t\t\t\t\t<th>Calefacci\xF3</th>\n\t\t\t\t\t\t\t\t\t\t<td><input type=\"radio\" name=\"salo_group5\" value=\"180\" ref=\"salo_calefaccio_q1\"/></td>\n\t\t\t\t\t\t\t\t\t\t<td><input type=\"radio\" name=\"salo_group5\" value=\"240\" ref=\"salo_calefaccio_q2\"/></td>\n\t\t\t\t\t\t\t\t\t\t<td><input type=\"radio\" name=\"salo_group5\" value=\"340\" ref=\"salo_calefaccio_q3\"/></td>\n\t\t\t\t\t\t\t\t\t</tr>\n\n\t\t\t\t\t\t\t\t\t<tr>\n\t\t\t\t\t\t\t\t\t\t<th>Sostre fals</th>\n\t\t\t\t\t\t\t\t\t\t<td><input type=\"radio\" name=\"salo_group6\" value=\"500\" ref=\"salo_sostre_fals_q1\"/></td>\n\t\t\t\t\t\t\t\t\t\t<td><input type=\"radio\" name=\"salo_group6\" value=\"700\" ref=\"salo_sostre_fals_q2\"/></td>\n\t\t\t\t\t\t\t\t\t\t<td><input type=\"radio\" name=\"salo_group6\" value=\"900\" ref=\"salo_sostre_fals_q3\"/></td>\n\t\t\t\t\t\t\t\t\t</tr>\n\n\t\t\t\t\t\t\t\t\t<tr>\n\t\t\t\t\t\t\t\t\t\t<th>Pintura</th>\n\t\t\t\t\t\t\t\t\t\t<td><input type=\"radio\" name=\"salo_group7\" value=\"750\" ref=\"salo_pintura_q1\"/></td>\n\t\t\t\t\t\t\t\t\t\t<td><input type=\"radio\" name=\"salo_group7\" value=\"850\" ref=\"salo_pintura_q2\"/></td>\n\t\t\t\t\t\t\t\t\t\t<td><input type=\"radio\" name=\"salo_group7\" value=\"1350\" ref=\"salo_pintura_q3\"/></td>\n\t\t\t\t\t\t\t\t\t</tr>\n\t\t\t\t\t\t\t\t</tbody>\n\t\t\t\t\t\t\t</table>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\n\t\t\t\t\t<div className=\"card\">\n\t\t\t\t\t\t<div className=\"card-header\" id=\"headingFour\">\n\t\t\t\t\t\t\t<h5 className=\"mb-0\">\n\t\t\t\t\t\t\t<button type=\"button\" className=\"btn btn-link btn-block collapsed\" data-toggle=\"collapse\" data-target=\"#collapseFour\" aria-expanded=\"true\" aria-controls=\"collapseFour\">\n\t\t\t\t\t\t\t\tHabitaci\xF3 matrimoni (aprox 18 m2)\n\t\t\t\t\t\t\t</button>\n\t\t\t\t\t\t\t</h5>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div id=\"collapseFour\" className=\"collapse\" aria-labelledby=\"headingFour\" data-parent=\"#accordion\">\n\t\t\t\t\t\t\t<div className=\"card-body\">\n\t\t\t\t\t\t\t\tAnim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid.\n\t\t\t\t\t\t\t</div>\n\n\t\t\t\t\t\t\t<table>\n\t\t\t\t\t\t\t\t<tbody>\n\t\t\t\t\t\t\t\t\t<tr>\n\t\t\t\t\t\t\t\t\t\t<th></th>\n\t\t\t\t\t\t\t\t\t\t<th>Qualitat Normal</th>\n\t\t\t\t\t\t\t\t\t\t<th>Qualitat Alta</th>\n\t\t\t\t\t\t\t\t\t\t<th>Qualitat Premium</th>\n\t\t\t\t\t\t\t\t\t</tr>\n\n\t\t\t\t\t\t\t\t\t<tr>\n\t\t\t\t\t\t\t\t\t\t<th>Interruptors i endolls</th>\n\t\t\t\t\t\t\t\t\t\t<td><input type=\"radio\" name=\"hb_mat1_group1\" value=\"210\" ref=\"hb_mat1_interruptors_endolls_q1\"/></td>\n\t\t\t\t\t\t\t\t\t\t<td><input type=\"radio\" name=\"hb_mat1_group1\" value=\"315\" ref=\"hb_mat1_interruptors_endolls_q2\"/></td>\n\t\t\t\t\t\t\t\t\t\t<td><input type=\"radio\" name=\"hb_mat1_group1\" value=\"280\" ref=\"hb_mat1_interruptors_endolls_q3\"/></td>\n\t\t\t\t\t\t\t\t\t</tr>\n\n\t\t\t\t\t\t\t\t\t<tr>\n\t\t\t\t\t\t\t\t\t\t<th>TV</th>\n\t\t\t\t\t\t\t\t\t\t<td><input type=\"radio\" name=\"hb_mat1_group2\" value=\"30\" ref=\"hb_mat1_tv_q1\"/></td>\n\t\t\t\t\t\t\t\t\t\t<td><input type=\"radio\" name=\"hb_mat1_group2\" value=\"45\" ref=\"hb_mat1_tv_q2\"/></td>\n\t\t\t\t\t\t\t\t\t\t<td><input type=\"radio\" name=\"hb_mat1_group2\" value=\"50\" ref=\"hb_mat1_tv_q3\"/></td>\n\t\t\t\t\t\t\t\t\t</tr>\n\n\t\t\t\t\t\t\t\t\t<tr>\n\t\t\t\t\t\t\t\t\t\t<th>Dades ordinador</th>\n\t\t\t\t\t\t\t\t\t\t<td><input type=\"radio\" name=\"hb_mat1_group3\" value=\"40\" ref=\"hb_mat1_dades_internet_q1\"/></td>\n\t\t\t\t\t\t\t\t\t\t<td><input type=\"radio\" name=\"hb_mat1_group3\" value=\"45\" ref=\"hb_mat1_dades_internet_q2\"/></td>\n\t\t\t\t\t\t\t\t\t\t<td><input type=\"radio\" name=\"hb_mat1_group3\" value=\"50\" ref=\"hb_mat1_dades_internet_q3\"/></td>\n\t\t\t\t\t\t\t\t\t</tr>\n\n\t\t\t\t\t\t\t\t\t<tr>\n\t\t\t\t\t\t\t\t\t\t<th>Aire Condicionat</th>\n\t\t\t\t\t\t\t\t\t\t<td><input type=\"radio\" name=\"hb_mat1_group4\" value=\"1100\" ref=\"hb_mat1_aire_condicionat_q1\"/></td>\n\t\t\t\t\t\t\t\t\t\t<td><input type=\"radio\" name=\"hb_mat1_group4\" value=\"1200\" ref=\"hb_mat1_aire_condicionat_q2\"/></td>\n\t\t\t\t\t\t\t\t\t\t<td><input type=\"radio\" name=\"hb_mat1_group4\" value=\"1300\" ref=\"hb_mat1_aire_condicionat_q3\"/></td>\n\t\t\t\t\t\t\t\t\t</tr>\n\n\t\t\t\t\t\t\t\t\t<tr>\n\t\t\t\t\t\t\t\t\t\t<th>Calefacci\xF3</th>\n\t\t\t\t\t\t\t\t\t\t<td><input type=\"radio\" name=\"hb_mat1_group5\" value=\"180\" ref=\"hb_mat1_calefaccio_q1\"/></td>\n\t\t\t\t\t\t\t\t\t\t<td><input type=\"radio\" name=\"hb_mat1_group5\" value=\"220\" ref=\"hb_mat1_calefaccio_q2\"/></td>\n\t\t\t\t\t\t\t\t\t\t<td><input type=\"radio\" name=\"hb_mat1_group5\" value=\"240\" ref=\"hb_mat1_calefaccio_q3\"/></td>\n\t\t\t\t\t\t\t\t\t</tr>\n\n\t\t\t\t\t\t\t\t\t<tr>\n\t\t\t\t\t\t\t\t\t\t<th>Sostre fals</th>\n\t\t\t\t\t\t\t\t\t\t<td><input type=\"radio\" name=\"hb_mat1_group6\" value=\"225\" ref=\"hb_mat1_sostre_fals_q1\"/></td>\n\t\t\t\t\t\t\t\t\t\t<td><input type=\"radio\" name=\"hb_mat1_group6\" value=\"315\" ref=\"hb_mat1_sostre_fals_q2\"/></td>\n\t\t\t\t\t\t\t\t\t\t<td><input type=\"radio\" name=\"hb_mat1_group6\" value=\"405\" ref=\"hb_mat1_sostre_fals_q3\"/></td>\n\t\t\t\t\t\t\t\t\t</tr>\n\n\t\t\t\t\t\t\t\t\t<tr>\n\t\t\t\t\t\t\t\t\t\t<th>Pintura</th>\n\t\t\t\t\t\t\t\t\t\t<td><input type=\"radio\" name=\"hb_mat1_group7\" value=\"750\" ref=\"hb_mat1_pintura_q1\"/></td>\n\t\t\t\t\t\t\t\t\t\t<td><input type=\"radio\" name=\"hb_mat1_group7\" value=\"850\" ref=\"hb_mat1_pintura_q2\"/></td>\n\t\t\t\t\t\t\t\t\t\t<td><input type=\"radio\" name=\"hb_mat1_group7\" value=\"950\" ref=\"hb_mat1_pintura_q3\"/></td>\n\t\t\t\t\t\t\t\t\t</tr>\n\t\t\t\t\t\t\t\t</tbody>\n\t\t\t\t\t\t\t</table>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\n\t\t\t\t\t<div className=\"card\">\n\t\t\t\t\t\t<div className=\"card-header\" id=\"headingFive\">\n\t\t\t\t\t\t\t<h5 className=\"mb-0\">\n\t\t\t\t\t\t\t<button type=\"button\" className=\"btn btn-link btn-block collapsed\" data-toggle=\"collapse\" data-target=\"#collapseFive\" aria-expanded=\"true\" aria-controls=\"collapseFive\">\n\t\t\t\t\t\t\t\tHabitaci\xF3 individual 1 (aprox 9 m2)\n\t\t\t\t\t\t\t</button>\n\t\t\t\t\t\t\t</h5>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div id=\"collapseFive\" className=\"collapse\" aria-labelledby=\"headingFive\" data-parent=\"#accordion\">\n\t\t\t\t\t\t\t<div className=\"card-body\">\n\t\t\t\t\t\t\t\tAnim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid.\n\t\t\t\t\t\t\t</div>\n\n\t\t\t\t\t\t\t<table>\n\t\t\t\t\t\t\t\t<tbody>\n\t\t\t\t\t\t\t\t\t<tr>\n\t\t\t\t\t\t\t\t\t\t<th></th>\n\t\t\t\t\t\t\t\t\t\t<th>Qualitat Normal</th>\n\t\t\t\t\t\t\t\t\t\t<th>Qualitat Alta</th>\n\t\t\t\t\t\t\t\t\t\t<th>Qualitat Premium</th>\n\t\t\t\t\t\t\t\t\t</tr>\n\n\t\t\t\t\t\t\t\t\t<tr>\n\t\t\t\t\t\t\t\t\t\t<th>Interruptors i endolls</th>\n\t\t\t\t\t\t\t\t\t\t<td><input type=\"radio\" name=\"hb_ind1_group1\" value=\"120\" ref=\"hb_ind1_interruptors_endolls_q1\"/></td>\n\t\t\t\t\t\t\t\t\t\t<td><input type=\"radio\" name=\"hb_ind1_group1\" value=\"180\" ref=\"hb_ind1_interruptors_endolls_q2\"/></td>\n\t\t\t\t\t\t\t\t\t\t<td><input type=\"radio\" name=\"hb_ind1_group1\" value=\"210\" ref=\"hb_ind1_interruptors_endolls_q3\"/></td>\n\t\t\t\t\t\t\t\t\t</tr>\n\n\t\t\t\t\t\t\t\t\t<tr>\n\t\t\t\t\t\t\t\t\t\t<th>TV</th>\n\t\t\t\t\t\t\t\t\t\t<td><input type=\"radio\" name=\"hb_ind1_group2\" value=\"30\" ref=\"hb_ind1_tv_q1\"/></td>\n\t\t\t\t\t\t\t\t\t\t<td><input type=\"radio\" name=\"hb_ind1_group2\" value=\"45\" ref=\"hb_ind1_tv_q2\"/></td>\n\t\t\t\t\t\t\t\t\t\t<td><input type=\"radio\" name=\"hb_ind1_group2\" value=\"50\" ref=\"hb_ind1_tv_q3\"/></td>\n\t\t\t\t\t\t\t\t\t</tr>\n\n\t\t\t\t\t\t\t\t\t<tr>\n\t\t\t\t\t\t\t\t\t\t<th>Dades ordinador</th>\n\t\t\t\t\t\t\t\t\t\t<td><input type=\"radio\" name=\"hb_ind1_group3\" value=\"40\" ref=\"hb_ind1_dades_internet_q1\"/></td>\n\t\t\t\t\t\t\t\t\t\t<td><input type=\"radio\" name=\"hb_ind1_group3\" value=\"45\" ref=\"hb_ind1_dades_internet_q2\"/></td>\n\t\t\t\t\t\t\t\t\t\t<td><input type=\"radio\" name=\"hb_ind1_group3\" value=\"50\" ref=\"hb_ind1_dades_internet_q3\"/></td>\n\t\t\t\t\t\t\t\t\t</tr>\n\n\t\t\t\t\t\t\t\t\t<tr>\n\t\t\t\t\t\t\t\t\t\t<th>Aire Condicionat</th>\n\t\t\t\t\t\t\t\t\t\t<td><input type=\"radio\" name=\"hb_ind1_group4\" value=\"1100\" ref=\"hb_ind1_aire_condicionat_q1\"/></td>\n\t\t\t\t\t\t\t\t\t\t<td><input type=\"radio\" name=\"hb_ind1_group4\" value=\"1200\" ref=\"hb_ind1_aire_condicionat_q2\"/></td>\n\t\t\t\t\t\t\t\t\t\t<td><input type=\"radio\" name=\"hb_ind1_group4\" value=\"1300\" ref=\"hb_ind1_aire_condicionat_q3\"/></td>\n\t\t\t\t\t\t\t\t\t</tr>\n\n\t\t\t\t\t\t\t\t\t<tr>\n\t\t\t\t\t\t\t\t\t\t<th>Calefacci\xF3</th>\n\t\t\t\t\t\t\t\t\t\t<td><input type=\"radio\" name=\"hb_ind1_group5\" value=\"90\" ref=\"hb_ind1_calefaccio_q1\"/></td>\n\t\t\t\t\t\t\t\t\t\t<td><input type=\"radio\" name=\"hb_ind1_group5\" value=\"120\" ref=\"hb_ind1_calefaccio_q2\"/></td>\n\t\t\t\t\t\t\t\t\t\t<td><input type=\"radio\" name=\"hb_ind1_group5\" value=\"150\" ref=\"hb_ind1_calefaccio_q3\"/></td>\n\t\t\t\t\t\t\t\t\t</tr>\n\n\t\t\t\t\t\t\t\t\t<tr>\n\t\t\t\t\t\t\t\t\t\t<th>Sostre fals</th>\n\t\t\t\t\t\t\t\t\t\t<td><input type=\"radio\" name=\"hb_ind1_group6\" value=\"150\" ref=\"hb_ind1_sostre_fals_q1\"/></td>\n\t\t\t\t\t\t\t\t\t\t<td><input type=\"radio\" name=\"hb_ind1_group6\" value=\"210\" ref=\"hb_ind1_sostre_fals_q2\"/></td>\n\t\t\t\t\t\t\t\t\t\t<td><input type=\"radio\" name=\"hb_ind1_group6\" value=\"270\" ref=\"hb_ind1_sostre_fals_q3\"/></td>\n\t\t\t\t\t\t\t\t\t</tr>\n\n\t\t\t\t\t\t\t\t\t<tr>\n\t\t\t\t\t\t\t\t\t\t<th>Pintura</th>\n\t\t\t\t\t\t\t\t\t\t<td><input type=\"radio\" name=\"hb_ind1_group7\" value=\"600\" ref=\"hb_ind1_pintura_q1\"/></td>\n\t\t\t\t\t\t\t\t\t\t<td><input type=\"radio\" name=\"hb_ind1_group7\" value=\"700\" ref=\"hb_ind1_pintura_q2\"/></td>\n\t\t\t\t\t\t\t\t\t\t<td><input type=\"radio\" name=\"hb_ind1_group7\" value=\"850\" ref=\"hb_ind1_pintura_q3\"/></td>\n\t\t\t\t\t\t\t\t\t</tr>\n\t\t\t\t\t\t\t\t</tbody>\n\t\t\t\t\t\t\t</table>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\n\t\t\t\t\t<div className=\"card\">\n\t\t\t\t\t\t<div className=\"card-header\" id=\"headingSix\">\n\t\t\t\t\t\t\t<h5 className=\"mb-0\">\n\t\t\t\t\t\t\t<button type=\"button\" className=\"btn btn-link btn-block collapsed\" data-toggle=\"collapse\" data-target=\"#collapseSix\" aria-expanded=\"true\" aria-controls=\"collapseSix\">\n\t\t\t\t\t\t\t\tHabitaci\xF3 individual 2 (aprox 9 m2)\n\t\t\t\t\t\t\t</button>\n\t\t\t\t\t\t\t</h5>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div id=\"collapseSix\" className=\"collapse\" aria-labelledby=\"headingSix\" data-parent=\"#accordion\">\n\t\t\t\t\t\t\t<div className=\"card-body\">\n\t\t\t\t\t\t\t\tAnim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid.\n\t\t\t\t\t\t\t</div>\n\n\t\t\t\t\t\t\t<table>\n\t\t\t\t\t\t\t\t<tbody>\n\t\t\t\t\t\t\t\t\t<tr>\n\t\t\t\t\t\t\t\t\t\t<th></th>\n\t\t\t\t\t\t\t\t\t\t<th>Qualitat Normal</th>\n\t\t\t\t\t\t\t\t\t\t<th>Qualitat Alta</th>\n\t\t\t\t\t\t\t\t\t\t<th>Qualitat Premium</th>\n\t\t\t\t\t\t\t\t\t</tr>\n\n\t\t\t\t\t\t\t\t\t<tr>\n\t\t\t\t\t\t\t\t\t\t<th>Interruptors i endolls</th>\n\t\t\t\t\t\t\t\t\t\t<td><input type=\"radio\" name=\"hb_ind2_group1\" value=\"120\" ref=\"hb_ind2_interruptors_endolls_q1\"/></td>\n\t\t\t\t\t\t\t\t\t\t<td><input type=\"radio\" name=\"hb_ind2_group1\" value=\"180\" ref=\"hb_ind2_interruptors_endolls_q2\"/></td>\n\t\t\t\t\t\t\t\t\t\t<td><input type=\"radio\" name=\"hb_ind2_group1\" value=\"210\" ref=\"hb_ind2_interruptors_endolls_q3\"/></td>\n\t\t\t\t\t\t\t\t\t</tr>\n\n\t\t\t\t\t\t\t\t\t<tr>\n\t\t\t\t\t\t\t\t\t\t<th>TV</th>\n\t\t\t\t\t\t\t\t\t\t<td><input type=\"radio\" name=\"hb_ind2_group2\" value=\"30\" ref=\"hb_ind2_tv_q1\"/></td>\n\t\t\t\t\t\t\t\t\t\t<td><input type=\"radio\" name=\"hb_ind2_group2\" value=\"45\" ref=\"hb_ind2_tv_q2\"/></td>\n\t\t\t\t\t\t\t\t\t\t<td><input type=\"radio\" name=\"hb_ind2_group2\" value=\"50\" ref=\"hb_ind2_tv_q3\"/></td>\n\t\t\t\t\t\t\t\t\t</tr>\n\n\t\t\t\t\t\t\t\t\t<tr>\n\t\t\t\t\t\t\t\t\t\t<th>Dades ordinador</th>\n\t\t\t\t\t\t\t\t\t\t<td><input type=\"radio\" name=\"hb_ind2_group3\" value=\"40\" ref=\"hb_ind2_dades_internet_q1\"/></td>\n\t\t\t\t\t\t\t\t\t\t<td><input type=\"radio\" name=\"hb_ind2_group3\" value=\"45\" ref=\"hb_ind2_dades_internet_q2\"/></td>\n\t\t\t\t\t\t\t\t\t\t<td><input type=\"radio\" name=\"hb_ind2_group3\" value=\"50\" ref=\"hb_ind2_dades_internet_q3\"/></td>\n\t\t\t\t\t\t\t\t\t</tr>\n\n\t\t\t\t\t\t\t\t\t<tr>\n\t\t\t\t\t\t\t\t\t\t<th>Aire Condicionat</th>\n\t\t\t\t\t\t\t\t\t\t<td><input type=\"radio\" name=\"hb_ind2_group4\" value=\"1100\" ref=\"hb_ind2_aire_condicionat_q1\"/></td>\n\t\t\t\t\t\t\t\t\t\t<td><input type=\"radio\" name=\"hb_ind2_group4\" value=\"1200\" ref=\"hb_ind2_aire_condicionat_q2\"/></td>\n\t\t\t\t\t\t\t\t\t\t<td><input type=\"radio\" name=\"hb_ind2_group4\" value=\"1300\" ref=\"hb_ind2_aire_condicionat_q3\"/></td>\n\t\t\t\t\t\t\t\t\t</tr>\n\n\t\t\t\t\t\t\t\t\t<tr>\n\t\t\t\t\t\t\t\t\t\t<th>Calefacci\xF3</th>\n\t\t\t\t\t\t\t\t\t\t<td><input type=\"radio\" name=\"hb_ind2_group5\" value=\"90\" ref=\"hb_ind2_calefaccio_q1\"/></td>\n\t\t\t\t\t\t\t\t\t\t<td><input type=\"radio\" name=\"hb_ind2_group5\" value=\"120\" ref=\"hb_ind2_calefaccio_q2\"/></td>\n\t\t\t\t\t\t\t\t\t\t<td><input type=\"radio\" name=\"hb_ind2_group5\" value=\"150\" ref=\"hb_ind2_calefaccio_q3\"/></td>\n\t\t\t\t\t\t\t\t\t</tr>\n\n\t\t\t\t\t\t\t\t\t<tr>\n\t\t\t\t\t\t\t\t\t\t<th>Sostre fals</th>\n\t\t\t\t\t\t\t\t\t\t<td><input type=\"radio\" name=\"hb_ind2_group6\" value=\"150\" ref=\"hb_ind2_sostre_fals_q1\"/></td>\n\t\t\t\t\t\t\t\t\t\t<td><input type=\"radio\" name=\"hb_ind2_group6\" value=\"210\" ref=\"hb_ind2_sostre_fals_q2\"/></td>\n\t\t\t\t\t\t\t\t\t\t<td><input type=\"radio\" name=\"hb_ind2_group6\" value=\"270\" ref=\"hb_ind2_sostre_fals_q3\"/></td>\n\t\t\t\t\t\t\t\t\t</tr>\n\n\t\t\t\t\t\t\t\t\t<tr>\n\t\t\t\t\t\t\t\t\t\t<th>Pintura</th>\n\t\t\t\t\t\t\t\t\t\t<td><input type=\"radio\" name=\"hb_ind2_group7\" value=\"600\" ref=\"hb_ind2_pintura_q1\"/></td>\n\t\t\t\t\t\t\t\t\t\t<td><input type=\"radio\" name=\"hb_ind2_group7\" value=\"700\" ref=\"hb_ind2_pintura_q2\"/></td>\n\t\t\t\t\t\t\t\t\t\t<td><input type=\"radio\" name=\"hb_ind2_group7\" value=\"850\" ref=\"hb_ind2_pintura_q3\"/></td>\n\t\t\t\t\t\t\t\t\t</tr>\n\t\t\t\t\t\t\t\t</tbody>\n\t\t\t\t\t\t\t</table>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\n\t\t\t\t\t<div className=\"card\">\n\t\t\t\t\t\t<div className=\"card-header\" id=\"headingSeven\">\n\t\t\t\t\t\t\t<h5 className=\"mb-0\">\n\t\t\t\t\t\t\t<button type=\"button\" className=\"btn btn-link btn-block collapsed\" data-toggle=\"collapse\" data-target=\"#collapseSeven\" aria-expanded=\"true\" aria-controls=\"collapseSeven\">\n\t\t\t\t\t\t\t\tRebedor/Passad\xEDs\n\t\t\t\t\t\t\t</button>\n\t\t\t\t\t\t\t</h5>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div id=\"collapseSeven\" className=\"collapse\" aria-labelledby=\"headingSeven\" data-parent=\"#accordion\">\n\t\t\t\t\t\t\t<div className=\"card-body\">\n\t\t\t\t\t\t\t\tAnim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid.\n\t\t\t\t\t\t\t</div>\n\n\t\t\t\t\t\t\t<table>\n\t\t\t\t\t\t\t\t<tbody>\n\t\t\t\t\t\t\t\t\t<tr>\n\t\t\t\t\t\t\t\t\t\t<th></th>\n\t\t\t\t\t\t\t\t\t\t<th>Qualitat Normal</th>\n\t\t\t\t\t\t\t\t\t\t<th>Qualitat Alta</th>\n\t\t\t\t\t\t\t\t\t\t<th>Qualitat Premium</th>\n\t\t\t\t\t\t\t\t\t</tr>\n\n\t\t\t\t\t\t\t\t\t<tr>\n\t\t\t\t\t\t\t\t\t\t<th>Interruptors i endolls</th>\n\t\t\t\t\t\t\t\t\t\t<td><input type=\"radio\" name=\"rebedor_group1\" value=\"120\" ref=\"rebedor_interruptors_endolls_q1\"/></td>\n\t\t\t\t\t\t\t\t\t\t<td><input type=\"radio\" name=\"rebedor_group1\" value=\"180\" ref=\"rebedor_interruptors_endolls_q2\"/></td>\n\t\t\t\t\t\t\t\t\t\t<td><input type=\"radio\" name=\"rebedor_group1\" value=\"210\" ref=\"rebedor_interruptors_endolls_q3\"/></td>\n\t\t\t\t\t\t\t\t\t</tr>\n\n\t\t\t\t\t\t\t\t\t<tr>\n\t\t\t\t\t\t\t\t\t\t<th>Calefacci\xF3</th>\n\t\t\t\t\t\t\t\t\t\t<td><input type=\"radio\" name=\"rebedor_group2\" value=\"90\"  ref=\"rebedor_calefaccio_q1\"/></td>\n\t\t\t\t\t\t\t\t\t\t<td><input type=\"radio\" name=\"rebedor_group2\" value=\"120\" ref=\"rebedor_calefaccio_q2\"/></td>\n\t\t\t\t\t\t\t\t\t\t<td><input type=\"radio\" name=\"rebedor_group2\" value=\"150\" ref=\"rebedor_calefaccio_q3\"/></td>\n\t\t\t\t\t\t\t\t\t</tr>\n\n\t\t\t\t\t\t\t\t\t<tr>\n\t\t\t\t\t\t\t\t\t\t<th>Sostre fals</th>\n\t\t\t\t\t\t\t\t\t\t<td><input type=\"radio\" name=\"rebedor_group3\" value=\"150\" ref=\"rebedor_sostre_fals_q1\"/></td>\n\t\t\t\t\t\t\t\t\t\t<td><input type=\"radio\" name=\"rebedor_group3\" value=\"210\" ref=\"rebedor_sostre_fals_q2\"/></td>\n\t\t\t\t\t\t\t\t\t\t<td><input type=\"radio\" name=\"rebedor_group3\" value=\"270\" ref=\"rebedor_sostre_fals_q3\"/></td>\n\t\t\t\t\t\t\t\t\t</tr>\n\n\t\t\t\t\t\t\t\t\t<tr>\n\t\t\t\t\t\t\t\t\t\t<th>Pintura</th>\n\t\t\t\t\t\t\t\t\t\t<td><input type=\"radio\" name=\"rebedor_group4\" value=\"600\" ref=\"rebedor_pintura_q1\"/></td>\n\t\t\t\t\t\t\t\t\t\t<td><input type=\"radio\" name=\"rebedor_group4\" value=\"700\" ref=\"rebedor_pintura_q2\"/></td>\n\t\t\t\t\t\t\t\t\t\t<td><input type=\"radio\" name=\"rebedor_group4\" value=\"850\" ref=\"rebedor_pintura_q3\"/></td>\n\t\t\t\t\t\t\t\t\t</tr>\n\t\t\t\t\t\t\t\t</tbody>\n\t\t\t\t\t\t\t</table>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t</div>"
+  formulari: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
+    id: "accordion",
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("h1", {
+      children: "AAAAAA"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
+      className: "card",
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", {
+        className: "card-header",
+        id: "headingOne",
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("h5", {
+          className: "mb-0",
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("button", {
+            type: "button",
+            className: "btn btn-link btn-block collapsed",
+            "data-toggle": "collapse",
+            "data-target": "#collapseOne",
+            "aria-expanded": "false",
+            "aria-controls": "collapseOne",
+            children: "Cuina"
+          })
+        })
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
+        id: "collapseOne",
+        className: "collapse",
+        "aria-labelledby": "headingOne",
+        "data-parent": "#accordion",
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", {
+          className: "card-body",
+          children: "Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid."
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("table", {
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("tbody", {
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("tr", {
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("th", {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("th", {
+                children: "Qualitat Normal"
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("th", {
+                children: "Qualitat Alta"
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("th", {
+                children: "Qualitat Premium"
+              })]
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("tr", {
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("th", {
+                children: "Electricitat:"
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
+                  type: "radio",
+                  name: "cuina_group1",
+                  value: "500",
+                  ref: "cuina_electricitat_q1"
+                })
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
+                  type: "radio",
+                  name: "cuina_group1",
+                  value: "600",
+                  ref: "cuina_electricitat_q2"
+                })
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
+                  type: "radio",
+                  name: "cuina_group1",
+                  value: "700",
+                  ref: "cuina_electricitat_q3"
+                })
+              })]
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("tr", {
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("th", {
+                children: "Aigua:"
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
+                  type: "radio",
+                  name: "cuina_group2",
+                  value: "500",
+                  ref: "cuina_aigua_q1"
+                })
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
+                  type: "radio",
+                  name: "cuina_group2",
+                  value: "600",
+                  ref: "cuina_aigua_q2"
+                })
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
+                  type: "radio",
+                  name: "cuina_group2",
+                  value: "700",
+                  ref: "cuina_aigua_q3"
+                })
+              })]
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("tr", {
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("th", {
+                children: "Gas:"
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
+                  type: "radio",
+                  name: "cuina_group3",
+                  value: "500",
+                  ref: "cuina_gas_q1"
+                })
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
+                  type: "radio",
+                  name: "cuina_group3",
+                  value: "600",
+                  ref: "cuina_gas_q2"
+                })
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
+                  type: "radio",
+                  name: "cuina_group3",
+                  value: "700",
+                  ref: "cuina_gas_q3"
+                })
+              })]
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("tr", {
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("th", {
+                children: "Mobles 2,40m lineals:"
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
+                  type: "radio",
+                  name: "cuina_group4",
+                  value: "500",
+                  ref: "cuina_mobles240_q1"
+                })
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
+                  type: "radio",
+                  name: "cuina_group4",
+                  value: "600",
+                  ref: "cuina_mobles240_q2"
+                })
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
+                  type: "radio",
+                  name: "cuina_group4",
+                  value: "700",
+                  ref: "cuina_mobles240_q3"
+                })
+              })]
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("tr", {
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("th", {
+                children: "Encimera gas:"
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
+                  type: "radio",
+                  name: "cuina_group5",
+                  value: "500",
+                  ref: "cuina_encimera_gas_q1"
+                })
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
+                  type: "radio",
+                  name: "cuina_group5",
+                  value: "600",
+                  ref: "cuina_encimera_gas_q2"
+                })
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
+                  type: "radio",
+                  name: "cuina_group5",
+                  value: "700",
+                  ref: "cuina_encimera_gas_q3"
+                })
+              })]
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("tr", {
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("th", {
+                children: "Encimera vitrocer\xE0mica:"
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
+                  type: "radio",
+                  name: "cuina_group6",
+                  value: "150",
+                  ref: "cuina_encimera_vitroceramica_q1"
+                })
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
+                  type: "radio",
+                  name: "cuina_group6",
+                  value: "230",
+                  ref: "cuina_encimera_vitroceramica_q2"
+                })
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
+                  type: "radio",
+                  name: "cuina_group6",
+                  value: "250",
+                  ref: "cuina_encimera_vitroceramica_q3"
+                })
+              })]
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("tr", {
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("th", {
+                children: "Encimera inducci\xF3:"
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
+                  type: "radio",
+                  name: "cuina_group7",
+                  value: "190",
+                  ref: "cuina_encimera_induccio_q1"
+                })
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
+                  type: "radio",
+                  name: "cuina_group7",
+                  value: "240",
+                  ref: "cuina_encimera_induccio_q2"
+                })
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
+                  type: "radio",
+                  name: "cuina_group7",
+                  value: "700",
+                  ref: "cuina_encimera_induccio_q3"
+                })
+              })]
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("tr", {
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("th", {
+                children: "Rentaplats:"
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
+                  type: "radio",
+                  name: "cuina_group8",
+                  value: "220",
+                  ref: "cuina_rentaplats_q1"
+                })
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
+                  type: "radio",
+                  name: "cuina_group8",
+                  value: "300",
+                  ref: "cuina_rentaplats_q2"
+                })
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
+                  type: "radio",
+                  name: "cuina_group8",
+                  value: "550",
+                  ref: "cuina_rentaplats_q3"
+                })
+              })]
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("tr", {
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("th", {
+                children: "Forn:"
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
+                  type: "radio",
+                  name: "cuina_group9",
+                  value: "250",
+                  ref: "cuina_forn_q1"
+                })
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
+                  type: "radio",
+                  name: "cuina_group9",
+                  value: "300",
+                  ref: "cuina_forn_q2"
+                })
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
+                  type: "radio",
+                  name: "cuina_group9",
+                  value: "400",
+                  ref: "cuina_forn_q3"
+                })
+              })]
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("tr", {
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("th", {
+                children: "Fregadora:"
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
+                  type: "radio",
+                  name: "cuina_group10",
+                  value: "50",
+                  ref: "cuina_fregadora_q1"
+                })
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
+                  type: "radio",
+                  name: "cuina_group10",
+                  value: "100",
+                  ref: "cuina_fregadora_q2"
+                })
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
+                  type: "radio",
+                  name: "cuina_group10",
+                  value: "150",
+                  ref: "cuina_fregadora_q3"
+                })
+              })]
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("tr", {
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("th", {
+                children: "Campana:"
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
+                  type: "radio",
+                  name: "cuina_group11",
+                  value: "70",
+                  ref: "cuina_campana_q1"
+                })
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
+                  type: "radio",
+                  name: "cuina_group11",
+                  value: "150",
+                  ref: "cuina_campana_q2"
+                })
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
+                  type: "radio",
+                  name: "cuina_group11",
+                  value: "200",
+                  ref: "cuina_campana_q3"
+                })
+              })]
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("tr", {
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("th", {
+                children: "Aixeta:"
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
+                  type: "radio",
+                  name: "cuina_group12",
+                  value: "45",
+                  ref: "cuina_aixeta_q1"
+                })
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
+                  type: "radio",
+                  name: "cuina_group12",
+                  value: "70",
+                  ref: "cuina_aixeta_q2"
+                })
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
+                  type: "radio",
+                  name: "cuina_group12",
+                  value: "100",
+                  ref: "cuina_aixeta_q3"
+                })
+              })]
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("tr", {
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("th", {
+                children: "Rentadora:"
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
+                  type: "radio",
+                  name: "cuina_group13",
+                  value: "325",
+                  ref: "cuina_rentadora_q1"
+                })
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
+                  type: "radio",
+                  name: "cuina_group13",
+                  value: "500",
+                  ref: "cuina_rentadora_q2"
+                })
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
+                  type: "radio",
+                  name: "cuina_group13",
+                  value: "650",
+                  ref: "cuina_rentadora_q3"
+                })
+              })]
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("tr", {
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("th", {
+                children: "Caldera:"
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
+                  type: "radio",
+                  name: "cuina_group14",
+                  value: "1400",
+                  ref: "cuina_caldera_q1"
+                })
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
+                  type: "radio",
+                  name: "cuina_group14",
+                  value: "1800",
+                  ref: "cuina_caldera_q2"
+                })
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
+                  type: "radio",
+                  name: "cuina_group14",
+                  value: "2000",
+                  ref: "cuina_caldera_q3"
+                })
+              })]
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("tr", {
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("th", {
+                children: "Sostres pladur:"
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
+                  type: "radio",
+                  name: "cuina_group15",
+                  value: "225",
+                  ref: "cuina_sostre_pladur_q1"
+                })
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
+                  type: "radio",
+                  name: "cuina_group15",
+                  value: "315",
+                  ref: "cuina_sostre_pladur_q2"
+                })
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
+                  type: "radio",
+                  name: "cuina_group15",
+                  value: "405",
+                  ref: "cuina_sostre_pladur_q3"
+                })
+              })]
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("tr", {
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("th", {
+                children: "Sostres alumini:"
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
+                  type: "radio",
+                  name: "cuina_group16",
+                  value: "315",
+                  ref: "cuina_sostre_alumini_q1"
+                })
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
+                  type: "radio",
+                  name: "cuina_group16",
+                  value: "405",
+                  ref: "cuina_sostre_alumini_q2"
+                })
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
+                  type: "radio",
+                  name: "cuina_group16",
+                  value: "495",
+                  ref: "cuina_sostre_alumini_q3"
+                })
+              })]
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("tr", {
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("th", {
+                children: "Alicatat:"
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
+                  type: "radio",
+                  name: "cuina_group17",
+                  value: "900",
+                  ref: "cuina_alicatat_q1"
+                })
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
+                  type: "radio",
+                  name: "cuina_group17",
+                  value: "1350",
+                  ref: "cuina_alicatat_q2"
+                })
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
+                  type: "radio",
+                  name: "cuina_group17",
+                  value: "1650",
+                  ref: "cuina_alicatat_q3"
+                })
+              })]
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("tr", {
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("th", {
+                children: "Pintura:"
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
+                  type: "radio",
+                  name: "cuina_group18",
+                  value: "750",
+                  ref: "cuina_pintura_q1"
+                })
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
+                  type: "radio",
+                  name: "cuina_group18",
+                  value: "850",
+                  ref: "cuina_pintura_q2"
+                })
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
+                  type: "radio",
+                  name: "cuina_group18",
+                  value: "950",
+                  ref: "cuina_pintura_q3"
+                })
+              })]
+            })]
+          })
+        })]
+      })]
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
+      className: "card",
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", {
+        className: "card-header",
+        id: "headingTwo",
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("h5", {
+          className: "mb-0",
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("button", {
+            type: "button",
+            className: "btn btn-link btn-block collapsed",
+            "data-toggle": "collapse",
+            "data-target": "#collapseTwo",
+            "aria-expanded": "false",
+            "aria-controls": "collapseTwo",
+            children: "Bany"
+          })
+        })
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
+        id: "collapseTwo",
+        className: "collapse",
+        "aria-labelledby": "headingTwo",
+        "data-parent": "#accordion",
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", {
+          className: "card-body",
+          children: "Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid."
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("table", {
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("tbody", {
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("tr", {
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("th", {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("th", {
+                children: "Qualitat Normal"
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("th", {
+                children: "Qualitat Alta"
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("th", {
+                children: "Qualitat Premium"
+              })]
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("tr", {
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("th", {
+                children: "Electricitat"
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
+                  type: "radio",
+                  name: "bany1_group1",
+                  value: "220",
+                  ref: "bany1_electricitat_q1"
+                })
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
+                  type: "radio",
+                  name: "bany1_group1",
+                  value: "280",
+                  ref: "bany1_electricitat_q2"
+                })
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
+                  type: "radio",
+                  name: "bany1_group1",
+                  value: "280",
+                  ref: "bany1_electricitat_q3"
+                })
+              })]
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("tr", {
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("th", {
+                children: "Aigua"
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
+                  type: "radio",
+                  name: "bany1_group2",
+                  value: "180",
+                  ref: "bany1_aigua_q1"
+                })
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
+                  type: "radio",
+                  name: "bany1_group2",
+                  value: "220",
+                  ref: "bany1_aigua_q2"
+                })
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
+                  type: "radio",
+                  name: "bany1_group2",
+                  value: "260",
+                  ref: "bany1_aigua_q3"
+                })
+              })]
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("tr", {
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("th", {
+                children: "Moble rentamans"
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
+                  type: "radio",
+                  name: "bany1_group3",
+                  value: "140",
+                  ref: "bany1_moble_rentamans_q1"
+                })
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
+                  type: "radio",
+                  name: "bany1_group3",
+                  value: "250",
+                  ref: "bany1_moble_rentamans_q2"
+                })
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
+                  type: "radio",
+                  name: "bany1_group3",
+                  value: "350",
+                  ref: "bany1_moble_rentamans_q3"
+                })
+              })]
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("tr", {
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("th", {
+                children: "Rentamans"
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
+                  type: "radio",
+                  name: "bany1_group4",
+                  value: "60",
+                  ref: "bany1_rentamans_q1"
+                })
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
+                  type: "radio",
+                  name: "bany1_group4",
+                  value: "90",
+                  ref: "bany1_rentamans_q2"
+                })
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
+                  type: "radio",
+                  name: "bany1_group4",
+                  value: "120",
+                  ref: "bany1_rentamans_q3"
+                })
+              })]
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("tr", {
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("th", {
+                children: "Mirall"
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
+                  type: "radio",
+                  name: "bany1_group5",
+                  value: "40",
+                  ref: "bany1_mirall_q1"
+                })
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
+                  type: "radio",
+                  name: "bany1_group5",
+                  value: "60",
+                  ref: "bany1_mirall_q2"
+                })
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
+                  type: "radio",
+                  name: "bany1_group5",
+                  value: "80",
+                  ref: "bany1_mirall_q3"
+                })
+              })]
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("tr", {
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("th", {
+                children: "Mampara banyera"
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
+                  type: "radio",
+                  name: "bany1_group6",
+                  value: "80",
+                  ref: "bany1_mampara_banyera_q1"
+                })
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
+                  type: "radio",
+                  name: "bany1_group6",
+                  value: "120",
+                  ref: "bany1_mampara_banyera_q2"
+                })
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
+                  type: "radio",
+                  name: "bany1_group6",
+                  value: "190",
+                  ref: "bany1_mampara_banyera_q3"
+                })
+              })]
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("tr", {
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("th", {
+                children: "Mampara dutxa"
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
+                  type: "radio",
+                  name: "bany1_group7",
+                  value: "90",
+                  ref: "bany1_mampara_dutxa_q1"
+                })
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
+                  type: "radio",
+                  name: "bany1_group7",
+                  value: "140",
+                  ref: "bany1_mampara_dutxa_q2"
+                })
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
+                  type: "radio",
+                  name: "bany1_group7",
+                  value: "230",
+                  ref: "bany1_mampara_dutxa_q3"
+                })
+              })]
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("tr", {
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("th", {
+                children: "Aixeta dutxa"
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
+                  type: "radio",
+                  name: "bany1_group8",
+                  value: "45",
+                  ref: "bany1_aixeta_dutxa_q1"
+                })
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
+                  type: "radio",
+                  name: "bany1_group8",
+                  value: "75",
+                  ref: "bany1_aixeta_dutxa_q2"
+                })
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
+                  type: "radio",
+                  name: "bany1_group8",
+                  value: "190",
+                  ref: "bany1_aixeta_dutxa_q3"
+                })
+              })]
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("tr", {
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("th", {
+                children: "Aixeta bany"
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
+                  type: "radio",
+                  name: "bany1_group9",
+                  value: "50",
+                  ref: "bany1_aixeta_bany_q1"
+                })
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
+                  type: "radio",
+                  name: "bany1_group9",
+                  value: "85",
+                  ref: "bany1_aixeta_bany_q2"
+                })
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
+                  type: "radio",
+                  name: "bany1_group9",
+                  value: "130",
+                  ref: "bany1_aixeta_bany_q3"
+                })
+              })]
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("tr", {
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("th", {
+                children: "Accesoris bany"
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
+                  type: "radio",
+                  name: "bany1_group10",
+                  value: "45",
+                  ref: "bany1_accesoris_bany_q1"
+                })
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
+                  type: "radio",
+                  name: "bany1_group10",
+                  value: "65",
+                  ref: "bany1_accesoris_bany_q2"
+                })
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
+                  type: "radio",
+                  name: "bany1_group10",
+                  value: "85",
+                  ref: "bany1_accesoris_bany_q3"
+                })
+              })]
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("tr", {
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("th", {
+                children: "Tovalloler"
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
+                  type: "radio",
+                  name: "bany1_group11",
+                  value: "45",
+                  ref: "bany1_tovalloler_q1"
+                })
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
+                  type: "radio",
+                  name: "bany1_group11",
+                  value: "90",
+                  ref: "bany1_tovalloler_q2"
+                })
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
+                  type: "radio",
+                  name: "bany1_group11",
+                  value: "130",
+                  ref: "bany1_tovalloler_q3"
+                })
+              })]
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("tr", {
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("th", {
+                children: "W.C."
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
+                  type: "radio",
+                  name: "bany1_group12",
+                  value: "140",
+                  ref: "bany1_wc_q1"
+                })
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
+                  type: "radio",
+                  name: "bany1_group12",
+                  value: "220",
+                  ref: "bany1_wc_q2"
+                })
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
+                  type: "radio",
+                  name: "bany1_group12",
+                  value: "345",
+                  ref: "bany1_wc_q3"
+                })
+              })]
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("tr", {
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("th", {
+                children: "Bidet"
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
+                  type: "radio",
+                  name: "bany1_group13",
+                  value: "65",
+                  ref: "bany1_bidet_q1"
+                })
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
+                  type: "radio",
+                  name: "bany1_group13",
+                  value: "100",
+                  ref: "bany1_bidet_q2"
+                })
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
+                  type: "radio",
+                  name: "bany1_group13",
+                  value: "140",
+                  ref: "bany1_bidet_q3"
+                })
+              })]
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("tr", {
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("th", {
+                children: "Banyera"
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
+                  type: "radio",
+                  name: "bany1_group14",
+                  value: "80",
+                  ref: "bany1_banyera_q1"
+                })
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
+                  type: "radio",
+                  name: "bany1_group14",
+                  value: "130",
+                  ref: "bany1_banyera_q2"
+                })
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
+                  type: "radio",
+                  name: "bany1_group14",
+                  value: "470",
+                  ref: "bany1_banyera_q3"
+                })
+              })]
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("tr", {
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("th", {
+                children: "Dutxa"
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
+                  type: "radio",
+                  name: "bany1_group15",
+                  value: "90",
+                  ref: "bany1_dutxa_q1"
+                })
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
+                  type: "radio",
+                  name: "bany1_group15",
+                  value: "150",
+                  ref: "bany1_dutxa_q2"
+                })
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
+                  type: "radio",
+                  name: "bany1_group15",
+                  value: "230",
+                  ref: "bany1_dutxa_q3"
+                })
+              })]
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("tr", {
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("th", {
+                children: "Sostres pladur"
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
+                  type: "radio",
+                  name: "bany1_group16",
+                  value: "100",
+                  ref: "bany1_sostre_pladur_q1"
+                })
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
+                  type: "radio",
+                  name: "bany1_group16",
+                  value: "180",
+                  ref: "bany1_sostre_pladur_q2"
+                })
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
+                  type: "radio",
+                  name: "bany1_group16",
+                  value: "210",
+                  ref: "bany1_sostre_pladur_q3"
+                })
+              })]
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("tr", {
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("th", {
+                children: "Sostres alumini"
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
+                  type: "radio",
+                  name: "bany1_group17",
+                  value: "120",
+                  ref: "bany1_sostre_alumini_q1"
+                })
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
+                  type: "radio",
+                  name: "bany1_group17",
+                  value: "200",
+                  ref: "bany1_sostre_alumini_q2"
+                })
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
+                  type: "radio",
+                  name: "bany1_group17",
+                  value: "250",
+                  ref: "bany1_sostre_alumini_q3"
+                })
+              })]
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("tr", {
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("th", {
+                children: "Alicatat"
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
+                  type: "radio",
+                  name: "bany1_group18",
+                  value: "450",
+                  ref: "bany1_alicatat_q1"
+                })
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
+                  type: "radio",
+                  name: "bany1_group18",
+                  value: "675",
+                  ref: "bany1_alicatat_q2"
+                })
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
+                  type: "radio",
+                  name: "bany1_group18",
+                  value: "825",
+                  ref: "bany1_alicatat_q3"
+                })
+              })]
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("tr", {
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("th", {
+                children: "Pintura"
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
+                  type: "radio",
+                  name: "bany1_group19",
+                  value: "300",
+                  ref: "bany1_pintura_q1"
+                })
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
+                  type: "radio",
+                  name: "bany1_group19",
+                  value: "340",
+                  ref: "bany1_pintura_q2"
+                })
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
+                  type: "radio",
+                  name: "bany1_group19",
+                  value: "390",
+                  ref: "bany1_pintura_q3"
+                })
+              })]
+            })]
+          })
+        })]
+      })]
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
+      className: "card",
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", {
+        className: "card-header",
+        id: "headingThree",
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("h5", {
+          className: "mb-0",
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("button", {
+            type: "button",
+            className: "btn btn-link btn-block collapsed",
+            "data-toggle": "collapse",
+            "data-target": "#collapseThree",
+            "aria-expanded": "true",
+            "aria-controls": "collapseThree",
+            children: "Sal\xF3"
+          })
+        })
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
+        id: "collapseThree",
+        className: "collapse",
+        "aria-labelledby": "headingThree",
+        "data-parent": "#accordion",
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", {
+          className: "card-body",
+          children: "Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid."
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("table", {
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("tbody", {
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("tr", {
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("th", {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("th", {
+                children: "Qualitat Normal"
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("th", {
+                children: "Qualitat Alta"
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("th", {
+                children: "Qualitat Premium"
+              })]
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("tr", {
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("th", {
+                children: "Interruptors i endolls"
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
+                  type: "radio",
+                  name: "salo_group1",
+                  value: "210",
+                  ref: "salo_interruptors_endolls_q1"
+                })
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
+                  type: "radio",
+                  name: "salo_group1",
+                  value: "315",
+                  ref: "salo_interruptors_endolls_q2"
+                })
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
+                  type: "radio",
+                  name: "salo_group1",
+                  value: "365",
+                  ref: "salo_interruptors_endolls_q3"
+                })
+              })]
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("tr", {
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("th", {
+                children: "TV"
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
+                  type: "radio",
+                  name: "salo_group2",
+                  value: "30",
+                  ref: "salo_tv_q1"
+                })
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
+                  type: "radio",
+                  name: "salo_group2",
+                  value: "45",
+                  ref: "salo_tv_q2"
+                })
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
+                  type: "radio",
+                  name: "salo_group2",
+                  value: "50",
+                  ref: "salo_tv_q3"
+                })
+              })]
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("tr", {
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("th", {
+                children: "Dades ordinador"
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
+                  type: "radio",
+                  name: "salo_group3",
+                  value: "40",
+                  ref: "salo_dades_internet_q1"
+                })
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
+                  type: "radio",
+                  name: "salo_group3",
+                  value: "45",
+                  ref: "salo_dades_internet_q2"
+                })
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
+                  type: "radio",
+                  name: "salo_group3",
+                  value: "50",
+                  ref: "salo_dades_internet_q3"
+                })
+              })]
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("tr", {
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("th", {
+                children: "Aire Condicionat"
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
+                  type: "radio",
+                  name: "salo_group4",
+                  value: "1100",
+                  ref: "salo_aire_condicionat_q1"
+                })
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
+                  type: "radio",
+                  name: "salo_group4",
+                  value: "1200",
+                  ref: "salo_aire_condicionat_q2"
+                })
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
+                  type: "radio",
+                  name: "salo_group4",
+                  value: "1300",
+                  ref: "salo_aire_condicionat_q3"
+                })
+              })]
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("tr", {
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("th", {
+                children: "Calefacci\xF3"
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
+                  type: "radio",
+                  name: "salo_group5",
+                  value: "180",
+                  ref: "salo_calefaccio_q1"
+                })
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
+                  type: "radio",
+                  name: "salo_group5",
+                  value: "240",
+                  ref: "salo_calefaccio_q2"
+                })
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
+                  type: "radio",
+                  name: "salo_group5",
+                  value: "340",
+                  ref: "salo_calefaccio_q3"
+                })
+              })]
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("tr", {
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("th", {
+                children: "Sostre fals"
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
+                  type: "radio",
+                  name: "salo_group6",
+                  value: "500",
+                  ref: "salo_sostre_fals_q1"
+                })
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
+                  type: "radio",
+                  name: "salo_group6",
+                  value: "700",
+                  ref: "salo_sostre_fals_q2"
+                })
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
+                  type: "radio",
+                  name: "salo_group6",
+                  value: "900",
+                  ref: "salo_sostre_fals_q3"
+                })
+              })]
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("tr", {
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("th", {
+                children: "Pintura"
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
+                  type: "radio",
+                  name: "salo_group7",
+                  value: "750",
+                  ref: "salo_pintura_q1"
+                })
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
+                  type: "radio",
+                  name: "salo_group7",
+                  value: "850",
+                  ref: "salo_pintura_q2"
+                })
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
+                  type: "radio",
+                  name: "salo_group7",
+                  value: "1350",
+                  ref: "salo_pintura_q3"
+                })
+              })]
+            })]
+          })
+        })]
+      })]
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
+      className: "card",
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", {
+        className: "card-header",
+        id: "headingFour",
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("h5", {
+          className: "mb-0",
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("button", {
+            type: "button",
+            className: "btn btn-link btn-block collapsed",
+            "data-toggle": "collapse",
+            "data-target": "#collapseFour",
+            "aria-expanded": "true",
+            "aria-controls": "collapseFour",
+            children: "Habitaci\xF3 matrimoni (aprox 18 m2)"
+          })
+        })
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
+        id: "collapseFour",
+        className: "collapse",
+        "aria-labelledby": "headingFour",
+        "data-parent": "#accordion",
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", {
+          className: "card-body",
+          children: "Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid."
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("table", {
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("tbody", {
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("tr", {
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("th", {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("th", {
+                children: "Qualitat Normal"
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("th", {
+                children: "Qualitat Alta"
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("th", {
+                children: "Qualitat Premium"
+              })]
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("tr", {
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("th", {
+                children: "Interruptors i endolls"
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
+                  type: "radio",
+                  name: "hb_mat1_group1",
+                  value: "210",
+                  ref: "hb_mat1_interruptors_endolls_q1"
+                })
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
+                  type: "radio",
+                  name: "hb_mat1_group1",
+                  value: "315",
+                  ref: "hb_mat1_interruptors_endolls_q2"
+                })
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
+                  type: "radio",
+                  name: "hb_mat1_group1",
+                  value: "280",
+                  ref: "hb_mat1_interruptors_endolls_q3"
+                })
+              })]
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("tr", {
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("th", {
+                children: "TV"
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
+                  type: "radio",
+                  name: "hb_mat1_group2",
+                  value: "30",
+                  ref: "hb_mat1_tv_q1"
+                })
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
+                  type: "radio",
+                  name: "hb_mat1_group2",
+                  value: "45",
+                  ref: "hb_mat1_tv_q2"
+                })
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
+                  type: "radio",
+                  name: "hb_mat1_group2",
+                  value: "50",
+                  ref: "hb_mat1_tv_q3"
+                })
+              })]
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("tr", {
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("th", {
+                children: "Dades ordinador"
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
+                  type: "radio",
+                  name: "hb_mat1_group3",
+                  value: "40",
+                  ref: "hb_mat1_dades_internet_q1"
+                })
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
+                  type: "radio",
+                  name: "hb_mat1_group3",
+                  value: "45",
+                  ref: "hb_mat1_dades_internet_q2"
+                })
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
+                  type: "radio",
+                  name: "hb_mat1_group3",
+                  value: "50",
+                  ref: "hb_mat1_dades_internet_q3"
+                })
+              })]
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("tr", {
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("th", {
+                children: "Aire Condicionat"
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
+                  type: "radio",
+                  name: "hb_mat1_group4",
+                  value: "1100",
+                  ref: "hb_mat1_aire_condicionat_q1"
+                })
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
+                  type: "radio",
+                  name: "hb_mat1_group4",
+                  value: "1200",
+                  ref: "hb_mat1_aire_condicionat_q2"
+                })
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
+                  type: "radio",
+                  name: "hb_mat1_group4",
+                  value: "1300",
+                  ref: "hb_mat1_aire_condicionat_q3"
+                })
+              })]
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("tr", {
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("th", {
+                children: "Calefacci\xF3"
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
+                  type: "radio",
+                  name: "hb_mat1_group5",
+                  value: "180",
+                  ref: "hb_mat1_calefaccio_q1"
+                })
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
+                  type: "radio",
+                  name: "hb_mat1_group5",
+                  value: "220",
+                  ref: "hb_mat1_calefaccio_q2"
+                })
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
+                  type: "radio",
+                  name: "hb_mat1_group5",
+                  value: "240",
+                  ref: "hb_mat1_calefaccio_q3"
+                })
+              })]
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("tr", {
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("th", {
+                children: "Sostre fals"
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
+                  type: "radio",
+                  name: "hb_mat1_group6",
+                  value: "225",
+                  ref: "hb_mat1_sostre_fals_q1"
+                })
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
+                  type: "radio",
+                  name: "hb_mat1_group6",
+                  value: "315",
+                  ref: "hb_mat1_sostre_fals_q2"
+                })
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
+                  type: "radio",
+                  name: "hb_mat1_group6",
+                  value: "405",
+                  ref: "hb_mat1_sostre_fals_q3"
+                })
+              })]
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("tr", {
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("th", {
+                children: "Pintura"
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
+                  type: "radio",
+                  name: "hb_mat1_group7",
+                  value: "750",
+                  ref: "hb_mat1_pintura_q1"
+                })
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
+                  type: "radio",
+                  name: "hb_mat1_group7",
+                  value: "850",
+                  ref: "hb_mat1_pintura_q2"
+                })
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
+                  type: "radio",
+                  name: "hb_mat1_group7",
+                  value: "950",
+                  ref: "hb_mat1_pintura_q3"
+                })
+              })]
+            })]
+          })
+        })]
+      })]
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
+      className: "card",
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", {
+        className: "card-header",
+        id: "headingFive",
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("h5", {
+          className: "mb-0",
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("button", {
+            type: "button",
+            className: "btn btn-link btn-block collapsed",
+            "data-toggle": "collapse",
+            "data-target": "#collapseFive",
+            "aria-expanded": "true",
+            "aria-controls": "collapseFive",
+            children: "Habitaci\xF3 individual 1 (aprox 9 m2)"
+          })
+        })
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
+        id: "collapseFive",
+        className: "collapse",
+        "aria-labelledby": "headingFive",
+        "data-parent": "#accordion",
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", {
+          className: "card-body",
+          children: "Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid."
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("table", {
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("tbody", {
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("tr", {
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("th", {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("th", {
+                children: "Qualitat Normal"
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("th", {
+                children: "Qualitat Alta"
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("th", {
+                children: "Qualitat Premium"
+              })]
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("tr", {
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("th", {
+                children: "Interruptors i endolls"
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
+                  type: "radio",
+                  name: "hb_ind1_group1",
+                  value: "120",
+                  ref: "hb_ind1_interruptors_endolls_q1"
+                })
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
+                  type: "radio",
+                  name: "hb_ind1_group1",
+                  value: "180",
+                  ref: "hb_ind1_interruptors_endolls_q2"
+                })
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
+                  type: "radio",
+                  name: "hb_ind1_group1",
+                  value: "210",
+                  ref: "hb_ind1_interruptors_endolls_q3"
+                })
+              })]
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("tr", {
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("th", {
+                children: "TV"
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
+                  type: "radio",
+                  name: "hb_ind1_group2",
+                  value: "30",
+                  ref: "hb_ind1_tv_q1"
+                })
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
+                  type: "radio",
+                  name: "hb_ind1_group2",
+                  value: "45",
+                  ref: "hb_ind1_tv_q2"
+                })
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
+                  type: "radio",
+                  name: "hb_ind1_group2",
+                  value: "50",
+                  ref: "hb_ind1_tv_q3"
+                })
+              })]
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("tr", {
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("th", {
+                children: "Dades ordinador"
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
+                  type: "radio",
+                  name: "hb_ind1_group3",
+                  value: "40",
+                  ref: "hb_ind1_dades_internet_q1"
+                })
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
+                  type: "radio",
+                  name: "hb_ind1_group3",
+                  value: "45",
+                  ref: "hb_ind1_dades_internet_q2"
+                })
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
+                  type: "radio",
+                  name: "hb_ind1_group3",
+                  value: "50",
+                  ref: "hb_ind1_dades_internet_q3"
+                })
+              })]
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("tr", {
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("th", {
+                children: "Aire Condicionat"
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
+                  type: "radio",
+                  name: "hb_ind1_group4",
+                  value: "1100",
+                  ref: "hb_ind1_aire_condicionat_q1"
+                })
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
+                  type: "radio",
+                  name: "hb_ind1_group4",
+                  value: "1200",
+                  ref: "hb_ind1_aire_condicionat_q2"
+                })
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
+                  type: "radio",
+                  name: "hb_ind1_group4",
+                  value: "1300",
+                  ref: "hb_ind1_aire_condicionat_q3"
+                })
+              })]
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("tr", {
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("th", {
+                children: "Calefacci\xF3"
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
+                  type: "radio",
+                  name: "hb_ind1_group5",
+                  value: "90",
+                  ref: "hb_ind1_calefaccio_q1"
+                })
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
+                  type: "radio",
+                  name: "hb_ind1_group5",
+                  value: "120",
+                  ref: "hb_ind1_calefaccio_q2"
+                })
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
+                  type: "radio",
+                  name: "hb_ind1_group5",
+                  value: "150",
+                  ref: "hb_ind1_calefaccio_q3"
+                })
+              })]
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("tr", {
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("th", {
+                children: "Sostre fals"
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
+                  type: "radio",
+                  name: "hb_ind1_group6",
+                  value: "150",
+                  ref: "hb_ind1_sostre_fals_q1"
+                })
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
+                  type: "radio",
+                  name: "hb_ind1_group6",
+                  value: "210",
+                  ref: "hb_ind1_sostre_fals_q2"
+                })
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
+                  type: "radio",
+                  name: "hb_ind1_group6",
+                  value: "270",
+                  ref: "hb_ind1_sostre_fals_q3"
+                })
+              })]
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("tr", {
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("th", {
+                children: "Pintura"
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
+                  type: "radio",
+                  name: "hb_ind1_group7",
+                  value: "600",
+                  ref: "hb_ind1_pintura_q1"
+                })
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
+                  type: "radio",
+                  name: "hb_ind1_group7",
+                  value: "700",
+                  ref: "hb_ind1_pintura_q2"
+                })
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
+                  type: "radio",
+                  name: "hb_ind1_group7",
+                  value: "850",
+                  ref: "hb_ind1_pintura_q3"
+                })
+              })]
+            })]
+          })
+        })]
+      })]
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
+      className: "card",
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", {
+        className: "card-header",
+        id: "headingSix",
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("h5", {
+          className: "mb-0",
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("button", {
+            type: "button",
+            className: "btn btn-link btn-block collapsed",
+            "data-toggle": "collapse",
+            "data-target": "#collapseSix",
+            "aria-expanded": "true",
+            "aria-controls": "collapseSix",
+            children: "Habitaci\xF3 individual 2 (aprox 9 m2)"
+          })
+        })
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
+        id: "collapseSix",
+        className: "collapse",
+        "aria-labelledby": "headingSix",
+        "data-parent": "#accordion",
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", {
+          className: "card-body",
+          children: "Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid."
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("table", {
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("tbody", {
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("tr", {
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("th", {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("th", {
+                children: "Qualitat Normal"
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("th", {
+                children: "Qualitat Alta"
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("th", {
+                children: "Qualitat Premium"
+              })]
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("tr", {
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("th", {
+                children: "Interruptors i endolls"
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
+                  type: "radio",
+                  name: "hb_ind2_group1",
+                  value: "120",
+                  ref: "hb_ind2_interruptors_endolls_q1"
+                })
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
+                  type: "radio",
+                  name: "hb_ind2_group1",
+                  value: "180",
+                  ref: "hb_ind2_interruptors_endolls_q2"
+                })
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
+                  type: "radio",
+                  name: "hb_ind2_group1",
+                  value: "210",
+                  ref: "hb_ind2_interruptors_endolls_q3"
+                })
+              })]
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("tr", {
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("th", {
+                children: "TV"
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
+                  type: "radio",
+                  name: "hb_ind2_group2",
+                  value: "30",
+                  ref: "hb_ind2_tv_q1"
+                })
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
+                  type: "radio",
+                  name: "hb_ind2_group2",
+                  value: "45",
+                  ref: "hb_ind2_tv_q2"
+                })
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
+                  type: "radio",
+                  name: "hb_ind2_group2",
+                  value: "50",
+                  ref: "hb_ind2_tv_q3"
+                })
+              })]
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("tr", {
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("th", {
+                children: "Dades ordinador"
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
+                  type: "radio",
+                  name: "hb_ind2_group3",
+                  value: "40",
+                  ref: "hb_ind2_dades_internet_q1"
+                })
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
+                  type: "radio",
+                  name: "hb_ind2_group3",
+                  value: "45",
+                  ref: "hb_ind2_dades_internet_q2"
+                })
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
+                  type: "radio",
+                  name: "hb_ind2_group3",
+                  value: "50",
+                  ref: "hb_ind2_dades_internet_q3"
+                })
+              })]
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("tr", {
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("th", {
+                children: "Aire Condicionat"
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
+                  type: "radio",
+                  name: "hb_ind2_group4",
+                  value: "1100",
+                  ref: "hb_ind2_aire_condicionat_q1"
+                })
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
+                  type: "radio",
+                  name: "hb_ind2_group4",
+                  value: "1200",
+                  ref: "hb_ind2_aire_condicionat_q2"
+                })
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
+                  type: "radio",
+                  name: "hb_ind2_group4",
+                  value: "1300",
+                  ref: "hb_ind2_aire_condicionat_q3"
+                })
+              })]
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("tr", {
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("th", {
+                children: "Calefacci\xF3"
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
+                  type: "radio",
+                  name: "hb_ind2_group5",
+                  value: "90",
+                  ref: "hb_ind2_calefaccio_q1"
+                })
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
+                  type: "radio",
+                  name: "hb_ind2_group5",
+                  value: "120",
+                  ref: "hb_ind2_calefaccio_q2"
+                })
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
+                  type: "radio",
+                  name: "hb_ind2_group5",
+                  value: "150",
+                  ref: "hb_ind2_calefaccio_q3"
+                })
+              })]
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("tr", {
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("th", {
+                children: "Sostre fals"
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
+                  type: "radio",
+                  name: "hb_ind2_group6",
+                  value: "150",
+                  ref: "hb_ind2_sostre_fals_q1"
+                })
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
+                  type: "radio",
+                  name: "hb_ind2_group6",
+                  value: "210",
+                  ref: "hb_ind2_sostre_fals_q2"
+                })
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
+                  type: "radio",
+                  name: "hb_ind2_group6",
+                  value: "270",
+                  ref: "hb_ind2_sostre_fals_q3"
+                })
+              })]
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("tr", {
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("th", {
+                children: "Pintura"
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
+                  type: "radio",
+                  name: "hb_ind2_group7",
+                  value: "600",
+                  ref: "hb_ind2_pintura_q1"
+                })
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
+                  type: "radio",
+                  name: "hb_ind2_group7",
+                  value: "700",
+                  ref: "hb_ind2_pintura_q2"
+                })
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
+                  type: "radio",
+                  name: "hb_ind2_group7",
+                  value: "850",
+                  ref: "hb_ind2_pintura_q3"
+                })
+              })]
+            })]
+          })
+        })]
+      })]
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
+      className: "card",
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", {
+        className: "card-header",
+        id: "headingSeven",
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("h5", {
+          className: "mb-0",
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("button", {
+            type: "button",
+            className: "btn btn-link btn-block collapsed",
+            "data-toggle": "collapse",
+            "data-target": "#collapseSeven",
+            "aria-expanded": "true",
+            "aria-controls": "collapseSeven",
+            children: "Rebedor/Passad\xEDs"
+          })
+        })
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
+        id: "collapseSeven",
+        className: "collapse",
+        "aria-labelledby": "headingSeven",
+        "data-parent": "#accordion",
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", {
+          className: "card-body",
+          children: "Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid."
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("table", {
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("tbody", {
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("tr", {
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("th", {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("th", {
+                children: "Qualitat Normal"
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("th", {
+                children: "Qualitat Alta"
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("th", {
+                children: "Qualitat Premium"
+              })]
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("tr", {
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("th", {
+                children: "Interruptors i endolls"
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
+                  type: "radio",
+                  name: "rebedor_group1",
+                  value: "120",
+                  ref: "rebedor_interruptors_endolls_q1"
+                })
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
+                  type: "radio",
+                  name: "rebedor_group1",
+                  value: "180",
+                  ref: "rebedor_interruptors_endolls_q2"
+                })
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
+                  type: "radio",
+                  name: "rebedor_group1",
+                  value: "210",
+                  ref: "rebedor_interruptors_endolls_q3"
+                })
+              })]
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("tr", {
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("th", {
+                children: "Calefacci\xF3"
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
+                  type: "radio",
+                  name: "rebedor_group2",
+                  value: "90",
+                  ref: "rebedor_calefaccio_q1"
+                })
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
+                  type: "radio",
+                  name: "rebedor_group2",
+                  value: "120",
+                  ref: "rebedor_calefaccio_q2"
+                })
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
+                  type: "radio",
+                  name: "rebedor_group2",
+                  value: "150",
+                  ref: "rebedor_calefaccio_q3"
+                })
+              })]
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("tr", {
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("th", {
+                children: "Sostre fals"
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
+                  type: "radio",
+                  name: "rebedor_group3",
+                  value: "150",
+                  ref: "rebedor_sostre_fals_q1"
+                })
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
+                  type: "radio",
+                  name: "rebedor_group3",
+                  value: "210",
+                  ref: "rebedor_sostre_fals_q2"
+                })
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
+                  type: "radio",
+                  name: "rebedor_group3",
+                  value: "270",
+                  ref: "rebedor_sostre_fals_q3"
+                })
+              })]
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("tr", {
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("th", {
+                children: "Pintura"
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
+                  type: "radio",
+                  name: "rebedor_group4",
+                  value: "600",
+                  ref: "rebedor_pintura_q1"
+                })
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
+                  type: "radio",
+                  name: "rebedor_group4",
+                  value: "700",
+                  ref: "rebedor_pintura_q2"
+                })
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
+                  type: "radio",
+                  name: "rebedor_group4",
+                  value: "850",
+                  ref: "rebedor_pintura_q3"
+                })
+              })]
+            })]
+          })
+        })]
+      })]
+    })]
+  })
 });
 
 /***/ }),

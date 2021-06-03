@@ -4,11 +4,11 @@ import Header from '../../components/header/Header';
 import axios from 'axios';
 import parse from 'html-react-parser';
 import pressupostVivenda from './PressupostVivenda';
-import pressupostLocalComercial from './PressupostLocalComercial';
+import pressupostLocalComercial from './PressupostLocalComercialForm';
 
 //import './header.css';
 
-let formulari
+let formulari;
 
 // const vivenda = <div dangerouslySetInnerHTML={{ __html: pressupostVivenda.formulari }} />;
 // const localComercial = <div dangerouslySetInnerHTML={{ __html: pressupostLocalComercial.formulari }} />;
@@ -1217,18 +1217,30 @@ class Pressupost extends React.Component {
         }
     }
 
-    formButton(className) {
+    formButton(e) {
         
         // alert(className);
 
-        if (className === "vivenda") {
-            document.getElementById("pressupostBody").innerHTML = "";
-            document.getElementById("pressupostBody").insertAdjacentHTML('beforeend', vivenda);
+        if (e === "vivenda") {
+            ReactDOM.render(<Pressupost />, document.getElementById("index"));
+            //document.getElementById("pressupostBody").innerHTML = "";
+            
+            /*return(
+                <div dangerouslySetInnerHTML={{ __html: `This text is set using dangerouslySetInnerHTML` }}>    
+                </div>
+            )*/
+            
+            //console.log(<div dangerouslySetInnerHTML={{ __html: vivenda }} />);
+            //document.getElementById("pressupostBody").insertAdjacentElement = <div dangerouslySetInnerHTML={{ __html: vivenda }} />;
+            //document.getElementById("pressupostBody").insertAdjacentHTML('beforeend', vivenda);
         }
-        if (className === "localComercial") {
-            document.getElementById("pressupostBody").innerHTML = "";
-            document.getElementById("pressupostBody").insertAdjacentHTML('beforeend', localComercial);
+        if (e === "localComercial") {
+            ReactDOM.render(<Pressupost />, document.getElementById("index"));
+            //document.getElementById("pressupostBody").innerHTML = "";
+            //document.getElementById("pressupostBody").insertAdjacentHTML('beforeend', localComercial);
         }
+
+        //ReactDOM.render(<Pressupost />, document.getElementById("pressupostBody"));
         
     }
 

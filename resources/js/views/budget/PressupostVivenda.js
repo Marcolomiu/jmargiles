@@ -1,5 +1,6 @@
 export default {
-	formulari: `<div id="accordion">
+	formulari: <div id="accordion">
+					<h1>AAAAAA</h1>
 					<div className="card">
 						<div className="card-header" id="headingOne">
 							<h5 className="mb-0">
@@ -666,5 +667,5 @@ export default {
 							</table>
 						</div>
 					</div>
-				</div>`
+				</div>
 }

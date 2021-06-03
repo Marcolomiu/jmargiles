@@ -146,18 +146,13 @@ class HomeBudgetController extends Controller
         //return response($request);
         $budget->save();
         
-        /*
         // Start Email
         $data = [
-            'Nom'  => $request->input('nom'),
-            'Telf' => $request->input('telf'),
-            'Email' => $request->input('email'),
-            'Descripcio' => $request->input('descripcio'),
-
-            // 'Nom'  => $budget->nom,
-            // 'Telf' => $budget->telefon,
-            // 'Email' => $budget->email,
-            // 'Descripcio' => $budget->descripcio,
+            'Nom'  => $budget->nom,
+            'Telf' => $budget->telefon,
+            'Email' => $budget->email,
+            'Descripcio' => $budget->descripcio
+        ];
 
         //Mail Function
         Mail::send('email.contactEmail', ['data1' => $data], function ($m) {
@@ -166,7 +161,14 @@ class HomeBudgetController extends Controller
         });
 
         // End Email
-        */
+
+        return response()->json(
+            [
+                "message" => "Bugdet created successfully", 
+                "data" => $data
+            ]
+        );
+        
         
         // return response()->json(["message" => "Bugdet created & email sent successfully."]);
         return response()->json(["message" => "Bugdet created successfully"]);
