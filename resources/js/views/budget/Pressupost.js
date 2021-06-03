@@ -8,7 +8,7 @@ import pressupostLocalComercial from './PressupostLocalComercialForm';
 
 //import './header.css';
 
-let formulari = 1;
+let formulari = 2;
 
 // const vivenda = <div dangerouslySetInnerHTML={{ __html: pressupostVivenda.formulari }} />;
 // const localComercial = <div dangerouslySetInnerHTML={{ __html: pressupostLocalComercial.formulari }} />;
