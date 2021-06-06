@@ -95,7 +95,7 @@ class Contacte extends React.Component {
             fd.append('email', this.refs.contactEmail.value);
             fd.append('descripcio', this.refs.contactDescripcio.value);
             
-            axios.post('https://jmargiles.herokuapp.com/api/send/contactEmail', fd).then(res=>
+            axios.post('/api/send/contactEmail', fd).then(res=>
                 {
                     console.log(res.data);
                     this.myFormRef.reset();
