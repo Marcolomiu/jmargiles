@@ -20,7 +20,7 @@ class CreateHomeBudgetsTable extends Migration
             $table->string('nom');
             $table->integer('telefon');
             $table->string('email');
-            $table->string('descripcio');
+            $table->string('descripcio')->nullable();
 
             //Kitchen
             $table->string('cuina_electricitat', 10)->nullable();
