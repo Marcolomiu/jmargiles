@@ -1,13 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import ReactDOM from 'react-dom';
+import Header from '../../components/header/Header';
 import axios from 'axios';
 import parse from 'html-react-parser';
-
-import Header from '../../components/header/Header';
-import PressupostLocalComercial from './PressupostLocalComercial';
 import pressupostVivenda from './PressupostVivenda';
 import pressupostLocalComercial from './PressupostLocalComercialForm';
-
 
 //import './header.css';
 
@@ -35,7 +32,7 @@ useEffect(() => {
     })
 })*/
 
-class Pressupost extends React.Component {
+class PressupostLocalComercial extends React.Component {
 
     constructor(props)
     {
@@ -59,8 +56,12 @@ class Pressupost extends React.Component {
         x = inputs.length;
         //console.log(x);
 
+
+        // https://dev.to/safventure/deploy-laravel-application-with-database-to-heroku-l50
+
+
         while(x--) {
-            if(inputs[x].type === "radio") {
+            if(inputs[x].type === "checkbox") {
 
                 let aux = this;
 
@@ -78,7 +79,7 @@ class Pressupost extends React.Component {
                     //console.log(y);
 
                     while(y--) {
-                        if(inputsAux[y].type === "radio") {
+                        if(inputsAux[y].type === "checkbox") {
                             if (inputsAux[y].checked === true) {
                                 auxBudgetCost += Number(inputsAux[y].value);
                                 // console.log("Value: " + inputsAux[y].value);
@@ -1306,30 +1307,30 @@ class Pressupost extends React.Component {
 
                                                             <tr>
                                                                 <th>Electricitat:</th>
-                                                                <td><input type="radio" name="cuina_group1" value="500" ref="cuina_electricitat_q1"/></td>
-                                                                <td><input type="radio" name="cuina_group1" value="600" ref="cuina_electricitat_q2"/></td>
-                                                                <td><input type="radio" name="cuina_group1" value="700" ref="cuina_electricitat_q3"/></td>
+                                                                <td><input type="checkbox" name="cuina_group1" value="500" ref="cuina_electricitat_q1"/></td>
+                                                                <td><input type="checkbox" name="cuina_group1" value="600" ref="cuina_electricitat_q2"/></td>
+                                                                <td><input type="checkbox" name="cuina_group1" value="700" ref="cuina_electricitat_q3"/></td>
                                                             </tr>
 
                                                             <tr>
                                                                 <th>Aigua:</th>
-                                                                <td><input type="radio" name="cuina_group2" value="500" ref="cuina_aigua_q1"/></td>
-                                                                <td><input type="radio" name="cuina_group2" value="600" ref="cuina_aigua_q2"/></td>
-                                                                <td><input type="radio" name="cuina_group2" value="700" ref="cuina_aigua_q3"/></td>
+                                                                <td><input type="checkbox" name="cuina_group2" value="500" ref="cuina_aigua_q1"/></td>
+                                                                <td><input type="checkbox" name="cuina_group2" value="600" ref="cuina_aigua_q2"/></td>
+                                                                <td><input type="checkbox" name="cuina_group2" value="700" ref="cuina_aigua_q3"/></td>
                                                             </tr>
 
                                                             <tr>
                                                                 <th>Gas:</th>
-                                                                <td><input type="radio" name="cuina_group3" value="500" ref="cuina_gas_q1"/></td>
-                                                                <td><input type="radio" name="cuina_group3" value="600" ref="cuina_gas_q2"/></td>
-                                                                <td><input type="radio" name="cuina_group3" value="700" ref="cuina_gas_q3"/></td>
+                                                                <td><input type="checkbox" name="cuina_group3" value="500" ref="cuina_gas_q1"/></td>
+                                                                <td><input type="checkbox" name="cuina_group3" value="600" ref="cuina_gas_q2"/></td>
+                                                                <td><input type="checkbox" name="cuina_group3" value="700" ref="cuina_gas_q3"/></td>
                                                             </tr>
 
                                                             <tr>
                                                                 <th>Mobles 2,40m lineals:</th>
-                                                                <td><input type="radio" name="cuina_group4" value="500" ref="cuina_mobles240_q1"/></td>
-                                                                <td><input type="radio" name="cuina_group4" value="600" ref="cuina_mobles240_q2"/></td>
-                                                                <td><input type="radio" name="cuina_group4" value="700" ref="cuina_mobles240_q3"/></td>
+                                                                <td><input type="checkbox" name="cuina_group4" value="500" ref="cuina_mobles240_q1"/></td>
+                                                                <td><input type="checkbox" name="cuina_group4" value="600" ref="cuina_mobles240_q2"/></td>
+                                                                <td><input type="checkbox" name="cuina_group4" value="700" ref="cuina_mobles240_q3"/></td>
                                                             </tr>
 
                                                             <tr>
@@ -1341,23 +1342,23 @@ class Pressupost extends React.Component {
 
                                                             <tr>
                                                                 <th>Encimera vitroceràmica:</th>
-                                                                <td><input type="radio" name="cuina_group6" value="150" ref="cuina_encimera_vitroceramica_q1"/></td>
-                                                                <td><input type="radio" name="cuina_group6" value="230" ref="cuina_encimera_vitroceramica_q2"/></td>
-                                                                <td><input type="radio" name="cuina_group6" value="250" ref="cuina_encimera_vitroceramica_q3"/></td>
+                                                                <td><input type="checkbox" name="cuina_group6" value="150" ref="cuina_encimera_vitroceramica_q1"/></td>
+                                                                <td><input type="checkbox" name="cuina_group6" value="230" ref="cuina_encimera_vitroceramica_q2"/></td>
+                                                                <td><input type="checkbox" name="cuina_group6" value="250" ref="cuina_encimera_vitroceramica_q3"/></td>
                                                             </tr>
 
                                                             <tr>
                                                                 <th>Encimera inducció:</th>
-                                                                <td><input type="radio" name="cuina_group7" value="190" ref="cuina_encimera_induccio_q1"/></td>
-                                                                <td><input type="radio" name="cuina_group7" value="240" ref="cuina_encimera_induccio_q2"/></td>
-                                                                <td><input type="radio" name="cuina_group7" value="700" ref="cuina_encimera_induccio_q3"/></td>
+                                                                <td><input type="checkbox" name="cuina_group7" value="190" ref="cuina_encimera_induccio_q1"/></td>
+                                                                <td><input type="checkbox" name="cuina_group7" value="240" ref="cuina_encimera_induccio_q2"/></td>
+                                                                <td><input type="checkbox" name="cuina_group7" value="700" ref="cuina_encimera_induccio_q3"/></td>
                                                             </tr>
 
                                                             <tr>
                                                                 <th>Rentaplats:</th>
-                                                                <td><input type="radio" name="cuina_group8" value="220" ref="cuina_rentaplats_q1"/></td>
-                                                                <td><input type="radio" name="cuina_group8" value="300" ref="cuina_rentaplats_q2"/></td>
-                                                                <td><input type="radio" name="cuina_group8" value="550" ref="cuina_rentaplats_q3"/></td>
+                                                                <td><input type="checkbox" name="cuina_group8" value="220" ref="cuina_rentaplats_q1"/></td>
+                                                                <td><input type="checkbox" name="cuina_group8" value="300" ref="cuina_rentaplats_q2"/></td>
+                                                                <td><input type="checkbox" name="cuina_group8" value="550" ref="cuina_rentaplats_q3"/></td>
                                                             </tr>
 
                                                             <tr>
@@ -1983,4 +1984,4 @@ class Pressupost extends React.Component {
     }
 }
 
-export default Pressupost;
+export default PressupostLocalComercial;
