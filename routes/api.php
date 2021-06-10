@@ -18,10 +18,14 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-//Email Route
-Route::post('send/contactEmail', [App\Http\Controllers\ContactEmailController::class, 'mail'])->name('email');
+// Email Route
+Route::post('send/contactEmail', [App\Http\Controllers\ContactEmailController::class, 'mail']);
 
-//Budget Route
-Route::post('send/homeBudget', [App\Http\Controllers\Budget\HomeBudgetController::class, 'store'])->name('budget');
+// Home Budget Route
+Route::post('send/homeBudget', [App\Http\Controllers\Budget\HomeBudgetController::class, 'store']);
 
-Route::get('/', [App\Http\Controllers\Budget\HomeBudgetController::class, 'index']);
+// Commercial Premises Budget Route
+Route::post('send/commercialPremisesBudget', [App\Http\Controllers\Budget\CommercialPremisesBudgetController::class, 'store']);
+
+// Home Budget GET Route
+//Route::get('/', [App\Http\Controllers\Budget\HomeBudgetController::class, 'index']);

@@ -308,16 +308,39 @@ table {
 td, th {
 	border: 1px solid #dddddd;
 	text-align: left;
-	padding: 8px;
+	padding: 1em 2em;
 }
 
 th {
     font-weight: 100;
 }
 
-/* ---- Buists ---- */
+/* ---- Pressupost Local Comercial ---- */
 
-.table-list{
+tbody.pressupostLocal {
+    margin-right: 0;
+    margin-left: 0;
+}
+
+tr.pressupostLocal {
+    padding-right: 0;
+    padding-left: 0;
+}
+
+tr.pressupostLocal > td {
+    width: 100%;
+    display:inline-block;
+}
+
+tr.pressupostLocal > td > input {
+    right: 2em;
+    top: 1.4em;
+    position: absolute;
+}
+
+/* ---- Budget lists ---- */
+
+.table-list {
     margin-left: 2rem;
     margin-right: 2rem;
 }

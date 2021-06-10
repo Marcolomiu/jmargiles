@@ -37,21 +37,7 @@ class HomeBudgetController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
-    {
-        /*
-        HomeBudget::insert([
-            'nom' => $request->input('nom'),
-            'telefon' => $request->input('telf'),
-            'email' => $request->input('email'),
-            'descripcio' => $request->input('descripcio'),
-        ]);
-    
-        $response['message'] = "Guardo exitosamente";
-        $response['success'] = true;
-    
-        return $response;
-        */
-        
+    {   
         $budget = new HomeBudget();
         
         //Personal info
@@ -60,7 +46,7 @@ class HomeBudgetController extends Controller
         $budget->email = $request->email;
         $budget->descripcio = $request->descripcio;
         
-        //Kitchen
+        // Kitchen
         $budget->cuina_electricitat = $request->cuina_electricitat;
         $budget->cuina_aigua = $request->cuina_aigua;
         $budget->cuina_gas = $request->cuina_gas;
@@ -80,7 +66,7 @@ class HomeBudgetController extends Controller
         $budget->cuina_alicatat = $request->cuina_alicatat;
         $budget->cuina_pintura = $request->cuina_pintura;
         
-        //Bathroom 1 ok
+        // Bathroom 1
         $budget->bany1_electricitat = $request->bany1_electricitat;
         $budget->bany1_aigua = $request->bany1_aigua;
         $budget->bany1_moble_rentamans = $request->bany1_moble_rentamans;
@@ -101,7 +87,7 @@ class HomeBudgetController extends Controller
         $budget->bany1_alicatat = $request->bany1_alicatat;
         $budget->bany1_pintura = $request->bany1_pintura;
         
-        //Living room ok
+        // Living room
         $budget->salo_interruptors_endolls = $request->salo_interruptors_endolls;
         $budget->salo_tv = $request->salo_tv;
         $budget->salo_dades_internet = $request->salo_dades_internet;
@@ -110,7 +96,7 @@ class HomeBudgetController extends Controller
         $budget->salo_sostre_fals = $request->salo_sostre_fals;
         $budget->salo_pintura = $request->salo_pintura;
 
-        //Double room 1 ok
+        // Double room 1
         $budget->hb_mat1_interruptors_endolls = $request->hb_mat1_interruptors_endolls;
         $budget->hb_mat1_tv = $request->hb_mat1_tv;
         $budget->hb_mat1_dades_internet = $request->hb_mat1_dades_internet;
@@ -119,7 +105,7 @@ class HomeBudgetController extends Controller
         $budget->hb_mat1_sostre_fals = $request->hb_mat1_sostre_fals;
         $budget->hb_mat1_pintura = $request->hb_mat1_pintura;
 
-        //Single room 1 ok
+        // Single room 1
         $budget->hb_ind1_interruptors_endolls = $request->hb_ind1_interruptors_endolls;
         $budget->hb_ind1_tv = $request->hb_ind1_tv;
         $budget->hb_ind1_dades_internet = $request->hb_ind1_dades_internet;
@@ -128,7 +114,7 @@ class HomeBudgetController extends Controller
         $budget->hb_ind1_sostre_fals = $request->hb_ind1_sostre_fals;
         $budget->hb_ind1_pintura = $request->hb_ind1_pintura;
 
-        //Single room 2 ok
+        // Single room 2
         $budget->hb_ind2_interruptors_endolls = $request->hb_ind2_interruptors_endolls;
         $budget->hb_ind2_tv = $request->hb_ind2_tv;
         $budget->hb_ind2_dades_internet = $request->hb_ind2_dades_internet;
@@ -137,7 +123,7 @@ class HomeBudgetController extends Controller
         $budget->hb_ind2_sostre_fals = $request->hb_ind2_sostre_fals;
         $budget->hb_ind2_pintura = $request->hb_ind2_pintura;
 
-        //Entrance hall / corridor ok
+        // Entrance hall / corridor
         $budget->rebedor_interruptors_endolls = $request->rebedor_interruptors_endolls;
         $budget->rebedor_calefaccio = $request->rebedor_calefaccio;
         $budget->rebedor_sostre_fals = $request->rebedor_sostre_fals;
@@ -154,7 +140,7 @@ class HomeBudgetController extends Controller
             'Descripcio' => $budget->descripcio
         ];
 
-        //Mail Function
+        // Mail Function
         Mail::send('email.contactEmail', ['data1' => $data], function ($m) {
 
             $m->to('marcargiles1@hotmail.com')->subject('Correu Formulari Web');

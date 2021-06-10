@@ -16,13 +16,14 @@ class CreateHomeBudgetsTable extends Migration
         Schema::create('vivenda', function (Blueprint $table) {
             
             $table->id();
-            //Personal info
+            
+            // Personal info
             $table->string('nom');
             $table->integer('telefon');
             $table->string('email');
             $table->string('descripcio')->nullable();
 
-            //Kitchen
+            // Kitchen
             $table->string('cuina_electricitat', 10)->nullable();
             $table->string('cuina_aigua', 10)->nullable();
             $table->string('cuina_gas', 10)->nullable();
@@ -42,7 +43,7 @@ class CreateHomeBudgetsTable extends Migration
             $table->string('cuina_alicatat', 10)->nullable();
             $table->string('cuina_pintura', 10)->nullable();
             
-            //Bathroom 1
+            // Bathroom 1
             $table->string('bany1_electricitat', 10)->nullable();
             $table->string('bany1_aigua', 10)->nullable();
             $table->string('bany1_moble_rentamans', 10)->nullable();
@@ -63,7 +64,7 @@ class CreateHomeBudgetsTable extends Migration
             $table->string('bany1_alicatat', 10)->nullable();
             $table->string('bany1_pintura', 10)->nullable();
             
-            //Living room
+            // Living room
             $table->string('salo_interruptors_endolls', 10)->nullable();
             $table->string('salo_tv', 10)->nullable();
             $table->string('salo_dades_internet', 10)->nullable();
@@ -72,7 +73,7 @@ class CreateHomeBudgetsTable extends Migration
             $table->string('salo_sostre_fals', 10)->nullable();
             $table->string('salo_pintura', 10)->nullable();
 
-            //Double room 1
+            // Double room 1
             $table->string('hb_mat1_interruptors_endolls', 10)->nullable();
             $table->string('hb_mat1_tv', 10)->nullable();
             $table->string('hb_mat1_dades_internet', 10)->nullable();
@@ -81,7 +82,7 @@ class CreateHomeBudgetsTable extends Migration
             $table->string('hb_mat1_sostre_fals', 10)->nullable();
             $table->string('hb_mat1_pintura', 10)->nullable();
 
-            //Single room 1
+            // Single room 1
             $table->string('hb_ind1_interruptors_endolls', 10)->nullable();
             $table->string('hb_ind1_tv', 10)->nullable();
             $table->string('hb_ind1_dades_internet', 10)->nullable();
@@ -90,7 +91,7 @@ class CreateHomeBudgetsTable extends Migration
             $table->string('hb_ind1_sostre_fals', 10)->nullable();
             $table->string('hb_ind1_pintura', 10)->nullable();
 
-            //Single room 2
+            // Single room 2
             $table->string('hb_ind2_interruptors_endolls', 10)->nullable();
             $table->string('hb_ind2_tv', 10)->nullable();
             $table->string('hb_ind2_dades_internet', 10)->nullable();
@@ -99,7 +100,7 @@ class CreateHomeBudgetsTable extends Migration
             $table->string('hb_ind2_sostre_fals', 10)->nullable();
             $table->string('hb_ind2_pintura', 10)->nullable();
 
-            //Entrance hall / corridor
+            // Entrance hall / corridor
             $table->string('rebedor_interruptors_endolls', 10)->nullable();
             $table->string('rebedor_calefaccio', 10)->nullable();
             $table->string('rebedor_sostre_fals', 10)->nullable();
