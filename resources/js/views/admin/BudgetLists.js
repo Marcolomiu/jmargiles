@@ -19,7 +19,7 @@ class BudgetLists extends React.Component {
 	deleteBudget(id) {
 		console.log(row.id);
 		console.log("Entra");
-		axios.post('api/delete/homeBudget', id).then(res=>
+		axios.delete('api/delete/homeBudget', id).then(res=>
 			{
 				console.log("Surt");
 				console.log(res.data);
