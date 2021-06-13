@@ -17,6 +17,7 @@ useEffect(() => {
 class BudgetLists extends React.Component {
 
 	deleteBudget(id) {
+		console.log(row.id);
 		console.log("Entra");
 		axios.post('api/delete/homeBudget', id).then(res=>
 			{
@@ -210,7 +211,7 @@ class BudgetLists extends React.Component {
 													<td>{row.rebedor_sostre_fals}</td>
 													<td>{row.rebedor_pintura}</td>
 
-													<td><button type="button" class="btn btn-danger" onClick={() => this.deleteBudget(row.id)}>Delete</button></td>
+													<td><button className="btn btn-danger" onClick={() => this.deleteBudget(row.id)}>Delete</button></td>
 												</tr>
 											);
 										})
