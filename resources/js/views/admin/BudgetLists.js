@@ -7,8 +7,10 @@ import { data } from 'jquery';
 
 
 function DeleteBudget(id) {
-	axios.post('api/delete/homeBudget', id.value).then(res=>
+	console.log("Entra");
+	axios.post('api/delete/homeBudget', id).then(res=>
 		{
+			console.log("Surt");
 			console.log(res.data);
 			// Aquí tindria que recarregar el render
 		}
