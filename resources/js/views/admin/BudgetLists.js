@@ -20,7 +20,7 @@ function BudgetLists() {
 	const [budget, setBudget] = useState([]);
 
 	useEffect(() => {
-		axios.get('api/')
+		axios.get('https://jmargiles.herokuapp.com/api/')
 		.then(response => {
 			setBudget(response.data);
 		})
