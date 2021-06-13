@@ -203,8 +203,16 @@ class HomeBudgetController extends Controller
      * @param  \App\Models\HomeBudget  $homeBudget
      * @return \Illuminate\Http\Response
      */
-    public function destroy(HomeBudget $homeBudget)
+    public function destroy($id) // HomeBudget $homeBudget
     {
-        //
+        $budget = HomeBudget::find($id);
+        $budget->delete();
+
+
+        // if ($video->user_id == Auth::id()) {
+        //     $video->delete();
+        // }
+        // return redirect()->route('videos.index');
+        // //return view('videos/index');
     }
 }
