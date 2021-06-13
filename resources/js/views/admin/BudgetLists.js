@@ -6,9 +6,9 @@ import { data } from 'jquery';
 //import './header.css';
 
 
-function DeleteBudget(id) {
+function DeleteBudget(props) {
 	console.log("Entra");
-	axios.post('api/delete/homeBudget', id).then(res=>
+	axios.post('api/delete/homeBudget', props.value).then(res=>
 		{
 			console.log("Surt");
 			console.log(res.data);
