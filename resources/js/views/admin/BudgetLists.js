@@ -211,7 +211,7 @@ class BudgetLists extends React.Component {
 													<td>{row.rebedor_sostre_fals}</td>
 													<td>{row.rebedor_pintura}</td>
 
-													<td><button className="btn btn-danger" onClick={() => this.deleteBudget(row.id)}>Delete</button></td>
+													<td><button type="submit" className="btn btn-danger" onClick={() => this.deleteBudget(row.id)}>Delete</button></td>
 												</tr>
 											);
 										})
