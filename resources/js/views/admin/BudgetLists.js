@@ -5,12 +5,22 @@ import axios from 'axios';
 import { data } from 'jquery';
 //import './header.css';
 
+
+function DeleteBudget(id) {
+	axios.post('api/delete/homeBudget', id.value).then(res=>
+		{
+			console.log(res.data);
+			// Aquí tindria que recarregar el render
+		}
+	);
+}
+
 function BudgetLists() {
 
 	const [budget, setBudget] = useState([]);
 
 	useEffect(() => {
-		axios.get('http://127.0.0.1:8000/api/')
+		axios.get('api/')
 		.then(response => {
 			setBudget(response.data);
 		})
@@ -107,6 +117,8 @@ function BudgetLists() {
 									<th>Rebedor calefacció</th>
 									<th>Rebedor sostre fals</th>
 									<th>Rebedor pintura</th>
+
+									<th>Delete</th>
 								</tr>
 							</thead>
 							<tbody>
@@ -195,6 +207,8 @@ function BudgetLists() {
 												<td>{row.rebedor_calefaccio}</td>
 												<td>{row.rebedor_sostre_fals}</td>
 												<td>{row.rebedor_pintura}</td>
+
+												<td><button type="button" class="btn btn-danger" onClick={()=>{<DeleteBudget value={row.id} />;}}>Delete</button></td>
 											</tr>
 										);
 									})

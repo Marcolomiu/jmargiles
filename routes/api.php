@@ -18,6 +18,9 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
+
+/* -- Send -- */
+
 // Email Route
 Route::post('send/contactEmail', [App\Http\Controllers\ContactEmailController::class, 'mail']);
 
@@ -27,5 +30,12 @@ Route::post('send/homeBudget', [App\Http\Controllers\Budget\HomeBudgetController
 // Commercial Premises Budget Route
 Route::post('send/commercialPremisesBudget', [App\Http\Controllers\Budget\CommercialPremisesBudgetController::class, 'store']);
 
+/* -- List -- */
+
 // Home Budget GET Route
-//Route::get('/', [App\Http\Controllers\Budget\HomeBudgetController::class, 'index']);
+Route::get('/', [App\Http\Controllers\Budget\HomeBudgetController::class, 'index']);
+
+/* -- Delete -- */
+
+// Home Budget DELETE ONE Route
+Route::delete('/delete/homeBudget', [App\Http\Controllers\Budget\HomeBudgetController::class, 'destroy']);
