@@ -43,7 +43,7 @@ function BudgetLists() {
 						<table>
 							<thead>
 								<tr>
-									<th>AAA</th>
+									<th>BBB</th>
 									<th>Nom</th>
 									<th>Telèfon</th>
 									<th>Email</th>
