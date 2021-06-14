@@ -19,9 +19,10 @@ function BudgetLists() {
 	function deleteBudget(id) {
 		console.log(id);
 		console.log("Entra");
-		axios.delete('api/delete/homeBudget', id).then(res=>
+
+		axios.delete('api/delete/homeBudget', { data: id }).then(res=>
 			{
-				console.log("Entra");
+				console.log("Surt");
 				console.log(res.data);
 				// Aquí tindria que recarregar el render
 			}
