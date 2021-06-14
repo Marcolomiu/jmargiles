@@ -18,9 +18,13 @@ function BudgetLists() {
 
 	function deleteBudget(id) {
 		console.log(id);
+
+		const fd = new FormData();
+		fd.append('id', id);
+
 		console.log("Entra");
 
-		axios.delete('api/delete/homeBudget', { data: id }).then(res=>
+		axios.delete('api/delete/homeBudget', fd).then(res=>
 			{
 				console.log("Surt");
 				console.log(res.data);
@@ -39,7 +43,7 @@ function BudgetLists() {
 						<table>
 							<thead>
 								<tr>
-									<th>#</th>
+									<th>AAA</th>
 									<th>Nom</th>
 									<th>Telèfon</th>
 									<th>Email</th>

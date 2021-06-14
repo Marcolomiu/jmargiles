@@ -203,9 +203,9 @@ class HomeBudgetController extends Controller
      * @param  \App\Models\HomeBudget  $homeBudget
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id) // HomeBudget $homeBudget
+    public function destroy(Request $request) // HomeBudget $homeBudget
     {
-        $budget = HomeBudget::find($id);
+        $budget = HomeBudget::find($request->id);
         $budget->delete();
 
 
