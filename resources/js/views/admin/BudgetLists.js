@@ -5,20 +5,6 @@ import axios from 'axios';
 import { data } from 'jquery';
 //import './header.css';
 
-
-function DeleteBudget(id) {
-	console.log(id);
-	console.log(id.value);
-	console.log("Entra");
-	axios.delete('api/delete/homeBudget', id.value).then(res=>
-		{
-			console.log("Entra");
-			console.log(res.data);
-			// Aquí tindria que recarregar el render
-		}
-	);
-}
-
 function BudgetLists() {
 
 	const [budget, setBudget] = useState([]);
@@ -30,6 +16,19 @@ function BudgetLists() {
 		})
 	}, [])
 
+	function deleteBudget(id) {
+		console.log(id);
+		console.log(id.value);
+		console.log("Entra");
+		axios.delete('api/delete/homeBudget', id.value).then(res=>
+			{
+				console.log("Entra");
+				console.log(res.data);
+				// Aquí tindria que recarregar el render
+			}
+		);
+	}
+
     return (
         <div>
             <Header/>
@@ -40,7 +39,7 @@ function BudgetLists() {
 						<table>
 							<thead>
 								<tr>
-									<th>#</th>
+									<th>@</th>
 									<th>Nom</th>
 									<th>Telèfon</th>
 									<th>Email</th>
@@ -212,7 +211,7 @@ function BudgetLists() {
 												<td>{row.rebedor_sostre_fals}</td>
 												<td>{row.rebedor_pintura}</td>
 
-												<td><button className="btn btn-danger" onClick={<DeleteBudget value={row.id} />}>Delete</button></td>
+												<td><button className="btn btn-danger" onClick={deleteBudget(row.id)}>Delete</button></td>
 											</tr>
 										);
 									})
