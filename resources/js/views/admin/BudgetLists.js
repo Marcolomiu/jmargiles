@@ -16,10 +16,10 @@ useEffect(() => {
 
 class BudgetLists extends React.Component {
 
-	deleteBudget(id) {
-		console.log(row.id);
+	deleteBudget(e) {
+		console.log(e);
 		console.log("Entra");
-		axios.delete('api/delete/homeBudget', id).then(res=>
+		axios.delete('api/delete/homeBudget', e).then(res=>
 			{
 				console.log("Surt");
 				console.log(res.data);
@@ -39,7 +39,7 @@ class BudgetLists extends React.Component {
 							<table>
 								<thead>
 									<tr>
-										<th>#</th>
+										<th>@</th>
 										<th>Nom</th>
 										<th>Telèfon</th>
 										<th>Email</th>
@@ -211,7 +211,7 @@ class BudgetLists extends React.Component {
 													<td>{row.rebedor_sostre_fals}</td>
 													<td>{row.rebedor_pintura}</td>
 
-													<td><button type="submit" className="btn btn-danger" onClick={() => this.deleteBudget(row.id)}>Delete</button></td>
+													<td><button className="btn btn-danger" onClick={() => this.deleteBudget(row.id)}>Delete</button></td>
 												</tr>
 											);
 										})
