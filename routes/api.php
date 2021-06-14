@@ -19,23 +19,27 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 
-/* -- Send -- */
+Route::middleware('cors')->group(function() {
+    
+   /* -- Send -- */
 
-// Email Route
-Route::post('send/contactEmail', [App\Http\Controllers\ContactEmailController::class, 'mail']);
+    // Email Route
+    Route::post('send/contactEmail', [App\Http\Controllers\ContactEmailController::class, 'mail']);
 
-// Home Budget Route
-Route::post('send/homeBudget', [App\Http\Controllers\Budget\HomeBudgetController::class, 'store']);
+    // Home Budget Route
+    Route::post('send/homeBudget', [App\Http\Controllers\Budget\HomeBudgetController::class, 'store']);
 
-// Commercial Premises Budget Route
-Route::post('send/commercialPremisesBudget', [App\Http\Controllers\Budget\CommercialPremisesBudgetController::class, 'store']);
+    // Commercial Premises Budget Route
+    Route::post('send/commercialPremisesBudget', [App\Http\Controllers\Budget\CommercialPremisesBudgetController::class, 'store']);
 
-/* -- List -- */
+    /* -- List -- */
 
-// Home Budget GET Route
-Route::get('/', [App\Http\Controllers\Budget\HomeBudgetController::class, 'index']);
+    // Home Budget GET Route
+    Route::get('/', [App\Http\Controllers\Budget\HomeBudgetController::class, 'index']);
 
-/* -- Delete -- */
+    /* -- Delete -- */
 
-// Home Budget DELETE ONE Route
-Route::delete('/delete/homeBudget', [App\Http\Controllers\Budget\HomeBudgetController::class, 'destroy']);
+    // Home Budget DELETE ONE Route
+    Route::delete('/delete/homeBudget', [App\Http\Controllers\Budget\HomeBudgetController::class, 'destroy']); 
+
+});
