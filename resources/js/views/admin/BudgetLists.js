@@ -212,10 +212,7 @@ function BudgetLists() {
 												<td>{row.rebedor_sostre_fals}</td>
 												<td>{row.rebedor_pintura}</td>
 
-												<td><button className="btn btn-danger" onClick={()=>{
-													console.log("click");
-													<DeleteBudget value={row.id} />
-													}}>Delete</button></td>
+												<td><button className="btn btn-danger" onClick={<DeleteBudget value={row.id} />}>Delete</button></td>
 											</tr>
 										);
 									})
